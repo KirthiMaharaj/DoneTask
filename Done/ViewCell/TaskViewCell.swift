@@ -9,6 +9,13 @@ import UIKit
 
 class TaskViewCell: UITableViewCell {
 
+    @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var taskName: UILabel!
+    @IBOutlet weak var taskDate: UILabel!
+    @IBOutlet weak var priortyButton: UIButton!
+    @IBOutlet weak var reminderButton: UIButton!
+    @IBOutlet weak var repeatButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +26,17 @@ class TaskViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    public var taskNames: String? {
+        get {
+            return self.taskDate.text
+        }
+        set {
+            self.taskDate.attributedText = nil
+            self.taskDate.text = newValue
+        }
+    }
+    
+    @IBAction func completeBtnTapped(_ sender: Any) {
+        
+    }
 }
