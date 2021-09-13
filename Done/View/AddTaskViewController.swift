@@ -29,14 +29,14 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
         if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(taskDes, taskName)
+            let task = DoneTask(taskDes, false, taskName)
             
             self.dataProvider.createTasks(task) { success in
                 if success {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-          //  self.dataProvider.saveTasks()
+            self.dataProvider.saveTasks()
             self.dataProvider.fetchTasks()
             self.dismiss(animated: true, completion: nil)
         }

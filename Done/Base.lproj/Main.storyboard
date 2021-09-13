@@ -248,8 +248,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="DRf-PZ-USH"/>
                                                     </constraints>
-                                                    <state key="normal" title="Priority" image="flag_icon">
+                                                    <state key="normal" title="Priority">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <imageReference key="image" image="flag_icon" renderingMode="template"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLO-85-bBQ">
@@ -257,8 +258,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="zIC-wj-gOR"/>
                                                     </constraints>
-                                                    <state key="normal" title="3" image="reminder_icon">
+                                                    <state key="normal" title="3">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <imageReference key="image" image="bell.fill" catalog="system" renderingMode="original"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUO-66-lLk">
@@ -302,6 +304,7 @@
                                     <outlet property="repeatButton" destination="dUO-66-lLk" id="lQk-Et-rZJ"/>
                                     <outlet property="taskDate" destination="4Zw-vR-L3H" id="WJE-Wk-eM5"/>
                                     <outlet property="taskName" destination="r5b-Ud-bWa" id="f74-Iw-abG"/>
+                                    <outlet property="taskView" destination="Dzh-YS-vtT" id="jj7-MV-uod"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -372,7 +375,6 @@
         <image name="flag.circle" catalog="system" width="128" height="121"/>
         <image name="flag_icon" width="16.666666030883789" height="16.666666030883789"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
-        <image name="reminder_icon" width="16.666666030883789" height="16.666666030883789"/>
         <image name="repeat" catalog="system" width="128" height="99"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

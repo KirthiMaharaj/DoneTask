@@ -12,6 +12,14 @@ protocol TasksDataManagerDelegate: AnyObject {
     func fetchTasksSuccess(model: TaskModel, success: Bool)
 }
 
+protocol TaskTableViewCellDelegate: AnyObject {
+    
+    func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool)
+    
+    func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool)
+}
+
+
 class TaskModel {
     
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
@@ -84,7 +92,7 @@ class TaskModel {
         newTask.descriptions = task.descriptions
         // newTask.dueDate = task.dueDate
         // newTask.id = task.id
-        //        newTask.isComplete = task.isComplete
+            newTask.isComplete = task.isComplete
         //        newTask.isDelete = task.isDelete
         newTask.name = task.name
         //  newTask.priorty = task.priorty
@@ -114,7 +122,7 @@ class TaskModel {
         entity.descriptions = task.descriptions
         // entity.dueDate = task.dueDate
         // entity.id = task.id
-        // entity.isComplete = task.isComplete
+         entity.isComplete = task.isComplete
         //  entity.isDelete = task.isDelete
         entity.name = task.name
         // entity.priorty = entity.priorty
@@ -135,7 +143,7 @@ class TaskModel {
         }
         
         let entity = self.task[index]
-        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.name ?? "empty name")
+        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.isComplete, entity.name ?? "empty name")
         //Task(isDone: entity.isDone,name: entity.name ?? "empty name", priority: entity.priority)
         return tasks
     }

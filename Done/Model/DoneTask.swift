@@ -13,17 +13,17 @@ struct DoneTask {
     var descriptions:String
     // var dueDate:Date
     // var id:UUID
-    //    var isComplete:Bool
+    var isComplete:Bool
     //    var isDelete:Bool
     var name:String
     // var priorty:Int64
     
-    init(_ taskDescriptions: String, _ taskName:String) {
+    init(_ taskDescriptions: String, _ taskComplete:Bool, _ taskName:String) {
         //  color = taskColor
         descriptions = taskDescriptions
         //  dueDate = taskDate
         //  id = taskId
-        //  isComplete = taskComplete
+        isComplete = taskComplete
         //   isDelete = taskDelete
         name = taskName
         //  priorty = taskPriorty
@@ -36,16 +36,10 @@ struct DoneTask {
         descriptions = taskDescriptions
         //  dueDate = taskDate
         //   id = taskId
-        //        isComplete = taskModel.isComplete
+        isComplete = taskModel.isComplete
         //        isDelete = taskModel.isDelete
         name = taskName
         //  priorty = taskModel.priorty
     }
 }
 
-protocol TaskTableViewCellDelegate: AnyObject {
-    
-    func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool)
-    
-    func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool)
-}

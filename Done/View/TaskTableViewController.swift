@@ -41,10 +41,15 @@ class TaskTableViewController: UITableViewController {
         // Configure the cell...
         if let tasks = dataProvider.getTask(atIndex: indexPath.row) {
             cell.taskName.text = tasks.name
+            cell.id = indexPath.row
+            cell.completeButton.isOn = tasks.isComplete
+            cell.delegate = self
             
         }
         return cell
     }
+    
+    
     
     
     /*
@@ -103,4 +108,26 @@ extension TaskTableViewController: TasksDataManagerDelegate {
             self.tableView.reloadData()
         }
     }
+}
+
+extension TaskTableViewController: TaskTableViewCellDelegate{
+    func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
+        guard let index = taskTableViewCell.id else { return }
+        if let old = self.dataProvider.getTask(atIndex: index) {
+            let new = DoneTask(old.descriptions, true, old.name)
+            self.dataProvider.updateTask(task: new, atIndex: index)
+            self.dataProvider.saveTasks()
+        }
+    }
+    
+    func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
+        guard let index = taskTableViewCell.id else { return }
+        if let old = self.dataProvider.getTask(atIndex: index) {
+            let new = DoneTask(old.descriptions, false, old.name)
+            self.dataProvider.updateTask(task: new, atIndex: index)
+            self.dataProvider.saveTasks()
+        }
+    }
+    
+    
 }
