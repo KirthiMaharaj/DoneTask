@@ -1,0 +1,16 @@
+PODS:
+  - MBCheckboxButton (1.4)
+
+DEPENDENCIES:
+  - MBCheckboxButton (~> 1.4)
+
+SPEC REPOS:
+  trunk:
+    - MBCheckboxButton
+
+SPEC CHECKSUMS:
+  MBCheckboxButton: 6ad0b46b111c59ea9dec558e0df1973cee2eb3aa
+
+PODFILE CHECKSUM: ad69cde7888eb8e82fe0b78a24aaf3c54bf88e17
+
+COCOAPODS: 1.11.1

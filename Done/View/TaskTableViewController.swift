@@ -9,16 +9,19 @@ import UIKit
 
 class TaskTableViewController: UITableViewController {
     
-    let dataProvider = TaskModel(completionClosure: {})
-    var task = [DoneTask]()
+    var dataProvider = TaskModel(completionClosure: {})
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataProvider.fetchTasks { _ in
-            self.tableView.reloadData()
-        }
+        setupModel()
+        dataProvider.fetchTasks()
     }
     
+    private func setupModel() {
+        self.dataProvider = TaskModel(completionClosure: {})
+        self.dataProvider.delegate = self
+    }
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -28,7 +31,7 @@ class TaskTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return  dataProvider.count
+        return  self.dataProvider.count
     }
     
     
@@ -38,6 +41,7 @@ class TaskTableViewController: UITableViewController {
         // Configure the cell...
         if let tasks = dataProvider.getTask(atIndex: indexPath.row) {
             cell.taskName.text = tasks.name
+            
         }
         return cell
     }
@@ -83,11 +87,20 @@ class TaskTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "show" {
-            if let vc = segue.destination as? AddTaskViewController {
+        if segue.destination .isKind(of: UINavigationController.self) {
+            let navi: UINavigationController = segue.destination as! UINavigationController
+            if let vc = navi.viewControllers.first as? AddTaskViewController {
                 vc.addRequiredData(model: self.dataProvider)
             }
         }
     }
     
+}
+
+extension TaskTableViewController: TasksDataManagerDelegate {
+    func fetchTasksSuccess(model: TaskModel, success: Bool) {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

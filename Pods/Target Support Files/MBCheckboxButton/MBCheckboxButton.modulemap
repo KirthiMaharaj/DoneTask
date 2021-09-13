@@ -1,0 +1,6 @@
+framework module MBCheckboxButton {
+  umbrella header "MBCheckboxButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

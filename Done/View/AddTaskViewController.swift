@@ -16,33 +16,32 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var priortyButton: UIButton!
     @IBOutlet weak var reminderButton: UIButton!
     @IBOutlet weak var taskDescription: UITextField!
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     var dataProvider = TaskModel(completionClosure: {})
-    private var taskName: String?
-    private var taskDes: String?
     var tasked: [DoneTask] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.dataProvider.fetchTasks()
     }
-    @IBAction func SaveButtonTapped(_ sender: UIButton) {
-        let task = DoneTask(self.taskDes ?? "", false, false, self.taskName ?? "")
-        
-        
-        self.dataProvider.createTasks(task) { success in
-            if success {
-                self.dismiss(animated: true)
-            }
+    
+    @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
+        if let taskDes = taskDescription.text, let taskName = taskTitle.text {
+            let task = DoneTask(taskDes, taskName)
             
+            self.dataProvider.createTasks(task) { success in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+          //  self.dataProvider.saveTasks()
+            self.dataProvider.fetchTasks()
+            self.dismiss(animated: true, completion: nil)
         }
-        self.dataProvider.saveTasks()
-        self.dataProvider.fetchTasks { tas in
-            self.tasked = tas
-        }
-        
     }
+    
     private func check() {
         if self.taskTitle.text?.isEmpty ?? true {
             self.saveButton.isEnabled = false
@@ -50,18 +49,21 @@ class AddTaskViewController: UIViewController {
             self.saveButton.isEnabled = true
         }
     }
+    
     @IBAction func colorPickerTapped(_ sender: Any) {
+        
     }
     @IBAction func reminderTapped(_ sender: Any) {
+        
     }
     
     @IBAction func priortyTapped(_ sender: Any) {
+        
     }
     
     @IBAction func nameEditTextField(_ sender: UITextField) {
         self.check()
-        self.taskName = sender.text
-        
+        // self.taskName = sender.text
     }
     
     public func addRequiredData(model: TaskModel) {

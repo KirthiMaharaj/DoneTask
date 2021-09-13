@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import MBCheckboxButton
 
 class TaskViewCell: UITableViewCell {
 
-    @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var completeButton: CheckboxButton!
     @IBOutlet weak var taskName: UILabel!
     @IBOutlet weak var taskDate: UILabel!
     @IBOutlet weak var priortyButton: UIButton!
