@@ -11,8 +11,12 @@
 		B3F63654220E19004D8FEFD5 /* Pods_Done_DoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1EAC53394008305929FDA8 /* Pods_Done_DoneUITests.framework */; };
 		D1EED19FF05BF21CF5910075 /* Pods_Done.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F30B9B82C6AFBAF0A4F1AD4 /* Pods_Done.framework */; };
 		FE08451F26EFAD5D000538AE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08451E26EFAD5D000538AE /* StringExtensions.swift */; };
+		FE08452126EFD427000538AE /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08452026EFD427000538AE /* HomeTableViewController.swift */; };
+		FE08452326EFD476000538AE /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08452226EFD476000538AE /* HomeTableViewCell.swift */; };
 		FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AB26EA1D8000BCE016 /* DoneTask.swift */; };
 		FE5457AE26EA27C100BCE016 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AD26EA27C100BCE016 /* TaskModel.swift */; };
+		FE59BD6F26F0D573006236F4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59BD6E26F0D573006236F4 /* HomeModel.swift */; };
+		FE59BD7126F0DC4E006236F4 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59BD7026F0DC4E006236F4 /* DateExtensions.swift */; };
 		FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141726E7A5D10023ACB8 /* AppDelegate.swift */; };
 		FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */; };
 		FECA141C26E7A5D10023ACB8 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141B26E7A5D10023ACB8 /* AddTaskViewController.swift */; };
@@ -54,8 +58,12 @@
 		BA6492AD491E57B9083C169A /* Pods-DoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoneTests.debug.xcconfig"; path = "Target Support Files/Pods-DoneTests/Pods-DoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC85C82AEA7CF6A8694D5122 /* Pods-DoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoneTests.release.xcconfig"; path = "Target Support Files/Pods-DoneTests/Pods-DoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		FE08451E26EFAD5D000538AE /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		FE08452026EFD427000538AE /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		FE08452226EFD476000538AE /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FE5457AB26EA1D8000BCE016 /* DoneTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTask.swift; sourceTree = "<group>"; };
 		FE5457AD26EA27C100BCE016 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		FE59BD6E26F0D573006236F4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FE59BD7026F0DC4E006236F4 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		FECA141426E7A5D10023ACB8 /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA141726E7A5D10023ACB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,17 +137,10 @@
 		FE08451C26EFAD5D000538AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FE08451D26EFAD5D000538AE /* Foundation */,
+				FE08451E26EFAD5D000538AE /* StringExtensions.swift */,
+				FE59BD7026F0DC4E006236F4 /* DateExtensions.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		FE08451D26EFAD5D000538AE /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				FE08451E26EFAD5D000538AE /* StringExtensions.swift */,
-			);
-			path = Foundation;
 			sourceTree = "<group>";
 		};
 		FECA140B26E7A5D10023ACB8 = {
@@ -204,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				FECA144D26E7D78E0023ACB8 /* TaskViewCell.swift */,
+				FE08452226EFD476000538AE /* HomeTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -213,6 +215,7 @@
 			children = (
 				FECA144F26E7D7C00023ACB8 /* TaskTableViewController.swift */,
 				FECA141B26E7A5D10023ACB8 /* AddTaskViewController.swift */,
+				FE08452026EFD427000538AE /* HomeTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			children = (
 				FE5457AB26EA1D8000BCE016 /* DoneTask.swift */,
 				FE5457AD26EA27C100BCE016 /* TaskModel.swift */,
+				FE59BD6E26F0D573006236F4 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -468,11 +472,15 @@
 				FECA145026E7D7C00023ACB8 /* TaskTableViewController.swift in Sources */,
 				FECA141C26E7A5D10023ACB8 /* AddTaskViewController.swift in Sources */,
 				FE08451F26EFAD5D000538AE /* StringExtensions.swift in Sources */,
+				FE08452126EFD427000538AE /* HomeTableViewController.swift in Sources */,
+				FE08452326EFD476000538AE /* HomeTableViewCell.swift in Sources */,
 				FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */,
 				FECA144E26E7D78E0023ACB8 /* TaskViewCell.swift in Sources */,
+				FE59BD6F26F0D573006236F4 /* HomeModel.swift in Sources */,
 				FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */,
 				FE5457AE26EA27C100BCE016 /* TaskModel.swift in Sources */,
 				FECA142226E7A5D10023ACB8 /* Done.xcdatamodeld in Sources */,
+				FE59BD7126F0DC4E006236F4 /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
