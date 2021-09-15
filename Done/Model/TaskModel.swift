@@ -25,6 +25,8 @@ class TaskModel {
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
     private var persistentContainer: NSPersistentContainer
     private var task: [Tasks] = []
+    
+    var lastIndexTapped : Int = 0
     public weak var delegate: TasksDataManagerDelegate?
     
     init(completionClosure: @escaping () -> ()) {
@@ -57,16 +59,7 @@ class TaskModel {
         }
     }
     
-    //    func fetchTasks(completion: @escaping (_ employee: [DoneTask]) -> ()){
-    //        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
-    //        do {
-    //            let tasksData = try managedObjectContext.fetch(fetch) as! [Tasks]
-    //            let tasks = tasksData.compactMap { DoneTask(taskModel: $0) }
-    //            completion(tasks)
-    //        } catch {
-    //            fatalError("Could not save context: \(error)")
-    //        }
-    //    }
+    
     public func fetchTasks() {
         do {
             self.task = try self.managedObjectContext.fetch(Tasks.fetchRequest())
@@ -77,22 +70,14 @@ class TaskModel {
         }
     }
     
-    //    public func createTask(_ task: DoneTask) {
-    //        let newTask = Tasks(context: self.managedObjectContext)
-    //        newTask.descriptions = task.descriptions
-    //        newTask.isComplete = task.isComplete
-    //        newTask.isDelete = task.isDelete
-    //        newTask.name = task.name
-    //
-    //    }
     
     func createTasks(_ task: DoneTask, completion: @escaping (_ success: Bool)-> ()) {
         let newTask = Tasks(context: managedObjectContext)
         // newTask.colors =  task.color
         newTask.descriptions = task.descriptions
-        // newTask.dueDate = task.dueDate
+        newTask.dueDate = task.dueDate
         // newTask.id = task.id
-            newTask.isComplete = task.isComplete
+        newTask.isComplete = task.isComplete
         //        newTask.isDelete = task.isDelete
         newTask.name = task.name
         //  newTask.priorty = task.priorty
@@ -112,6 +97,26 @@ class TaskModel {
         }
     }
     
+    
+    public func updatedTasks(task: DoneTask) {
+    
+        let update = Tasks(context: managedObjectContext)
+        
+        // update.colors =  task.color
+        update.descriptions = task.descriptions
+        update.dueDate = task.dueDate
+        // update.id = task.id
+        update.isComplete = task.isComplete
+        //  update.isDelete = task.isDelete
+        update.name = task.name
+        //  update.priorty = task.priorty
+        do {
+            try managedObjectContext.save()
+        } catch {
+            fatalError("Could not save context: \(error)")
+        }
+    }
+    
     public func updateTask(task: DoneTask, atIndex index: Int) {
         guard index >= 0, index < self.count else {
             return
@@ -120,13 +125,14 @@ class TaskModel {
         let entity = self.task[index]
         // entity.colors = task.color
         entity.descriptions = task.descriptions
-        // entity.dueDate = task.dueDate
+        entity.dueDate = task.dueDate
         // entity.id = task.id
-         entity.isComplete = task.isComplete
+        entity.isComplete = task.isComplete
         //  entity.isDelete = task.isDelete
         entity.name = task.name
         // entity.priorty = entity.priorty
     }
+    
     
     public func deleteTask(atIndex index: Int) {
         guard index >= 0, index < self.count, self.count > 0 else {
@@ -141,12 +147,11 @@ class TaskModel {
         guard index >= 0, index < self.count else {
             return nil
         }
-        
         let entity = self.task[index]
-        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.isComplete, entity.name ?? "empty name")
-        //Task(isDone: entity.isDone,name: entity.name ?? "empty name", priority: entity.priority)
+        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name")
         return tasks
     }
+    
     
     public func removeAllDoneTasks() {
         var index: Int = 0
@@ -159,3 +164,36 @@ class TaskModel {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+//    public func createTask(_ task: DoneTask) {
+//        let newTask = Tasks(context: self.managedObjectContext)
+//        newTask.descriptions = task.descriptions
+//        newTask.isComplete = task.isComplete
+//        newTask.isDelete = task.isDelete
+//        newTask.name = task.name
+//
+//    }
+//    func fetchTasks(completion: @escaping (_ tasked: [DoneTask]) -> ()){
+//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
+//        do {
+//            let tasksData = try managedObjectContext.fetch(fetch) as! [Tasks]
+//            let tasks = tasksData.compactMap { DoneTask(taskModel: $0) }
+//            completion(tasks)
+//        } catch {
+//            fatalError("Could not save context: \(error)")
+//        }
+//    }
+//    func getToday() -> DoneTask {
+//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
+//
+//    }
+

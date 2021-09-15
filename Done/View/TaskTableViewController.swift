@@ -42,6 +42,9 @@ class TaskTableViewController: UITableViewController {
         if let tasks = dataProvider.getTask(atIndex: indexPath.row) {
             cell.taskName.text = tasks.name
             cell.id = indexPath.row
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM-dd-yyyy"
+            cell.taskDate.text = formatter.string(from: tasks.dueDate)
             cell.completeButton.isOn = tasks.isComplete
             cell.delegate = self
             
@@ -49,7 +52,23 @@ class TaskTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            self.dataProvider.deleteTask(atIndex: indexPath.row)
+            self.dataProvider.saveTasks()
+            self.dataProvider.fetchTasks()
+        }
+        action.image = UIImage(systemName: "trash")?.withTintColor(.green, renderingMode: .alwaysOriginal)
+        action.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [action])
+    }
     
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        dataProvider.lastIndexTapped = indexPath.row
+//        let tasked = dataProvider.getTask(atIndex: indexPath.row)
+//        performSegue(withIdentifier: "editTask", sender: tasked)
+//
+//    }
     
     
     /*
@@ -111,19 +130,21 @@ extension TaskTableViewController: TasksDataManagerDelegate {
 }
 
 extension TaskTableViewController: TaskTableViewCellDelegate{
+    
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, true, old.name)
+            let new = DoneTask(old.descriptions, old.dueDate,true, old.name)
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
+            
         }
     }
     
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, false, old.name)
+            let new = DoneTask(old.descriptions, old.dueDate, false, old.name)
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
         }
@@ -131,3 +152,4 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     
     
 }
+

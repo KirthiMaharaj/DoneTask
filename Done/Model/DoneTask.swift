@@ -11,17 +11,17 @@ import CoreData
 struct DoneTask {
     //var color:String
     var descriptions:String
-    // var dueDate:Date
+    var dueDate:Date
     // var id:UUID
     var isComplete:Bool
     //    var isDelete:Bool
     var name:String
     // var priorty:Int64
     
-    init(_ taskDescriptions: String, _ taskComplete:Bool, _ taskName:String) {
+    init(_ taskDescriptions: String, _ taskDate:Date, _ taskComplete:Bool, _ taskName:String) {
         //  color = taskColor
         descriptions = taskDescriptions
-        //  dueDate = taskDate
+        dueDate = taskDate
         //  id = taskId
         isComplete = taskComplete
         //   isDelete = taskDelete
@@ -30,14 +30,13 @@ struct DoneTask {
     }
     
     init?(taskModel: Tasks) {
-        guard
-            let taskDescriptions = taskModel.descriptions, let taskName = taskModel.name else { return nil }
+        guard let taskDescriptions = taskModel.descriptions, let taskDate = taskModel.dueDate, let taskName = taskModel.name else { return nil }
         //  color = taskColor
         descriptions = taskDescriptions
-        //  dueDate = taskDate
+        dueDate = taskDate
         //   id = taskId
         isComplete = taskModel.isComplete
-        //        isDelete = taskModel.isDelete
+        //    isDelete = taskModel.isDelete
         name = taskName
         //  priorty = taskModel.priorty
     }

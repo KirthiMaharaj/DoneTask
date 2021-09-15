@@ -10,7 +10,7 @@ import UIKit
 class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var taskTitle: UITextField!
-    @IBOutlet weak var dateTask: UITextField!
+    @IBOutlet weak var dateTaskPicker: UIDatePicker!
     @IBOutlet weak var priortyTask: UITextField!
     @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var priortyButton: UIButton!
@@ -19,28 +19,36 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var dataProvider = TaskModel(completionClosure: {})
-    var tasked: [DoneTask] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.dataProvider.fetchTasks()
+        
     }
     
+    
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
+        
         if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(taskDes, false, taskName)
+            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName)
             
             self.dataProvider.createTasks(task) { success in
                 if success {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
+            
             self.dataProvider.saveTasks()
             self.dataProvider.fetchTasks()
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
+    @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     private func check() {
         if self.taskTitle.text?.isEmpty ?? true {
@@ -53,6 +61,7 @@ class AddTaskViewController: UIViewController {
     @IBAction func colorPickerTapped(_ sender: Any) {
         
     }
+    
     @IBAction func reminderTapped(_ sender: Any) {
         
     }
@@ -70,6 +79,4 @@ class AddTaskViewController: UIViewController {
         self.dataProvider = model
     }
     
-    
 }
-

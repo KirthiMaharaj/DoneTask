@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -84,13 +84,13 @@
 		996F6ABE7DEA275EE3F1DC28E66C7453 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
 		9CC7568AB0B892D60B4FB991D76593B4 /* Pods-Done-DoneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5380F95349BCF79A62D8AC84C5DB3E /* Pods-DoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Done"; path = Pods_Done.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80BA6BA68F8CC1C670D27978055537F /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
 		AA551D5F44FF21A78631A35A43216EE8 /* Pods-Done-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Done-frameworks.sh"; sourceTree = "<group>"; };
 		B8E8B500C878D752C80BB0297B06B113 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
-		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCheckboxButton; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C079DFAF2897ECB229869D37211EB694 /* Pods-Done-DoneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-DoneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C40C12887E96C940D2AF0740826C3E00 /* Pods-Done-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-Info.plist"; sourceTree = "<group>"; };
 		D990ABA8DD219C2E8483FA0B11284587 /* Pods-Done.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Done.modulemap"; sourceTree = "<group>"; };
@@ -165,13 +165,14 @@
 				7B5F404FC0461731E3CE714470CE4CF1 /* RadioCheckboxBaseContainer.swift */,
 				B4D4A912CFC80D901E2834B2F10F59FA /* Support Files */,
 			);
+			name = MBCheckboxButton;
 			path = MBCheckboxButton;
 			sourceTree = "<group>";
 		};
 		41008F72C2A4AE2F0505C1521AE7B292 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */,
+				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
 				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
 				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
 				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
@@ -383,7 +384,7 @@
 			);
 			name = MBCheckboxButton;
 			productName = MBCheckboxButton;
-			productReference = BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */;
+			productReference = BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -393,10 +394,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -601,7 +602,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,7 +636,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
