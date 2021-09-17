@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Done-DoneUITests/Pods-Done-DoneUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LKAlertController/LKAlertController.framework
 ${BUILT_PRODUCTS_DIR}/MBCheckboxButton/MBCheckboxButton.framework

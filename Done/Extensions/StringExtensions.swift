@@ -17,3 +17,8 @@ extension String {
     }
 }
 
+extension String {
+    func localized() -> String {
+        return NSLocalizedString(self, comment: "")
+    }
+}

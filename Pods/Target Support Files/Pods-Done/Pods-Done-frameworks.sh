@@ -176,9 +176,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/LKAlertController/LKAlertController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBCheckboxButton/MBCheckboxButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/LKAlertController/LKAlertController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBCheckboxButton/MBCheckboxButton.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -7,6 +7,7 @@ target 'Done' do
 
   # Pods for Done
 	pod 'MBCheckboxButton', '~> 1.4'
+	pod 'LKAlertController', '~> 1.12'
 
   target 'DoneTests' do
     inherit! :search_paths

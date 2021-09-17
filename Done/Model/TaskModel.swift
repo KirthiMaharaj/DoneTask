@@ -99,7 +99,7 @@ class TaskModel {
     
     
     public func updatedTasks(task: DoneTask) {
-    
+        
         let update = Tasks(context: managedObjectContext)
         
         // update.colors =  task.color
@@ -148,7 +148,7 @@ class TaskModel {
             return nil
         }
         let entity = self.task[index]
-        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name")
+        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", entity.priorty)
         return tasks
     }
     
@@ -163,8 +163,13 @@ class TaskModel {
         }
     }
     
+//    public func changeTaskPriority(task: DoneTask, priority: Int) {
+//        let update = Tasks(context: managedObjectContext)
+//        update.priorty = task.priorty
+//
+//    }
+    
 }
-
 
 
 

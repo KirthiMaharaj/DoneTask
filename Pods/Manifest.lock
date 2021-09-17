@@ -1,16 +1,20 @@
 PODS:
+  - LKAlertController (1.12.2)
   - MBCheckboxButton (1.4)
 
 DEPENDENCIES:
+  - LKAlertController (~> 1.12)
   - MBCheckboxButton (~> 1.4)
 
 SPEC REPOS:
   trunk:
+    - LKAlertController
     - MBCheckboxButton
 
 SPEC CHECKSUMS:
+  LKAlertController: 10c7e8627e5d4757d03b4f53469f35ded14c378f
   MBCheckboxButton: 6ad0b46b111c59ea9dec558e0df1973cee2eb3aa
 
-PODFILE CHECKSUM: ad69cde7888eb8e82fe0b78a24aaf3c54bf88e17
+PODFILE CHECKSUM: 43bb3cb07c1deadfc697de78a4c67073e7fea487
 
 COCOAPODS: 1.11.1

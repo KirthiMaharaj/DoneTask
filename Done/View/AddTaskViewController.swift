@@ -6,12 +6,11 @@
 //
 
 import UIKit
-
+import LKAlertController
 class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var dateTaskPicker: UIDatePicker!
-    @IBOutlet weak var priortyTask: UITextField!
     @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var priortyButton: UIButton!
     @IBOutlet weak var reminderButton: UIButton!
@@ -19,7 +18,7 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var dataProvider = TaskModel(completionClosure: {})
-    
+    private var selectedPriority: Priority!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,7 +30,7 @@ class AddTaskViewController: UIViewController {
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
         
         if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName)
+            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName, Int16(self.selectedPriority.rawValue))
             
             self.dataProvider.createTasks(task) { success in
                 if success {
@@ -67,12 +66,37 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBAction func priortyTapped(_ sender: Any) {
+        let sheet = ActionSheet(title: "PRIORITY".localized(), message: nil)
+        sheet.setPresentingSource(self.priortyButton)
         
+        sheet.addAction(Priority.High.text, style: .default) { action in
+            // self.setTaskPriority(priority: 1, title: action?.title)
+            self.selectedPriority = .High
+            self.priortyButton.setTitleColor(self.selectedPriority.color, for: .normal)
+            self.priortyButton.setTitle(action?.title, for: .normal)
+        }
+        sheet.addAction(Priority.Normal.text, style: .default) { action in
+            self.selectedPriority = .Normal
+            self.priortyButton.setTitleColor(self.selectedPriority.color, for: .normal)
+            self.priortyButton.setTitle(action?.title, for: .normal)
+        }
+        sheet.addAction(Priority.Low.text, style: .default) { action in
+            self.selectedPriority = .Low
+            self.priortyButton.setTitleColor(self.selectedPriority.color, for: .normal)
+            self.priortyButton.setTitle(action?.title, for: .normal)
+        }
+        sheet.addAction(Priority.None.text, style: .default) { (action) in
+            self.selectedPriority = .None
+            self.priortyButton.setTitle(action?.title, for: .normal)
+        }
+        sheet.addAction("CANCEL".localized(), style: .cancel)
+        sheet.presentIn(self)
+        sheet.show(animated: true)
     }
+    
     
     @IBAction func nameEditTextField(_ sender: UITextField) {
         self.check()
-        // self.taskName = sender.text
     }
     
     public func addRequiredData(model: TaskModel) {
@@ -80,3 +104,16 @@ class AddTaskViewController: UIViewController {
     }
     
 }
+
+
+//    func setTaskPriority(priority: Int, title: String?) {
+//        let task = DoneTask(taskDescription.text ?? "", dateTaskPicker.date, false, taskTitle.text ?? "", Int16(priortyButton.buttonType.rawValue))
+//        dataProvider.changeTaskPriority(task: task , priority: priority)
+//        self.priortyButton.setTitle(title, for: .normal)
+//        if priority != 5 {
+//            self.priortyButton.setTitleColor(Config.General.priorityColors[Int(priority) - 1], for: .normal)
+//        } else {
+//            self.priortyButton.setTitleColor(UIColor.black, for: .normal)
+//        }
+//    }
+

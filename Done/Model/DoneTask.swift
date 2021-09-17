@@ -16,9 +16,9 @@ struct DoneTask {
     var isComplete:Bool
     //    var isDelete:Bool
     var name:String
-    // var priorty:Int64
+    var priorty:Int16 = 5
     
-    init(_ taskDescriptions: String, _ taskDate:Date, _ taskComplete:Bool, _ taskName:String) {
+    init(_ taskDescriptions: String, _ taskDate:Date, _ taskComplete:Bool, _ taskName:String, _ taskPriority:Int16) {
         //  color = taskColor
         descriptions = taskDescriptions
         dueDate = taskDate
@@ -26,7 +26,7 @@ struct DoneTask {
         isComplete = taskComplete
         //   isDelete = taskDelete
         name = taskName
-        //  priorty = taskPriorty
+        priorty = taskPriority
     }
     
     init?(taskModel: Tasks) {
@@ -38,7 +38,7 @@ struct DoneTask {
         isComplete = taskModel.isComplete
         //    isDelete = taskModel.isDelete
         name = taskName
-        //  priorty = taskModel.priorty
+        priorty = Int16(taskModel.priorty)
     }
 }
 

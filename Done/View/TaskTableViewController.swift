@@ -47,8 +47,18 @@ class TaskTableViewController: UITableViewController {
             cell.taskDate.text = formatter.string(from: tasks.dueDate)
             cell.completeButton.isOn = tasks.isComplete
             cell.delegate = self
-            
+            let priorityColor = Priority(rawValue: Int(tasks.priorty))
+            cell.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
+            cell.priortyButton.setTitle(priorityColor?.text, for: .normal)
+            //            if tasks.priorty != 5 && Config.Features.enablePriority {
+            //                cell.priortyButton.setTitle(Config.General.priorityTitles[Int(tasks.priorty) - 1], for: .normal)
+            //                cell.priortyButton.setTitleColor(Config.General.priorityColors[Int(tasks.priorty) - 1], for: .normal)
+            //                cell.priortyButton.isHidden = false
+            //            } else {
+            //                cell.priortyButton.isHidden = true
+            //           }
         }
+        
         return cell
     }
     
@@ -63,12 +73,12 @@ class TaskTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [action])
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        dataProvider.lastIndexTapped = indexPath.row
-//        let tasked = dataProvider.getTask(atIndex: indexPath.row)
-//        performSegue(withIdentifier: "editTask", sender: tasked)
-//
-//    }
+    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        dataProvider.lastIndexTapped = indexPath.row
+    //        let tasked = dataProvider.getTask(atIndex: indexPath.row)
+    //        performSegue(withIdentifier: "editTask", sender: tasked)
+    //
+    //    }
     
     
     /*
@@ -134,7 +144,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate,true, old.name)
+            let new = DoneTask(old.descriptions, old.dueDate,true, old.name, old.priorty)
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
             
@@ -144,7 +154,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate, false, old.name)
+            let new = DoneTask(old.descriptions, old.dueDate, false, old.name, old.priorty)
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
         }

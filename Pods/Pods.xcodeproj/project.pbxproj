@@ -7,101 +7,138 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BC152DC59425255AF377B5D9D599D9D /* Pods-Done-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */; };
-		1D6DF7E6C8A40BC3E297814F2512B7B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		332505AA200561E9DCA3E9D03EFA6C68 /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957F4A3952C6A3C41856A8D66894E1FC /* CheckboxLineStyle.swift */; };
-		3754727600CC00A9B107FB2C9A463C18 /* Pods-Done-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		39FB38FADD5A2E04EEF5EA5EF75C18D6 /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F404FC0461731E3CE714470CE4CF1 /* RadioCheckboxBaseContainer.swift */; };
-		5270F53B8CD2835B62C9DE91C44CF039 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		5684BB90ADF94A7F041BA1710A9745D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		691E868ABFE11240C25B6F631524269E /* MBCheckboxButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E19BBD314178E8A2F9EB8DE93AE25E9 /* MBCheckboxButton-dummy.m */; };
-		7CAE59FD98FFE8CFA0FEF30378466CF6 /* CheckboxButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113FDECA2C4A8F1AB6A2366B10274EA7 /* CheckboxButtonContainer.swift */; };
-		9F36088C422A7F17C34564D1B92B8236 /* MBCheckboxButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 368305CEE99CB1EE1950E99222BAB7F6 /* MBCheckboxButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9BBE1121F466D87C970716753C65040 /* Pods-Done-DoneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */; };
-		A9F0D34E237E45D5565A5F3543A4C33D /* Pods-Done-DoneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD1DC82ABB7F630B9B9D5874350BBABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0B0A2CB8044E2FF98502BEA42376049F /* LKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */; };
+		1D6DF7E6C8A40BC3E297814F2512B7B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		332505AA200561E9DCA3E9D03EFA6C68 /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */; };
+		39FB38FADD5A2E04EEF5EA5EF75C18D6 /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */; };
+		5C01E8C77200D7C562919A4AF814DECB /* LKAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		691E868ABFE11240C25B6F631524269E /* MBCheckboxButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */; };
+		6DF8639777AD87E317E55EF56A854F71 /* Pods-Done-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E75DFD4D69FFEE69BE3D400CA2C9E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		72057BE96FDEA6D88C18C708C847DC52 /* Pods-Done-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */; };
+		7CAE59FD98FFE8CFA0FEF30378466CF6 /* CheckboxButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */; };
+		9353BA8B6D069863D7C4CB267DCC6F11 /* Pods-Done-DoneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F36088C422A7F17C34564D1B92B8236 /* MBCheckboxButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD1DC82ABB7F630B9B9D5874350BBABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		AE0AC93BA55C4C7101E06EC408464405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		B1101DDADF0DE8E93DC932E41E2F2290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		BA7D2B4B14FDDF15B1FD1C5D64B61559 /* Pods-DoneTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA2A2512A0D9F51A511883D97DE40D /* Pods-DoneTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2252A396EB5410375AAD0D615BE72F6 /* Pods-DoneTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DE355F1B2115FD82D04F7F9E80F22 /* Pods-DoneTests-dummy.m */; };
-		D7AC0898CBC727054AC9AA6A467FC50D /* CheckboxButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E8B500C878D752C80BB0297B06B113 /* CheckboxButtonContainerView.swift */; };
-		DB9C3CD2D141DB4502B79C1E0CAE2545 /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ACC2DA7CD85CC6697C12155AD01C54 /* RadioCheckboxBaseButton.swift */; };
-		E74D3072654C741675136F0F4F3941B0 /* CheckBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80BA6BA68F8CC1C670D27978055537F /* CheckBoxColor.swift */; };
-		F1F5AE80D38C77CD431FB790C2924C7F /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F6ABE7DEA275EE3F1DC28E66C7453 /* CheckboxButton.swift */; };
+		D2FD47565A46EAD2ED19E052CAF35C99 /* LKAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */; };
+		D7238422BA70C1CEEFE9968B8A01D7D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		D7AC0898CBC727054AC9AA6A467FC50D /* CheckboxButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */; };
+		DB9C3CD2D141DB4502B79C1E0CAE2545 /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */; };
+		E74D3072654C741675136F0F4F3941B0 /* CheckBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */; };
+		EE39E620ADC31C4FD40BF1AE2290ACC6 /* Pods-Done-DoneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */; };
+		F1F5AE80D38C77CD431FB790C2924C7F /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10EDAF1911E568AE78EAD38C859A29E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
-			remoteInfo = MBCheckboxButton;
-		};
-		748574016D26E86079C3CA5CA18D26BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
-			remoteInfo = MBCheckboxButton;
-		};
-		DDDDBFB4A73B0CD1C09AEA3396163295 /* PBXContainerItemProxy */ = {
+		6A1833C7A1CDEA5A759E422E5D84D0FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C4676B34762A4138E48399FA14D1B48F;
 			remoteInfo = "Pods-Done";
 		};
+		A2C6D2D609BA20BE5A72FEB9CD31E1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
+			remoteInfo = MBCheckboxButton;
+		};
+		AF23D574E62EBA3C6CF85D6620DBB415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
+			remoteInfo = LKAlertController;
+		};
+		C2B3A51B3818BF4A9713230BE2C51C08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
+			remoteInfo = MBCheckboxButton;
+		};
+		F831077D66CE262CF417F66F7D7B4862 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
+			remoteInfo = LKAlertController;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		083796D02F7D8147BF51CB0B75280FA3 /* MBCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCheckboxButton.modulemap; sourceTree = "<group>"; };
 		0C892FC08B0D4DC9ACB6590A8EC6C243 /* Pods-Done-DoneUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Done-DoneUITests.modulemap"; sourceTree = "<group>"; };
 		0FEF528930415EE5715FF83C26AE6CDE /* Pods-Done-DoneUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Done-DoneUITests-frameworks.sh"; sourceTree = "<group>"; };
-		113FDECA2C4A8F1AB6A2366B10274EA7 /* CheckboxButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainer.swift; path = Source/CheckboxButton/CheckboxButtonContainer.swift; sourceTree = "<group>"; };
+		1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.release.xcconfig; sourceTree = "<group>"; };
 		200312DFA9C67FF1A9426D24B58EC45C /* Pods-Done-DoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20B0C3D22BB6A0D9C2774BC74B122EA1 /* Pods-Done.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done.debug.xcconfig"; sourceTree = "<group>"; };
-		2740D0A4B8F5CF7402EC3BE5819A5A34 /* MBCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCheckboxButton.modulemap; sourceTree = "<group>"; };
-		368305CEE99CB1EE1950E99222BAB7F6 /* MBCheckboxButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-umbrella.h"; sourceTree = "<group>"; };
+		29927607CE84D95F8F3576097EB2CC69 /* MBCheckboxButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCheckboxButton-Info.plist"; sourceTree = "<group>"; };
 		3B6730B5DB08FB4AAC0B53E7ABAA6BF2 /* Pods-DoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.debug.xcconfig; sourceTree = "<group>"; };
 		4BFAEA23FD3139510F5439B309DBF084 /* Pods-Done-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C32151C6AD3F657F857148004D01F25 /* Pods-Done-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-acknowledgements.plist"; sourceTree = "<group>"; };
+		510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-umbrella.h"; sourceTree = "<group>"; };
 		528FBBFC4E7456ADA710B208AE875678 /* Pods-DoneTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DoneTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		58D993109707A1BB2A680B33E6A4EB15 /* MBCheckboxButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-prefix.pch"; sourceTree = "<group>"; };
 		5C37810A6573A281A8E15CD043B373B9 /* Pods-Done-DoneUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-Info.plist"; sourceTree = "<group>"; };
 		5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done.release.xcconfig"; sourceTree = "<group>"; };
 		6C06F903BC7CEA7B3201F53C71590A4F /* Pods-DoneTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DoneTests-Info.plist"; sourceTree = "<group>"; };
-		6E19BBD314178E8A2F9EB8DE93AE25E9 /* MBCheckboxButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCheckboxButton-dummy.m"; sourceTree = "<group>"; };
-		6E4B1203053BE5FA6236712C9F06A5ED /* MBCheckboxButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCheckboxButton-Info.plist"; sourceTree = "<group>"; };
+		6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LKAlertController; path = LKAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Done-DoneUITests-umbrella.h"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7B5F404FC0461731E3CE714470CE4CF1 /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
+		78F0330C8CA718AC9365ABC81DE9DFA6 /* MBCheckboxButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-prefix.pch"; sourceTree = "<group>"; };
 		7BDAB166B51A3FA7509A6421109F9EF7 /* Pods-DoneTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DoneTests.modulemap"; sourceTree = "<group>"; };
 		7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Done-DoneUITests-dummy.m"; sourceTree = "<group>"; };
+		7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxLineStyle.swift; path = Source/CheckboxButton/CheckboxLineStyle.swift; sourceTree = "<group>"; };
 		828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DoneTests"; path = Pods_DoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Done-dummy.m"; sourceTree = "<group>"; };
-		8FFC459FE91FBB1B77C711F1DEEBD9FD /* MBCheckboxButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.debug.xcconfig; sourceTree = "<group>"; };
-		957F4A3952C6A3C41856A8D66894E1FC /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxLineStyle.swift; path = Source/CheckboxButton/CheckboxLineStyle.swift; sourceTree = "<group>"; };
+		87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.debug.xcconfig; sourceTree = "<group>"; };
+		884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
+		956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKAlertController.swift; path = Pod/Classes/LKAlertController.swift; sourceTree = "<group>"; };
 		98DA2A2512A0D9F51A511883D97DE40D /* Pods-DoneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DoneTests-umbrella.h"; sourceTree = "<group>"; };
 		993DE355F1B2115FD82D04F7F9E80F22 /* Pods-DoneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DoneTests-dummy.m"; sourceTree = "<group>"; };
-		996F6ABE7DEA275EE3F1DC28E66C7453 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
 		9CC7568AB0B892D60B4FB991D76593B4 /* Pods-Done-DoneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5380F95349BCF79A62D8AC84C5DB3E /* Pods-DoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
 		A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Done"; path = Pods_Done.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A80BA6BA68F8CC1C670D27978055537F /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
+		A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainer.swift; path = Source/CheckboxButton/CheckboxButtonContainer.swift; sourceTree = "<group>"; };
 		AA551D5F44FF21A78631A35A43216EE8 /* Pods-Done-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Done-frameworks.sh"; sourceTree = "<group>"; };
-		B8E8B500C878D752C80BB0297B06B113 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
 		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCheckboxButton; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
+		BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-umbrella.h"; sourceTree = "<group>"; };
+		C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKAlertController-dummy.m"; sourceTree = "<group>"; };
 		C079DFAF2897ECB229869D37211EB694 /* Pods-Done-DoneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-DoneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCheckboxButton-dummy.m"; sourceTree = "<group>"; };
 		C40C12887E96C940D2AF0740826C3E00 /* Pods-Done-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-Info.plist"; sourceTree = "<group>"; };
+		CC567A042DA5A434180BA28489F14C47 /* LKAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LKAlertController-Info.plist"; sourceTree = "<group>"; };
+		D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseButton.swift; path = Source/BaseButton/RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D361B3B1E579FCBF6F43D188F96E8E86 /* LKAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-prefix.pch"; sourceTree = "<group>"; };
+		D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.release.xcconfig; sourceTree = "<group>"; };
 		D990ABA8DD219C2E8483FA0B11284587 /* Pods-Done.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Done.modulemap"; sourceTree = "<group>"; };
-		DC7FD1B1B577784F68CDE887E7BB4B3A /* MBCheckboxButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.release.xcconfig; sourceTree = "<group>"; };
+		DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
 		E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Done-umbrella.h"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F22EB69A8E89BB94518F7FFCCF951EB1 /* Pods-DoneTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DoneTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F6ACC2DA7CD85CC6697C12155AD01C54 /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseButton.swift; path = Source/BaseButton/RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
 		FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Done-DoneUITests"; path = Pods_Done_DoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF8FA6B82087D7C47D2F59F229B16C6 /* LKAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LKAlertController.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		02C4133319FD67B8674AE21388C68DE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E75DFD4D69FFEE69BE3D400CA2C9E33 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		062890CF79ADA7EB6EAA6A15DC1E589A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,19 +147,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B53BE03A5B31990C2D54D97FED9EF3BC /* Frameworks */ = {
+		0A5AB4CA71BD69FFAAC4709EA8C568D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5684BB90ADF94A7F041BA1710A9745D8 /* Foundation.framework in Frameworks */,
+				D7238422BA70C1CEEFE9968B8A01D7D6 /* Foundation.framework in Frameworks */,
+				B1101DDADF0DE8E93DC932E41E2F2290 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D85A2935CA47FDE2633024D8446D36F6 /* Frameworks */ = {
+		58FBA2756F341F1F862C001D29DED5A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5270F53B8CD2835B62C9DE91C44CF039 /* Foundation.framework in Frameworks */,
+				AE0AC93BA55C4C7101E06EC408464405 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,31 +191,12 @@
 			path = "Target Support Files/Pods-DoneTests";
 			sourceTree = "<group>";
 		};
-		14E7E83FCE3C38B0B73A60EE2958B8AE /* MBCheckboxButton */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				996F6ABE7DEA275EE3F1DC28E66C7453 /* CheckboxButton.swift */,
-				113FDECA2C4A8F1AB6A2366B10274EA7 /* CheckboxButtonContainer.swift */,
-				B8E8B500C878D752C80BB0297B06B113 /* CheckboxButtonContainerView.swift */,
-				A80BA6BA68F8CC1C670D27978055537F /* CheckBoxColor.swift */,
-				957F4A3952C6A3C41856A8D66894E1FC /* CheckboxLineStyle.swift */,
-				F6ACC2DA7CD85CC6697C12155AD01C54 /* RadioCheckboxBaseButton.swift */,
-				7B5F404FC0461731E3CE714470CE4CF1 /* RadioCheckboxBaseContainer.swift */,
-				B4D4A912CFC80D901E2834B2F10F59FA /* Support Files */,
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
-			name = MBCheckboxButton;
-			path = MBCheckboxButton;
-			sourceTree = "<group>";
-		};
-		41008F72C2A4AE2F0505C1521AE7B292 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
-				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
-				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
-				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
-			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5634A0716D265AEE02A9AC8EA7C9BE2C /* Targets Support Files */ = {
@@ -190,10 +209,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		580CCF84EF9314ED7252657A54F436D5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				083796D02F7D8147BF51CB0B75280FA3 /* MBCheckboxButton.modulemap */,
+				C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */,
+				29927607CE84D95F8F3576097EB2CC69 /* MBCheckboxButton-Info.plist */,
+				78F0330C8CA718AC9365ABC81DE9DFA6 /* MBCheckboxButton-prefix.pch */,
+				BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */,
+				4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */,
+				D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBCheckboxButton";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -215,19 +250,54 @@
 			path = "Target Support Files/Pods-Done-DoneUITests";
 			sourceTree = "<group>";
 		};
-		B4D4A912CFC80D901E2834B2F10F59FA /* Support Files */ = {
+		85E3625EAF6E150B25F27E9B627A037C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2740D0A4B8F5CF7402EC3BE5819A5A34 /* MBCheckboxButton.modulemap */,
-				6E19BBD314178E8A2F9EB8DE93AE25E9 /* MBCheckboxButton-dummy.m */,
-				6E4B1203053BE5FA6236712C9F06A5ED /* MBCheckboxButton-Info.plist */,
-				58D993109707A1BB2A680B33E6A4EB15 /* MBCheckboxButton-prefix.pch */,
-				368305CEE99CB1EE1950E99222BAB7F6 /* MBCheckboxButton-umbrella.h */,
-				8FFC459FE91FBB1B77C711F1DEEBD9FD /* MBCheckboxButton.debug.xcconfig */,
-				DC7FD1B1B577784F68CDE887E7BB4B3A /* MBCheckboxButton.release.xcconfig */,
+				FFF8FA6B82087D7C47D2F59F229B16C6 /* LKAlertController.modulemap */,
+				C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */,
+				CC567A042DA5A434180BA28489F14C47 /* LKAlertController-Info.plist */,
+				D361B3B1E579FCBF6F43D188F96E8E86 /* LKAlertController-prefix.pch */,
+				510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */,
+				87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */,
+				1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBCheckboxButton";
+			path = "../Target Support Files/LKAlertController";
+			sourceTree = "<group>";
+		};
+		8B2720F7DD841FBABC6A621DA5319638 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7FFF883E9F2B3C494BEFC52C1F3A9A1 /* LKAlertController */,
+				8DC2318D364AB5416A34FD945711DB18 /* MBCheckboxButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DC2318D364AB5416A34FD945711DB18 /* MBCheckboxButton */ = {
+			isa = PBXGroup;
+			children = (
+				DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */,
+				A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */,
+				A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */,
+				BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */,
+				7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */,
+				D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */,
+				884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */,
+				580CCF84EF9314ED7252657A54F436D5 /* Support Files */,
+			);
+			name = MBCheckboxButton;
+			path = MBCheckboxButton;
+			sourceTree = "<group>";
+		};
+		A7FFF883E9F2B3C494BEFC52C1F3A9A1 /* LKAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */,
+				85E3625EAF6E150B25F27E9B627A037C /* Support Files */,
+			);
+			name = LKAlertController;
+			path = LKAlertController;
 			sourceTree = "<group>";
 		};
 		C0E60F092E8D236A8FCF5FC8B9F4C1D2 /* Pods-Done */ = {
@@ -247,41 +317,37 @@
 			path = "Target Support Files/Pods-Done";
 			sourceTree = "<group>";
 		};
-		CD885EE3B4BC133F713C79F19C2C3989 /* Pods */ = {
+		CCBF106E191333FA7F97FEB91515E498 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14E7E83FCE3C38B0B73A60EE2958B8AE /* MBCheckboxButton */,
+				6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */,
+				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
+				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
+				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
+				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				CD885EE3B4BC133F713C79F19C2C3989 /* Pods */,
-				41008F72C2A4AE2F0505C1521AE7B292 /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				8B2720F7DD841FBABC6A621DA5319638 /* Pods */,
+				CCBF106E191333FA7F97FEB91515E498 /* Products */,
 				5634A0716D265AEE02A9AC8EA7C9BE2C /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		176DE7DE2A0FA53B5851DCB70E1A39DC /* Headers */ = {
+		0A3C4AFFDBE0EE74F9396C4B3B72E6E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F0D34E237E45D5565A5F3543A4C33D /* Pods-Done-DoneUITests-umbrella.h in Headers */,
+				6DF8639777AD87E317E55EF56A854F71 /* Pods-Done-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,11 +359,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7C888528F414866544431EFF4F10869D /* Headers */ = {
+		61F452E326C486EBEAFDAEDCAF631D7A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3754727600CC00A9B107FB2C9A463C18 /* Pods-Done-umbrella.h in Headers */,
+				9353BA8B6D069863D7C4CB267DCC6F11 /* Pods-Done-DoneUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF90BCCC875EF663B2B9D563FADC5F35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C01E8C77200D7C562919A4AF814DECB /* LKAlertController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +386,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EA8E7E8B0828DEB81E3F42AC2922475 /* Build configuration list for PBXNativeTarget "LKAlertController" */;
+			buildPhases = (
+				AF90BCCC875EF663B2B9D563FADC5F35 /* Headers */,
+				29C86974434AF8B28F4DBD5701803BC2 /* Sources */,
+				0A5AB4CA71BD69FFAAC4709EA8C568D0 /* Frameworks */,
+				975F0BA58E114ECC7615862A1F83D2D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LKAlertController;
+			productName = LKAlertController;
+			productReference = 6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */;
+			productType = "com.apple.product-type.framework";
+		};
 		90BA32F2E01EE6518D47FDCECA0D1F6C /* Pods-DoneTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B5A6E8B676D08B9C2C0BC4266F75180 /* Build configuration list for PBXNativeTarget "Pods-DoneTests" */;
@@ -324,7 +416,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				279EE19FF001CB13DD19FFA6A9832D62 /* PBXTargetDependency */,
+				F73216B7E60B48DAD0B7953435DBFA66 /* PBXTargetDependency */,
 			);
 			name = "Pods-DoneTests";
 			productName = Pods_DoneTests;
@@ -333,17 +425,18 @@
 		};
 		BDB140F45EA97BF501F6D1B7456E797F /* Pods-Done-DoneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1199D37BF202BED4A642E27DD879191 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */;
+			buildConfigurationList = 4964EEB6106ECF9FAF3756FC5B380B42 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */;
 			buildPhases = (
-				176DE7DE2A0FA53B5851DCB70E1A39DC /* Headers */,
-				D4F805DCE45C2E2DEF4EB393049A14F5 /* Sources */,
-				B53BE03A5B31990C2D54D97FED9EF3BC /* Frameworks */,
-				D045983EFBC425148BE6870DA5F19DFB /* Resources */,
+				61F452E326C486EBEAFDAEDCAF631D7A /* Headers */,
+				A2BDF0423C1C4B38538D86F4F0CB6558 /* Sources */,
+				58FBA2756F341F1F862C001D29DED5A5 /* Frameworks */,
+				EB9E80BD73B2123AA352A2C8F69B90DD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2B979DA1485B920E287AAED4B36AD66E /* PBXTargetDependency */,
+				75B8F5A783AD8F5ADCF1BADD99F330B8 /* PBXTargetDependency */,
+				5CC78750468B0896D5BFF34717F972D1 /* PBXTargetDependency */,
 			);
 			name = "Pods-Done-DoneUITests";
 			productName = Pods_Done_DoneUITests;
@@ -352,17 +445,18 @@
 		};
 		C4676B34762A4138E48399FA14D1B48F /* Pods-Done */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9672AF5F246F9F528F4C0554332BA07 /* Build configuration list for PBXNativeTarget "Pods-Done" */;
+			buildConfigurationList = 01DEF0C86A3F80CBB6ADDF7CD6479DFF /* Build configuration list for PBXNativeTarget "Pods-Done" */;
 			buildPhases = (
-				7C888528F414866544431EFF4F10869D /* Headers */,
-				7252850EEDF13714B3E871556C83C5DA /* Sources */,
-				D85A2935CA47FDE2633024D8446D36F6 /* Frameworks */,
-				34F0D9396CF786EE559B2B79F5679976 /* Resources */,
+				0A3C4AFFDBE0EE74F9396C4B3B72E6E6 /* Headers */,
+				2ADCCDE67978D259F7E21C4565E5BC04 /* Sources */,
+				02C4133319FD67B8674AE21388C68DE9 /* Frameworks */,
+				586EE559131D125A1E1886F1BA8A6B93 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E9D250F3DF265F10EF77CB9B1D5C6B2 /* PBXTargetDependency */,
+				9B179D2AA7D2E41C704E36E3A10E5673 /* PBXTargetDependency */,
+				BE9B42E3FD277B81221D445E07BD0CA6 /* PBXTargetDependency */,
 			);
 			name = "Pods-Done";
 			productName = Pods_Done;
@@ -405,10 +499,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 41008F72C2A4AE2F0505C1521AE7B292 /* Products */;
+			productRefGroup = CCBF106E191333FA7F97FEB91515E498 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */,
 				F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */,
 				C4676B34762A4138E48399FA14D1B48F /* Pods-Done */,
 				BDB140F45EA97BF501F6D1B7456E797F /* Pods-Done-DoneUITests */,
@@ -418,7 +513,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		34F0D9396CF786EE559B2B79F5679976 /* Resources */ = {
+		586EE559131D125A1E1886F1BA8A6B93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		975F0BA58E114ECC7615862A1F83D2D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,7 +534,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D045983EFBC425148BE6870DA5F19DFB /* Resources */ = {
+		EB9E80BD73B2123AA352A2C8F69B90DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +551,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		29C86974434AF8B28F4DBD5701803BC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0A2CB8044E2FF98502BEA42376049F /* LKAlertController.swift in Sources */,
+				D2FD47565A46EAD2ED19E052CAF35C99 /* LKAlertController-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ADCCDE67978D259F7E21C4565E5BC04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72057BE96FDEA6D88C18C708C847DC52 /* Pods-Done-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4AC1D2BCEB615D222379B7F3E0C554B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,42 +591,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7252850EEDF13714B3E871556C83C5DA /* Sources */ = {
+		A2BDF0423C1C4B38538D86F4F0CB6558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC152DC59425255AF377B5D9D599D9D /* Pods-Done-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F805DCE45C2E2DEF4EB393049A14F5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A9BBE1121F466D87C970716753C65040 /* Pods-Done-DoneUITests-dummy.m in Sources */,
+				EE39E620ADC31C4FD40BF1AE2290ACC6 /* Pods-Done-DoneUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		279EE19FF001CB13DD19FFA6A9832D62 /* PBXTargetDependency */ = {
+		5CC78750468B0896D5BFF34717F972D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBCheckboxButton;
+			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
+			targetProxy = C2B3A51B3818BF4A9713230BE2C51C08 /* PBXContainerItemProxy */;
+		};
+		75B8F5A783AD8F5ADCF1BADD99F330B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKAlertController;
+			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
+			targetProxy = AF23D574E62EBA3C6CF85D6620DBB415 /* PBXContainerItemProxy */;
+		};
+		9B179D2AA7D2E41C704E36E3A10E5673 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKAlertController;
+			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
+			targetProxy = F831077D66CE262CF417F66F7D7B4862 /* PBXContainerItemProxy */;
+		};
+		BE9B42E3FD277B81221D445E07BD0CA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBCheckboxButton;
+			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
+			targetProxy = A2C6D2D609BA20BE5A72FEB9CD31E1DA /* PBXContainerItemProxy */;
+		};
+		F73216B7E60B48DAD0B7953435DBFA66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Done";
 			target = C4676B34762A4138E48399FA14D1B48F /* Pods-Done */;
-			targetProxy = DDDDBFB4A73B0CD1C09AEA3396163295 /* PBXContainerItemProxy */;
-		};
-		2B979DA1485B920E287AAED4B36AD66E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBCheckboxButton;
-			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
-			targetProxy = 748574016D26E86079C3CA5CA18D26BC /* PBXContainerItemProxy */;
-		};
-		6E9D250F3DF265F10EF77CB9B1D5C6B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBCheckboxButton;
-			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
-			targetProxy = 10EDAF1911E568AE78EAD38C859A29E9 /* PBXContainerItemProxy */;
+			targetProxy = 6A1833C7A1CDEA5A759E422E5D84D0FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -536,6 +659,44 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-DoneTests/Pods-DoneTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1FAB1D90891C59950E7A6A48D857A9FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Done/Pods-Done-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Done/Pods-Done.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -589,7 +750,7 @@
 		};
 		40AE1670022409C453E616E036BCEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FFC459FE91FBB1B77C711F1DEEBD9FD /* MBCheckboxButton.debug.xcconfig */;
+			baseConfigurationReference = 4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -621,42 +782,7 @@
 			};
 			name = Debug;
 		};
-		416F62CA4724A51D675AB18D49EA0E8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC7FD1B1B577784F68CDE887E7BB4B3A /* MBCheckboxButton.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton.modulemap";
-				PRODUCT_MODULE_NAME = MBCheckboxButton;
-				PRODUCT_NAME = MBCheckboxButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6B7E5A72C71C7A0FD5BC34A46F3CC2F5 /* Debug */ = {
+		416F16D77C15B1C24227E35ABBBBCB75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20B0C3D22BB6A0D9C2774BC74B122EA1 /* Pods-Done.debug.xcconfig */;
 			buildSettings = {
@@ -693,12 +819,10 @@
 			};
 			name = Debug;
 		};
-		743C7063C83726E6C2B9B771A3A9B871 /* Release */ = {
+		416F62CA4724A51D675AB18D49EA0E8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */;
+			baseConfigurationReference = D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -707,23 +831,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Done/Pods-Done-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Done/Pods-Done.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton.modulemap";
+				PRODUCT_MODULE_NAME = MBCheckboxButton;
+				PRODUCT_NAME = MBCheckboxButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -731,7 +854,76 @@
 			};
 			name = Release;
 		};
-		8414B344AA29C40C6B27298ECBECB6E3 /* Debug */ = {
+		9E4201ADA78316FB98C9685012A05140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
+				PRODUCT_MODULE_NAME = LKAlertController;
+				PRODUCT_NAME = LKAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AABD2ECBD93FAED2A09E71F009F58F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
+				PRODUCT_MODULE_NAME = LKAlertController;
+				PRODUCT_NAME = LKAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B9AEF4105AF0EDE6C37E47D4D04777FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 200312DFA9C67FF1A9426D24B58EC45C /* Pods-Done-DoneUITests.debug.xcconfig */;
 			buildSettings = {
@@ -896,7 +1088,7 @@
 			};
 			name = Release;
 		};
-		F64A54FD4F7E75B731B85B9B189C6266 /* Release */ = {
+		DCAD9C2175E4B4773D4AF891DAEFCC09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */;
 			buildSettings = {
@@ -937,6 +1129,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01DEF0C86A3F80CBB6ADDF7CD6479DFF /* Build configuration list for PBXNativeTarget "Pods-Done" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				416F16D77C15B1C24227E35ABBBBCB75 /* Debug */,
+				1FAB1D90891C59950E7A6A48D857A9FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EA8E7E8B0828DEB81E3F42AC2922475 /* Build configuration list for PBXNativeTarget "LKAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E4201ADA78316FB98C9685012A05140 /* Debug */,
+				AABD2ECBD93FAED2A09E71F009F58F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1EE20B498E3FC0927AC375AFFD015918 /* Build configuration list for PBXNativeTarget "MBCheckboxButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -955,29 +1165,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4964EEB6106ECF9FAF3756FC5B380B42 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9AEF4105AF0EDE6C37E47D4D04777FA /* Debug */,
+				DCAD9C2175E4B4773D4AF891DAEFCC09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5B5A6E8B676D08B9C2C0BC4266F75180 /* Build configuration list for PBXNativeTarget "Pods-DoneTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C3F1167AA6A11069647329FDBC0E048 /* Debug */,
 				17DEB31E3B831DAE326998C8EECB17FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1199D37BF202BED4A642E27DD879191 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8414B344AA29C40C6B27298ECBECB6E3 /* Debug */,
-				F64A54FD4F7E75B731B85B9B189C6266 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9672AF5F246F9F528F4C0554332BA07 /* Build configuration list for PBXNativeTarget "Pods-Done" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B7E5A72C71C7A0FD5BC34A46F3CC2F5 /* Debug */,
-				743C7063C83726E6C2B9B771A3A9B871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
