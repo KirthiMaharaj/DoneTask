@@ -18,16 +18,12 @@ class TaskTableViewController: UITableViewController {
         dataProvider.fetchTasks()
     }
     
+    
     private func setupModel() {
         self.dataProvider = TaskModel(completionClosure: {})
         self.dataProvider.delegate = self
     }
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -50,28 +46,29 @@ class TaskTableViewController: UITableViewController {
             let priorityColor = Priority(rawValue: Int(tasks.priorty))
             cell.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
             cell.priortyButton.setTitle(priorityColor?.text, for: .normal)
-            //            if tasks.priorty != 5 && Config.Features.enablePriority {
-            //                cell.priortyButton.setTitle(Config.General.priorityTitles[Int(tasks.priorty) - 1], for: .normal)
-            //                cell.priortyButton.setTitleColor(Config.General.priorityColors[Int(tasks.priorty) - 1], for: .normal)
-            //                cell.priortyButton.isHidden = false
-            //            } else {
-            //                cell.priortyButton.isHidden = true
-            //           }
         }
         
         return cell
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let alert = UIAlertController(title: "Delete", message: "Are you sure?", preferredStyle: .alert)
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
-            self.dataProvider.deleteTask(atIndex: indexPath.row)
-            self.dataProvider.saveTasks()
-            self.dataProvider.fetchTasks()
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                self.dataProvider.deleteTask(atIndex: indexPath.row)
+                self.dataProvider.saveTasks()
+                self.dataProvider.fetchTasks()
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
         }
         action.image = UIImage(systemName: "trash")?.withTintColor(.green, renderingMode: .alwaysOriginal)
         action.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return UISwipeActionsConfiguration(actions: [action])
     }
+    
     
     //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //        dataProvider.lastIndexTapped = indexPath.row
@@ -144,7 +141,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate,true, old.name, old.priorty)
+            let new = DoneTask(old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
             
@@ -154,7 +151,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate, false, old.name, old.priorty)
+            let new = DoneTask(old.descriptions, old.dueDate, false, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
         }
@@ -163,3 +160,13 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     
 }
 
+
+
+
+//            if tasks.priorty != 5 && Config.Features.enablePriority {
+//                cell.priortyButton.setTitle(Config.General.priorityTitles[Int(tasks.priorty) - 1], for: .normal)
+//                cell.priortyButton.setTitleColor(Config.General.priorityColors[Int(tasks.priorty) - 1], for: .normal)
+//                cell.priortyButton.isHidden = false
+//            } else {
+//                cell.priortyButton.isHidden = true
+//           }

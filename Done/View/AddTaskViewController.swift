@@ -19,6 +19,7 @@ class AddTaskViewController: UIViewController {
     
     var dataProvider = TaskModel(completionClosure: {})
     private var selectedPriority: Priority!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,14 +31,13 @@ class AddTaskViewController: UIViewController {
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
         
         if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName, Int16(self.selectedPriority.rawValue))
+            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName, Int(self.selectedPriority.rawValue))
             
             self.dataProvider.createTasks(task) { success in
                 if success {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-            
             self.dataProvider.saveTasks()
             self.dataProvider.fetchTasks()
             self.dismiss(animated: true, completion: nil)

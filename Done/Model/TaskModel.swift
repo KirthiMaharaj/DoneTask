@@ -76,11 +76,9 @@ class TaskModel {
         // newTask.colors =  task.color
         newTask.descriptions = task.descriptions
         newTask.dueDate = task.dueDate
-        // newTask.id = task.id
         newTask.isComplete = task.isComplete
-        //        newTask.isDelete = task.isDelete
         newTask.name = task.name
-        //  newTask.priorty = task.priorty
+        newTask.priorty = task.priorty
         do {
             try managedObjectContext.save()
         } catch {
@@ -105,9 +103,7 @@ class TaskModel {
         // update.colors =  task.color
         update.descriptions = task.descriptions
         update.dueDate = task.dueDate
-        // update.id = task.id
         update.isComplete = task.isComplete
-        //  update.isDelete = task.isDelete
         update.name = task.name
         //  update.priorty = task.priorty
         do {
@@ -126,11 +122,9 @@ class TaskModel {
         // entity.colors = task.color
         entity.descriptions = task.descriptions
         entity.dueDate = task.dueDate
-        // entity.id = task.id
         entity.isComplete = task.isComplete
-        //  entity.isDelete = task.isDelete
         entity.name = task.name
-        // entity.priorty = entity.priorty
+        entity.priorty = entity.priorty
     }
     
     
@@ -148,26 +142,26 @@ class TaskModel {
             return nil
         }
         let entity = self.task[index]
-        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", entity.priorty)
+        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
         return tasks
     }
     
     
-    public func removeAllDoneTasks() {
-        var index: Int = 0
-        for entity in self.task {
-            if entity.isComplete {
-                self.deleteTask(atIndex: index)
-            }
-            index += 1
-        }
-    }
-    
-//    public func changeTaskPriority(task: DoneTask, priority: Int) {
-//        let update = Tasks(context: managedObjectContext)
-//        update.priorty = task.priorty
-//
+//    public func removeAllDoneTasks() {
+//        var index: Int = 0
+//        for entity in self.task {
+//            if entity.isComplete {
+//                self.deleteTask(atIndex: index)
+//            }
+//            index += 1
+//        }
 //    }
+    
+    //    public func changeTaskPriority(task: DoneTask, priority: Int) {
+    //        let update = Tasks(context: managedObjectContext)
+    //        update.priorty = task.priorty
+    //
+    //    }
     
 }
 
