@@ -32,6 +32,17 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configures(tasks: DoneTask){
+        self.taskName.text = tasks.name
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM-dd-yyyy"
+        self.taskDate.text = formatter.string(from: tasks.dueDate)
+        self.completeButton.isOn = tasks.isComplete
+        let priorityColor = Priority(rawValue: Int(tasks.priorty))
+        self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
+        self.priortyButton.setTitle(priorityColor?.text, for: .normal)
+    }
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         setup()
@@ -48,6 +59,7 @@ class TaskViewCell: UITableViewCell {
             UIView.animate(withDuration: 0.5) {
                 self.taskName.attributedText = String.makeSlashText(text)
                 self.taskName.alpha = 0.5
+                
             }
             self.delegate?.didSelect(taskTableViewCell: self, didSelect: true)
         }
@@ -72,6 +84,7 @@ class TaskViewCell: UITableViewCell {
     
     
 }
+
 
 extension TaskViewCell: CheckboxButtonDelegate {
     func chechboxButtonDidSelect(_ button: CheckboxButton) {

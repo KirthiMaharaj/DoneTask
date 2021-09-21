@@ -297,7 +297,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="bh8-Xk-yvO">
                         <rightBarButtonItems>
-                            <barButtonItem image="arrow.up.arrow.down" catalog="system" id="Uc4-Km-9av"/>
+                            <barButtonItem image="arrow.up.arrow.down" catalog="system" id="Uc4-Km-9av">
+                                <connections>
+                                    <action selector="sortTypeTapped:" destination="2Q0-Mm-2Ul" id="ML3-sl-lHI"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="add" id="Yyd-AA-XHe">
                                 <connections>
                                     <segue destination="QPZ-Nn-8HN" kind="show" identifier="show" id="HWG-02-Ms1"/>
@@ -306,6 +310,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sortButton" destination="Uc4-Km-9av" id="wqY-eS-lQN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtK-Nd-91x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,7 +431,7 @@
     </scenes>
     <designables>
         <designable name="p0m-MX-DxL">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="24" height="18"/>
         </designable>
     </designables>
     <resources>

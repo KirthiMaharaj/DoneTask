@@ -28,7 +28,7 @@ class TaskModel {
     
     var lastIndexTapped : Int = 0
     public weak var delegate: TasksDataManagerDelegate?
-    
+    var selectedSortType: SortModel = .sortDateAsc
     init(completionClosure: @escaping () -> ()) {
         persistentContainer = NSPersistentContainer(name: "Done")
         persistentContainer.loadPersistentStores { (description, error) in
@@ -61,8 +61,12 @@ class TaskModel {
     
     
     public func fetchTasks() {
+        let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
+        //        let sortDescriptors = NSSortDescriptor(key: "dueDate", ascending: true)
+        //        fetchRequest.sortDescriptors = [sortDescriptors]
+        fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
         do {
-            self.task = try self.managedObjectContext.fetch(Tasks.fetchRequest())
+            self.task = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)
         }
         catch {
@@ -147,21 +151,16 @@ class TaskModel {
     }
     
     
-//    public func removeAllDoneTasks() {
-//        var index: Int = 0
-//        for entity in self.task {
-//            if entity.isComplete {
-//                self.deleteTask(atIndex: index)
-//            }
-//            index += 1
-//        }
-//    }
-    
-    //    public func changeTaskPriority(task: DoneTask, priority: Int) {
-    //        let update = Tasks(context: managedObjectContext)
-    //        update.priorty = task.priorty
-    //
+    //    public func removeAllDoneTasks() {
+    //        var index: Int = 0
+    //        for entity in self.task {
+    //            if entity.isComplete {
+    //                self.deleteTask(atIndex: index)
+    //            }
+    //            index += 1
+    //        }
     //    }
+    
     
 }
 
@@ -181,16 +180,17 @@ class TaskModel {
 //        newTask.name = task.name
 //
 //    }
-//    func fetchTasks(completion: @escaping (_ tasked: [DoneTask]) -> ()){
-//        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
-//        do {
-//            let tasksData = try managedObjectContext.fetch(fetch) as! [Tasks]
-//            let tasks = tasksData.compactMap { DoneTask(taskModel: $0) }
-//            completion(tasks)
-//        } catch {
-//            fatalError("Could not save context: \(error)")
+//        func fetchTasks(completion: @escaping (_ tasked: [DoneTask]) -> ()){
+//            let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
+//            do {
+//                let tasksData = try managedObjectContext.fetch(fetch) as! [Tasks]
+//                let tasks = tasksData.compactMap { DoneTask(taskModel: $0) }
+//                completion(tasks)
+//            } catch {
+//                fatalError("Could not save context: \(error)")
+//            }
 //        }
-//    }
+//
 //    func getToday() -> DoneTask {
 //        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
 //

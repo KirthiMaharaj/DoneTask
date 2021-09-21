@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import LKAlertController
 
 class TaskTableViewController: UITableViewController {
     
     var dataProvider = TaskModel(completionClosure: {})
     
+    
+    @IBOutlet weak var sortButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,17 @@ class TaskTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "Progress" : "Completed"
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return  self.dataProvider.count
+        self.sortButton.isEnabled = self.dataProvider.count > 0
+        
+        return dataProvider.count
     }
     
     
@@ -36,16 +47,10 @@ class TaskTableViewController: UITableViewController {
         
         // Configure the cell...
         if let tasks = dataProvider.getTask(atIndex: indexPath.row) {
-            cell.taskName.text = tasks.name
+            
             cell.id = indexPath.row
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MM-dd-yyyy"
-            cell.taskDate.text = formatter.string(from: tasks.dueDate)
-            cell.completeButton.isOn = tasks.isComplete
+            cell.configures(tasks: tasks)
             cell.delegate = self
-            let priorityColor = Priority(rawValue: Int(tasks.priorty))
-            cell.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
-            cell.priortyButton.setTitle(priorityColor?.text, for: .normal)
         }
         
         return cell
@@ -68,14 +73,28 @@ class TaskTableViewController: UITableViewController {
         action.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return UISwipeActionsConfiguration(actions: [action])
     }
+//
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
     
     
-    //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //        dataProvider.lastIndexTapped = indexPath.row
-    //        let tasked = dataProvider.getTask(atIndex: indexPath.row)
-    //        performSegue(withIdentifier: "editTask", sender: tasked)
-    //
-    //    }
+    
+    @IBAction func sortTypeTapped(_ sender: UIBarButtonItem) {
+        let sortSheet = ActionSheet(title: "Sort Types".localized(), message: nil)
+        
+        SortModel.allCases.forEach { (sortType) in
+            sortSheet.addAction(sortType.getSortTitle(), style: .default) { (_) in
+                self.dataProvider.selectedSortType = sortType
+                self.dataProvider.fetchTasks()
+            }
+        }
+        
+        sortSheet.addAction("CANCEL".localized(), style: .cancel)
+        
+        sortSheet.presentIn(self)
+        sortSheet.show(animated: true)
+    }
     
     
     /*
