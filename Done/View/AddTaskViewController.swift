@@ -7,6 +7,13 @@
 
 import UIKit
 import LKAlertController
+
+
+protocol TaskDelegate: AnyObject {
+    func didTapSave(task : DoneTask)
+    func didTapUpdate(task : DoneTask)
+}
+
 class AddTaskViewController: UIViewController {
     
     @IBOutlet weak var taskTitle: UITextField!
@@ -19,12 +26,16 @@ class AddTaskViewController: UIViewController {
     
     var dataProvider = TaskModel(completionClosure: {})
     private var selectedPriority: Priority!
+    weak var delegate : TaskDelegate?
+    var isUpdate: Bool = false
+    var tasks : DoneTask? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.dataProvider.fetchTasks()
         
+        isUpdate = (tasks != nil)
+        editTasks()
     }
     
     
@@ -38,15 +49,35 @@ class AddTaskViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
-            self.dataProvider.saveTasks()
+            if isUpdate {
+                self.delegate?.didTapUpdate(task: task)
+            } else {
+                self.delegate?.didTapSave(task: task)
+            }
             self.dataProvider.fetchTasks()
             self.dismiss(animated: true, completion: nil)
         }
     }
     
+    func editTasks() {
+        
+        guard let tasks = self.tasks else { return }
+        
+        taskDescription.text = tasks.descriptions
+        taskTitle.text = tasks.name
+        dateTaskPicker.date = tasks.dueDate
+        let priorityColor = Priority(rawValue: Int(tasks.priorty))
+        self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
+        self.priortyButton.setTitle(priorityColor?.text, for: .normal)
+//        self.dataProvider.saveTasks()
+//        self.dataProvider.fetchTasks()
+    }
+    
+    
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     
     private func check() {
@@ -70,7 +101,6 @@ class AddTaskViewController: UIViewController {
         sheet.setPresentingSource(self.priortyButton)
         
         sheet.addAction(Priority.High.text, style: .default) { action in
-            // self.setTaskPriority(priority: 1, title: action?.title)
             self.selectedPriority = .High
             self.priortyButton.setTitleColor(self.selectedPriority.color, for: .normal)
             self.priortyButton.setTitle(action?.title, for: .normal)
@@ -103,17 +133,9 @@ class AddTaskViewController: UIViewController {
         self.dataProvider = model
     }
     
+    
 }
 
 
-//    func setTaskPriority(priority: Int, title: String?) {
-//        let task = DoneTask(taskDescription.text ?? "", dateTaskPicker.date, false, taskTitle.text ?? "", Int16(priortyButton.buttonType.rawValue))
-//        dataProvider.changeTaskPriority(task: task , priority: priority)
-//        self.priortyButton.setTitle(title, for: .normal)
-//        if priority != 5 {
-//            self.priortyButton.setTitleColor(Config.General.priorityColors[Int(priority) - 1], for: .normal)
-//        } else {
-//            self.priortyButton.setTitleColor(UIColor.black, for: .normal)
-//        }
-//    }
+
 

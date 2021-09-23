@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import CoreData
 import LKAlertController
 
 class TaskTableViewController: UITableViewController {
+    
     
     var dataProvider = TaskModel(completionClosure: {})
     
@@ -28,34 +30,36 @@ class TaskTableViewController: UITableViewController {
     }
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "Progress" : "Completed"
-    }
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+    //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //        return section == 0 ? "Progress" : "Completed"
+    //    }
+    //
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        return self.dataProvider.taskD.count
+    //    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         self.sortButton.isEnabled = self.dataProvider.count > 0
+        return self.dataProvider.count
         
-        return dataProvider.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
-        
         // Configure the cell...
-        if let tasks = dataProvider.getTask(atIndex: indexPath.row) {
-            
-            cell.id = indexPath.row
-            cell.configures(tasks: tasks)
-            cell.delegate = self
-        }
-        
+        cell.id = indexPath.row
+        cell.configures(tasks: dataProvider.getTask(atIndex: indexPath.row)!, completed: false)
+        cell.delegate = self
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dataProvider.lastIndexTapped = indexPath.row
+        let detail = dataProvider.getTask(atIndex: indexPath.row)
+        performSegue(withIdentifier: "Add", sender: detail)
+    }
     
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -73,10 +77,6 @@ class TaskTableViewController: UITableViewController {
         action.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return UISwipeActionsConfiguration(actions: [action])
     }
-//
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
     
     
     
@@ -91,46 +91,15 @@ class TaskTableViewController: UITableViewController {
         }
         
         sortSheet.addAction("CANCEL".localized(), style: .cancel)
-        
         sortSheet.presentIn(self)
         sortSheet.show(animated: true)
     }
     
+    @IBAction func segmentTasks(_ sender: UISegmentedControl) {
+        
+    }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
     
     
     // MARK: - Navigation
@@ -141,6 +110,9 @@ class TaskTableViewController: UITableViewController {
             let navi: UINavigationController = segue.destination as! UINavigationController
             if let vc = navi.viewControllers.first as? AddTaskViewController {
                 vc.addRequiredData(model: self.dataProvider)
+                vc.hidesBottomBarWhenPushed = true
+                vc.delegate = self
+                vc.tasks = sender  as? DoneTask
             }
         }
     }
@@ -155,7 +127,7 @@ extension TaskTableViewController: TasksDataManagerDelegate {
     }
 }
 
-extension TaskTableViewController: TaskTableViewCellDelegate{
+extension TaskTableViewController: TaskTableViewCellDelegate {
     
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
@@ -163,7 +135,6 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
             let new = DoneTask(old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
-            
         }
     }
     
@@ -179,13 +150,43 @@ extension TaskTableViewController: TaskTableViewCellDelegate{
     
 }
 
+extension TaskTableViewController: TaskDelegate {
+    func didTapSave(task: DoneTask) {
+        self.dataProvider.saveTasks()
+       // self.dataProvider.fetchTasks()
+    }
+    
+    
+    func didTapUpdate(task: DoneTask) {
+        self.dataProvider.updatedTasks(task: task)
+    }
+}
 
-
-
-//            if tasks.priorty != 5 && Config.Features.enablePriority {
-//                cell.priortyButton.setTitle(Config.General.priorityTitles[Int(tasks.priorty) - 1], for: .normal)
-//                cell.priortyButton.setTitleColor(Config.General.priorityColors[Int(tasks.priorty) - 1], for: .normal)
-//                cell.priortyButton.isHidden = false
-//            } else {
-//                cell.priortyButton.isHidden = true
-//           }
+extension TaskTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+                    didChange anObject: Any,
+                    at indexPath: IndexPath?,
+                    for type: NSFetchedResultsChangeType,
+                    newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .fade)
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .fade)
+        case .update:
+            tableView.reloadRows(at: [indexPath!], with: .fade)
+        case .move:
+            break
+        @unknown default:
+            break
+        }
+    }
+}

@@ -87,3 +87,7 @@ class HomeTableViewController: UITableViewController {
      */
     
 }
+protocol ListViewDelegate: AnyObject {
+   
+    func updateTodoTotal(incrementBy: Int)
+}

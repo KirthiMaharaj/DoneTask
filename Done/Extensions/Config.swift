@@ -30,3 +30,11 @@ class Config: NSObject {
     }
 }
 
+
+//            if tasks.priorty != 5 && Config.Features.enablePriority {
+//                cell.priortyButton.setTitle(Config.General.priorityTitles[Int(tasks.priorty) - 1], for: .normal)
+//                cell.priortyButton.setTitleColor(Config.General.priorityColors[Int(tasks.priorty) - 1], for: .normal)
+//                cell.priortyButton.isHidden = false
+//            } else {
+//                cell.priortyButton.isHidden = true
+//           }

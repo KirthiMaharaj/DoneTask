@@ -24,7 +24,9 @@ class TaskModel {
     
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
     private var persistentContainer: NSPersistentContainer
-    private var task: [Tasks] = []
+    var task = [Tasks]()
+    //var taskD = [[Tasks](), [Tasks]()]
+   // var taskComplete = [Tasks]()
     
     var lastIndexTapped : Int = 0
     public weak var delegate: TasksDataManagerDelegate?
@@ -95,28 +97,25 @@ class TaskModel {
             try self.managedObjectContext.save()
         }
         catch {
+            task.removeLast()
             fatalError()
         }
     }
     
     
     public func updatedTasks(task: DoneTask) {
-        
+
         let update = Tasks(context: managedObjectContext)
-        
+
         // update.colors =  task.color
         update.descriptions = task.descriptions
         update.dueDate = task.dueDate
         update.isComplete = task.isComplete
         update.name = task.name
-        //  update.priorty = task.priorty
-        do {
-            try managedObjectContext.save()
-        } catch {
-            fatalError("Could not save context: \(error)")
-        }
+        update.priorty = task.priorty
+
     }
-    
+
     public func updateTask(task: DoneTask, atIndex index: Int) {
         guard index >= 0, index < self.count else {
             return
@@ -129,16 +128,17 @@ class TaskModel {
         entity.isComplete = task.isComplete
         entity.name = task.name
         entity.priorty = entity.priorty
+        
+       
     }
     
-    
+
     public func deleteTask(atIndex index: Int) {
-        guard index >= 0, index < self.count, self.count > 0 else {
-            return
-        }
-        
+        guard index >= 0, index < self.count, self.count > 0 else { return }
+       
         let entity = self.task[index]
         self.managedObjectContext.delete(entity)
+
     }
     
     public func getTask(atIndex index: Int) -> DoneTask? {
@@ -151,17 +151,7 @@ class TaskModel {
     }
     
     
-    //    public func removeAllDoneTasks() {
-    //        var index: Int = 0
-    //        for entity in self.task {
-    //            if entity.isComplete {
-    //                self.deleteTask(atIndex: index)
-    //            }
-    //            index += 1
-    //        }
-    //    }
-    
-    
+ 
 }
 
 

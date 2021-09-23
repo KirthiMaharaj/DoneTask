@@ -32,7 +32,7 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configures(tasks: DoneTask){
+    func configures(tasks: DoneTask, completed: Bool) {
         self.taskName.text = tasks.name
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
@@ -41,6 +41,11 @@ class TaskViewCell: UITableViewCell {
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
+        if (completed) {
+            selected()
+        } else {
+           deselected()
+        }
     }
     
     override func draw(_ rect: CGRect) {
@@ -59,7 +64,7 @@ class TaskViewCell: UITableViewCell {
             UIView.animate(withDuration: 0.5) {
                 self.taskName.attributedText = String.makeSlashText(text)
                 self.taskName.alpha = 0.5
-                
+                self.taskView.alpha = 0.4
             }
             self.delegate?.didSelect(taskTableViewCell: self, didSelect: true)
         }
@@ -70,6 +75,7 @@ class TaskViewCell: UITableViewCell {
             UIView.animate(withDuration: 0.5) {
                 self.taskName.attributedText = NSMutableAttributedString(string: text)
                 self.taskName.alpha = 1.0
+                self.taskView.alpha = 1.0
             }
             self.delegate?.didDeselect(taskTableViewCell: self, didDeselect: true)
         }
