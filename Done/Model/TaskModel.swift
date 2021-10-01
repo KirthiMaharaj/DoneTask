@@ -17,6 +17,7 @@ protocol TaskTableViewCellDelegate: AnyObject {
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool)
     
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool)
+    
 }
 
 
@@ -24,13 +25,13 @@ class TaskModel {
     
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
     private var persistentContainer: NSPersistentContainer
-    var task = [Tasks]()
+    var task: [Tasks] = []
     //var taskD = [[Tasks](), [Tasks]()]
-   // var taskComplete = [Tasks]()
     
     var lastIndexTapped : Int = 0
     public weak var delegate: TasksDataManagerDelegate?
     var selectedSortType: SortModel = .sortDateAsc
+    let sorting = Sorting()
     init(completionClosure: @escaping () -> ()) {
         persistentContainer = NSPersistentContainer(name: "Done")
         persistentContainer.loadPersistentStores { (description, error) in
@@ -55,18 +56,22 @@ class TaskModel {
         }
     }
     
-    public var doneCount: Int {
-        get {
-            self.doneTaskEntities.count
+    
+    func numberOfItemsFor(section: Int) -> Int {
+        switch section {
+        case 0:
+            return task.filter({!$0.isComplete}).count
+        case 1:
+            return task.filter({$0.isComplete}).count
+        default:
+            fatalError("Too many sections")
         }
     }
     
-    
     public func fetchTasks() {
         let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
-        //        let sortDescriptors = NSSortDescriptor(key: "dueDate", ascending: true)
-        //        fetchRequest.sortDescriptors = [sortDescriptors]
-        fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
+        fetchRequest.sortDescriptors = sorting.selectedSort + selectedSortType.getSortDescriptor()
+        //fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
         do {
             self.task = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)
@@ -77,7 +82,7 @@ class TaskModel {
     }
     
     
-    func createTasks(_ task: DoneTask, completion: @escaping (_ success: Bool)-> ()) {
+    func createTasks(_ task: DoneTask ,completion: @escaping (_ success: Bool)-> ()) {
         let newTask = Tasks(context: managedObjectContext)
         // newTask.colors =  task.color
         newTask.descriptions = task.descriptions
@@ -95,26 +100,30 @@ class TaskModel {
     public func saveTasks() {
         do {
             try self.managedObjectContext.save()
-        }
-        catch {
-            task.removeLast()
+        }catch {
             fatalError()
         }
     }
     
     
-    public func updatedTasks(task: DoneTask) {
-
-        let update = Tasks(context: managedObjectContext)
-
-        // update.colors =  task.color
-        update.descriptions = task.descriptions
-        update.dueDate = task.dueDate
-        update.isComplete = task.isComplete
-        update.name = task.name
-        update.priorty = task.priorty
-
-    }
+    //    public func updatedTasks(_ task: DoneTask) {
+    //        let update = Tasks(context: managedObjectContext)
+    //
+    //        // update.colors =  task.color
+    //        update.descriptions = task.descriptions
+    //        update.dueDate = task.dueDate
+    //        update.isComplete = task.isComplete
+    //        update.name = task.name
+    //        update.priorty = task.priorty
+    //        do {
+    //            try self.managedObjectContext.save()
+    //            fetchTasks()
+    //        }catch {
+    //            fatalError()
+    //        }
+    //
+    //    }
+    
 
     public func updateTask(task: DoneTask, atIndex index: Int) {
         guard index >= 0, index < self.count else {
@@ -128,17 +137,16 @@ class TaskModel {
         entity.isComplete = task.isComplete
         entity.name = task.name
         entity.priorty = entity.priorty
+
         
-       
     }
     
-
     public func deleteTask(atIndex index: Int) {
         guard index >= 0, index < self.count, self.count > 0 else { return }
-       
+        
         let entity = self.task[index]
         self.managedObjectContext.delete(entity)
-
+        
     }
     
     public func getTask(atIndex index: Int) -> DoneTask? {
@@ -146,11 +154,11 @@ class TaskModel {
             return nil
         }
         let entity = self.task[index]
+        
         let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
+        
         return tasks
     }
-    
-    
  
 }
 

@@ -20,10 +20,12 @@ class TaskViewCell: UITableViewCell {
     
     public weak var delegate: TaskTableViewCellDelegate?
     public var id: Int?
+    var dataProvider = TaskModel(completionClosure: {})
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+       
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,7 +34,7 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configures(tasks: DoneTask, completed: Bool) {
+    func configures(tasks: DoneTask, completed: Bool){
         self.taskName.text = tasks.name
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
@@ -69,7 +71,7 @@ class TaskViewCell: UITableViewCell {
             self.delegate?.didSelect(taskTableViewCell: self, didSelect: true)
         }
     }
-    
+
     private func deselected() {
         if let text = self.taskName.text {
             UIView.animate(withDuration: 0.5) {
@@ -84,10 +86,11 @@ class TaskViewCell: UITableViewCell {
     private func setup() {
         self.completeButton.checkboxLine = CheckboxLineStyle(checkBoxHeight: self.frame.height * 0.2)
         self.completeButton.delegate = self
-        self.taskName.adjustsFontSizeToFitWidth = true
+       self.taskName.adjustsFontSizeToFitWidth = true
         self.taskName.numberOfLines = 0
     }
     
+
     
 }
 

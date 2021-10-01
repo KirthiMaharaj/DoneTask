@@ -18,6 +18,7 @@
 		FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AB26EA1D8000BCE016 /* DoneTask.swift */; };
 		FE5457AE26EA27C100BCE016 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AD26EA27C100BCE016 /* TaskModel.swift */; };
 		FE59BD6F26F0D573006236F4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59BD6E26F0D573006236F4 /* HomeModel.swift */; };
+		FE763BC726FCF5BC00281128 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE763BC626FCF5BC00281128 /* GDLabel.swift */; };
 		FEBFF85E26F9E98A0056E0B4 /* SortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */; };
 		FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141726E7A5D10023ACB8 /* AppDelegate.swift */; };
 		FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 		FE5457AB26EA1D8000BCE016 /* DoneTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTask.swift; sourceTree = "<group>"; };
 		FE5457AD26EA27C100BCE016 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		FE59BD6E26F0D573006236F4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FE763BC626FCF5BC00281128 /* GDLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
 		FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModel.swift; sourceTree = "<group>"; };
 		FECA141426E7A5D10023ACB8 /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA141726E7A5D10023ACB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		FE08451C26EFAD5D000538AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FE763BC626FCF5BC00281128 /* GDLabel.swift */,
 				FE1002F126F3523B00C3D466 /* Config.swift */,
 				FE59BD6E26F0D573006236F4 /* HomeModel.swift */,
 				FE08451E26EFAD5D000538AE /* StringExtensions.swift */,
@@ -477,6 +480,7 @@
 				FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */,
 				FECA145026E7D7C00023ACB8 /* TaskTableViewController.swift in Sources */,
 				FE1002F226F3523B00C3D466 /* Config.swift in Sources */,
+				FE763BC726FCF5BC00281128 /* GDLabel.swift in Sources */,
 				FECA141C26E7A5D10023ACB8 /* AddTaskViewController.swift in Sources */,
 				FE08451F26EFAD5D000538AE /* StringExtensions.swift in Sources */,
 				FEBFF85E26F9E98A0056E0B4 /* SortModel.swift in Sources */,

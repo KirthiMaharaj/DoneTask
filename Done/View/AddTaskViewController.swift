@@ -9,10 +9,6 @@ import UIKit
 import LKAlertController
 
 
-protocol TaskDelegate: AnyObject {
-    func didTapSave(task : DoneTask)
-    func didTapUpdate(task : DoneTask)
-}
 
 class AddTaskViewController: UIViewController {
     
@@ -26,14 +22,13 @@ class AddTaskViewController: UIViewController {
     
     var dataProvider = TaskModel(completionClosure: {})
     private var selectedPriority: Priority!
-    weak var delegate : TaskDelegate?
     var isUpdate: Bool = false
     var tasks : DoneTask? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        setupPriorityButtons()
         isUpdate = (tasks != nil)
         editTasks()
     }
@@ -49,10 +44,12 @@ class AddTaskViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             }
+            
             if isUpdate {
-                self.delegate?.didTapUpdate(task: task)
+                // self.dataProvider.updatedTasks(task)
+                self.dataProvider.updateTask(task: task, atIndex: 0)
             } else {
-                self.delegate?.didTapSave(task: task)
+                self.dataProvider.saveTasks()
             }
             self.dataProvider.fetchTasks()
             self.dismiss(animated: true, completion: nil)
@@ -60,7 +57,6 @@ class AddTaskViewController: UIViewController {
     }
     
     func editTasks() {
-        
         guard let tasks = self.tasks else { return }
         
         taskDescription.text = tasks.descriptions
@@ -69,8 +65,7 @@ class AddTaskViewController: UIViewController {
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
-//        self.dataProvider.saveTasks()
-//        self.dataProvider.fetchTasks()
+       
     }
     
     
@@ -133,6 +128,22 @@ class AddTaskViewController: UIViewController {
         self.dataProvider = model
     }
     
+    private func setupPriorityButtons() {
+        priortyButton.layer.cornerRadius = 10
+        priortyButton.backgroundColor = UIColor.clear
+        priortyButton.layer.borderWidth = 2
+        priortyButton.layer.borderColor = UIColor.darkGray.cgColor
+        colorPickerButton.layer.cornerRadius = 10
+        colorPickerButton.backgroundColor = UIColor.clear
+        colorPickerButton.layer.borderWidth = 2
+        colorPickerButton.layer.borderColor = UIColor.darkGray.cgColor
+        colorPickerButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        reminderButton.layer.cornerRadius = 10
+        reminderButton.backgroundColor = UIColor.clear
+        reminderButton.layer.borderWidth = 2
+        reminderButton.layer.borderColor = UIColor.darkGray.cgColor
+        reminderButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
     
 }
 

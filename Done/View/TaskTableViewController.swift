@@ -21,6 +21,7 @@ class TaskTableViewController: UITableViewController {
         super.viewDidLoad()
         setupModel()
         dataProvider.fetchTasks()
+        self.tableView.reloadData()
     }
     
     
@@ -28,31 +29,47 @@ class TaskTableViewController: UITableViewController {
         self.dataProvider = TaskModel(completionClosure: {})
         self.dataProvider.delegate = self
     }
+    
+    
     // MARK: - Table view data source
     
-    //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //        return section == 0 ? "Progress" : "Completed"
-    //    }
-    //
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        return self.dataProvider.taskD.count
-    //    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Progress"
+        }
+        
+        return "Completed"
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         self.sortButton.isEnabled = self.dataProvider.count > 0
-        return self.dataProvider.count
-        
+        // return self.dataProvider.count
+        return self.dataProvider.numberOfItemsFor(section: section)
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
         // Configure the cell...
-        cell.id = indexPath.row
-        cell.configures(tasks: dataProvider.getTask(atIndex: indexPath.row)!, completed: false)
+        let complete = self.dataProvider.getTask(atIndex: indexPath.row)!
+        
+        if indexPath.section == 0 && !complete.isComplete {
+            cell.id = indexPath.row
+            cell.configures(tasks: complete, completed: false)
+        }else if indexPath.section == 1 && complete.isComplete {
+            cell.id = indexPath.row
+            cell.configures(tasks: complete, completed: true)
+        }
         cell.delegate = self
         return cell
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,26 +95,23 @@ class TaskTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [action])
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //
+    }
     
     @IBAction func sortTypeTapped(_ sender: UIBarButtonItem) {
         let sortSheet = ActionSheet(title: "Sort Types".localized(), message: nil)
-        
         SortModel.allCases.forEach { (sortType) in
             sortSheet.addAction(sortType.getSortTitle(), style: .default) { (_) in
                 self.dataProvider.selectedSortType = sortType
                 self.dataProvider.fetchTasks()
             }
         }
-        
         sortSheet.addAction("CANCEL".localized(), style: .cancel)
         sortSheet.presentIn(self)
         sortSheet.show(animated: true)
     }
     
-    @IBAction func segmentTasks(_ sender: UISegmentedControl) {
-        
-    }
     
     
     
@@ -110,8 +124,6 @@ class TaskTableViewController: UITableViewController {
             let navi: UINavigationController = segue.destination as! UINavigationController
             if let vc = navi.viewControllers.first as? AddTaskViewController {
                 vc.addRequiredData(model: self.dataProvider)
-                vc.hidesBottomBarWhenPushed = true
-                vc.delegate = self
                 vc.tasks = sender  as? DoneTask
             }
         }
@@ -135,6 +147,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
             let new = DoneTask(old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
+            self.dataProvider.fetchTasks()
         }
     }
     
@@ -144,23 +157,15 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
             let new = DoneTask(old.descriptions, old.dueDate, false, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
+            self.dataProvider.fetchTasks()
+            
         }
     }
     
     
 }
 
-extension TaskTableViewController: TaskDelegate {
-    func didTapSave(task: DoneTask) {
-        self.dataProvider.saveTasks()
-       // self.dataProvider.fetchTasks()
-    }
-    
-    
-    func didTapUpdate(task: DoneTask) {
-        self.dataProvider.updatedTasks(task: task)
-    }
-}
+
 
 extension TaskTableViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -190,3 +195,4 @@ extension TaskTableViewController: NSFetchedResultsControllerDelegate {
         }
     }
 }
+

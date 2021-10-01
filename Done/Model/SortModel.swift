@@ -42,13 +42,29 @@ enum SortModel: CaseIterable {
         case .sortNameDesc:
             return [NSSortDescriptor(key: "name", ascending: false)]
         case .sortDateAsc:
-            return [NSSortDescriptor(key: "dueDate", ascending: true)]
+            return [NSSortDescriptor(key: "dueDate", ascending: true), NSSortDescriptor(key: "isComplete", ascending: true)]
         case .sortDateDesc:
             return [NSSortDescriptor(key: "dueDate", ascending: false)]
         case .sortPriorityAsc:
-            return [NSSortDescriptor(key: "priorty", ascending: true), NSSortDescriptor(key: "dueDate", ascending: true)]
-        case .sortPriorityDesc:
             return [NSSortDescriptor(key: "priorty", ascending: false), NSSortDescriptor(key: "dueDate", ascending: true)]
+        case .sortPriorityDesc:
+            return [NSSortDescriptor(key: "priorty", ascending: true), NSSortDescriptor(key: "dueDate", ascending: true)]
         }
+    }
+}
+
+
+class Sorting {
+    
+    let sortOnNotComplete = NSSortDescriptor(key: "isComplete", ascending: true)
+    let sortOnCompleted = NSSortDescriptor(key: "isComplete", ascending: false)
+    lazy var selectedSort = [sortOnNotComplete, sortOnCompleted]
+    
+    func sortCompleted() {
+        selectedSort = [sortOnCompleted, sortOnNotComplete]
+    }
+    
+    func sortNotCompleted() {
+        selectedSort = [sortOnNotComplete, sortOnNotComplete]
     }
 }
