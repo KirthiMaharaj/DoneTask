@@ -28,7 +28,7 @@ class AddTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupPriorityButtons()
+        setupButtons()
         isUpdate = (tasks != nil)
         editTasks()
     }
@@ -46,7 +46,6 @@ class AddTaskViewController: UIViewController {
             }
             
             if isUpdate {
-                // self.dataProvider.updatedTasks(task)
                 self.dataProvider.updateTask(task: task, atIndex: 0)
             } else {
                 self.dataProvider.saveTasks()
@@ -65,7 +64,7 @@ class AddTaskViewController: UIViewController {
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
-       
+        
     }
     
     
@@ -128,7 +127,7 @@ class AddTaskViewController: UIViewController {
         self.dataProvider = model
     }
     
-    private func setupPriorityButtons() {
+    private func setupButtons() {
         priortyButton.layer.cornerRadius = 10
         priortyButton.backgroundColor = UIColor.clear
         priortyButton.layer.borderWidth = 2

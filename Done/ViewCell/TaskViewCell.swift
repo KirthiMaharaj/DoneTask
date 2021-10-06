@@ -8,6 +8,15 @@
 import UIKit
 import MBCheckboxButton
 
+
+protocol TaskTableViewCellDelegate: AnyObject {
+    
+    func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool)
+    
+    func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool)
+    
+}
+
 class TaskViewCell: UITableViewCell {
     
     @IBOutlet weak var completeButton: CheckboxButton!
@@ -34,7 +43,7 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configures(tasks: DoneTask, completed: Bool){
+    func configures(tasks: DoneTask){
         self.taskName.text = tasks.name
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
@@ -43,11 +52,11 @@ class TaskViewCell: UITableViewCell {
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
-        if (completed) {
-            selected()
-        } else {
-           deselected()
-        }
+//        if (completed) {
+//            selected()
+//        } else {
+//           deselected()
+//        }
     }
     
     override func draw(_ rect: CGRect) {
@@ -62,19 +71,19 @@ class TaskViewCell: UITableViewCell {
     }
     
     private func selected(){
-        if let text = self.taskName.text {
-            UIView.animate(withDuration: 0.5) {
-                self.taskName.attributedText = String.makeSlashText(text)
+      //  if let text = self.taskName.text {
+            UIView.animate(withDuration: 0.1) {
+          //      self.taskName.attributedText = String.makeSlashText(text)
                 self.taskName.alpha = 0.5
                 self.taskView.alpha = 0.4
             }
             self.delegate?.didSelect(taskTableViewCell: self, didSelect: true)
-        }
+        //}
     }
 
     private func deselected() {
         if let text = self.taskName.text {
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.1) {
                 self.taskName.attributedText = NSMutableAttributedString(string: text)
                 self.taskName.alpha = 1.0
                 self.taskView.alpha = 1.0

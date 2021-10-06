@@ -12,13 +12,6 @@ protocol TasksDataManagerDelegate: AnyObject {
     func fetchTasksSuccess(model: TaskModel, success: Bool)
 }
 
-protocol TaskTableViewCellDelegate: AnyObject {
-    
-    func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool)
-    
-    func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool)
-    
-}
 
 
 class TaskModel {
@@ -42,13 +35,15 @@ class TaskModel {
         }
     }
     
-    var doneTaskEntities: [Tasks] {
-        get {
-            self.task.filter { taskEntity in
-                taskEntity.isComplete
-            }
-        }
-    }
+    /*
+     var doneTaskEntities: [Tasks] {
+     get {
+     self.task.filter { taskEntity in
+     taskEntity.isComplete
+     }
+     }
+     }
+     */
     
     var count: Int {
         get {
@@ -68,10 +63,12 @@ class TaskModel {
         }
     }
     
+    
+    
     public func fetchTasks() {
         let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         fetchRequest.sortDescriptors = sorting.selectedSort + selectedSortType.getSortDescriptor()
-        //fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
+       // fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
         do {
             self.task = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)
@@ -105,26 +102,26 @@ class TaskModel {
         }
     }
     
+    /*
+     public func updatedTasks(_ task: DoneTask) {
+     let update = Tasks(context: managedObjectContext)
+     
+     // update.colors =  task.color
+     update.descriptions = task.descriptions
+     update.dueDate = task.dueDate
+     update.isComplete = task.isComplete
+     update.name = task.name
+     update.priorty = task.priorty
+     do {
+     try self.managedObjectContext.save()
+     fetchTasks()
+     }catch {
+     fatalError()
+     }
+     
+     }
+     */
     
-    //    public func updatedTasks(_ task: DoneTask) {
-    //        let update = Tasks(context: managedObjectContext)
-    //
-    //        // update.colors =  task.color
-    //        update.descriptions = task.descriptions
-    //        update.dueDate = task.dueDate
-    //        update.isComplete = task.isComplete
-    //        update.name = task.name
-    //        update.priorty = task.priorty
-    //        do {
-    //            try self.managedObjectContext.save()
-    //            fetchTasks()
-    //        }catch {
-    //            fatalError()
-    //        }
-    //
-    //    }
-    
-
     public func updateTask(task: DoneTask, atIndex index: Int) {
         guard index >= 0, index < self.count else {
             return
@@ -137,7 +134,6 @@ class TaskModel {
         entity.isComplete = task.isComplete
         entity.name = task.name
         entity.priorty = entity.priorty
-
         
     }
     
@@ -154,19 +150,11 @@ class TaskModel {
             return nil
         }
         let entity = self.task[index]
-        
         let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
-        
         return tasks
     }
- 
+    
 }
-
-
-
-
-
-
 
 
 
