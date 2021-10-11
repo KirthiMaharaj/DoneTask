@@ -172,7 +172,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
+            let new = DoneTask( old.notification, old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
          // self.dataProvider.fetchTasks()
@@ -182,7 +182,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.descriptions, old.dueDate, false, old.name, Int(old.priorty))
+            let new = DoneTask(old.notification, old.descriptions, old.dueDate, false, old.name, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
          // self.dataProvider.fetchTasks()

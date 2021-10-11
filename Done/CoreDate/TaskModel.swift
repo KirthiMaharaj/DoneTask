@@ -19,8 +19,8 @@ class TaskModel {
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
     private var persistentContainer: NSPersistentContainer
     var task: [Tasks] = []
-    //var taskD = [[Tasks](), [Tasks]()]
-    
+  
+    var list : [SubTask] = []
     var lastIndexTapped : Int = 0
     public weak var delegate: TasksDataManagerDelegate?
     var selectedSortType: SortModel = .sortDateAsc
@@ -45,13 +45,14 @@ class TaskModel {
      }
      */
     
+     //SubTasks
     var count: Int {
         get {
             self.task.count
         }
     }
     
-    
+    //SubTasks
     func numberOfItemsFor(section: Int) -> Int {
         switch section {
         case 0:
@@ -64,7 +65,7 @@ class TaskModel {
     }
     
     
-    
+    //SubTasks
     public func fetchTasks() {
         let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         fetchRequest.sortDescriptors = sorting.selectedSort + selectedSortType.getSortDescriptor()
@@ -78,10 +79,12 @@ class TaskModel {
         }
     }
     
-    
+    //SubTasks
     func createTasks(_ task: DoneTask ,completion: @escaping (_ success: Bool)-> ()) {
         let newTask = Tasks(context: managedObjectContext)
         // newTask.colors =  task.color
+       
+        newTask.notification = task.notification
         newTask.descriptions = task.descriptions
         newTask.dueDate = task.dueDate
         newTask.isComplete = task.isComplete
@@ -93,6 +96,7 @@ class TaskModel {
             fatalError("Could not save context: \(error)")
         }
     }
+    
     
     public func saveTasks() {
         do {
@@ -122,6 +126,7 @@ class TaskModel {
      }
      */
     
+    //SubTasks
     public func updateTask(task: DoneTask, atIndex index: Int) {
         guard index >= 0, index < self.count else {
             return
@@ -129,6 +134,8 @@ class TaskModel {
         
         let entity = self.task[index]
         // entity.colors = task.color
+      
+        entity.notification = task.notification
         entity.descriptions = task.descriptions
         entity.dueDate = task.dueDate
         entity.isComplete = task.isComplete
@@ -137,6 +144,7 @@ class TaskModel {
         
     }
     
+    //SubTasks
     public func deleteTask(atIndex index: Int) {
         guard index >= 0, index < self.count, self.count > 0 else { return }
         
@@ -145,12 +153,61 @@ class TaskModel {
         
     }
     
+    //SubTasks
     public func getTask(atIndex index: Int) -> DoneTask? {
         guard index >= 0, index < self.count else {
             return nil
         }
         let entity = self.task[index]
-        let tasks = DoneTask(entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
+        let tasks = DoneTask(entity.notification ,entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
+        return tasks
+    }
+    
+    //Category
+    
+    var countCate: Int {
+        get {
+            self.list.count
+        }
+    }
+    
+    public func fetchCategory() {
+        let fetchRequest: NSFetchRequest<SubTask> = SubTask.fetchRequest()
+        
+        do {
+            self.list = try self.managedObjectContext.fetch(fetchRequest)
+            self.delegate?.fetchTasksSuccess(model: self, success: true)
+        }
+        catch {
+            fatalError()
+        }
+    }
+    
+    func createCategoryTasks(_ task: Category ,completion: @escaping (_ success: Bool)-> ()) {
+        let newTask = SubTask(context: managedObjectContext)
+        
+        newTask.title = task.name
+        do {
+            try managedObjectContext.save()
+        } catch {
+            fatalError("Could not save context: \(error)")
+        }
+    }
+    
+    public func deleteSubTask(atIndex index: Int) {
+        guard index >= 0, index < self.countCate, self.countCate > 0 else { return }
+        
+        let entity = self.list[index]
+        self.managedObjectContext.delete(entity)
+        
+    }
+    
+    public func getCategory(atIndex index: Int) -> Category? {
+        guard index >= 0, index < self.countCate else {
+            return nil
+        }
+        let entity = self.list[index]
+        let tasks = Category(entity.title ?? "name")
         return tasks
     }
     

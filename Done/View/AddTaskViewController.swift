@@ -10,7 +10,9 @@ import LKAlertController
 
 
 
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: UIViewController , NotificationDelegate{
+    
+    
     
     @IBOutlet weak var taskTitle: UITextField!
     @IBOutlet weak var dateTaskPicker: UIDatePicker!
@@ -24,12 +26,15 @@ class AddTaskViewController: UIViewController {
     private var selectedPriority: Priority!
     var isUpdate: Bool = false
     var tasks : DoneTask? = nil
+    private var updateNotification = false
+    private var removeNotification = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupButtons()
         isUpdate = (tasks != nil)
+        dateTaskPicker.minimumDate = Date()
         editTasks()
     }
     
@@ -37,7 +42,7 @@ class AddTaskViewController: UIViewController {
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
         
         if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(taskDes, dateTaskPicker.date, false, taskName, Int(self.selectedPriority.rawValue))
+            let task = DoneTask( false, taskDes ,dateTaskPicker.date, false, taskName, Int(self.selectedPriority.rawValue))
             
             self.dataProvider.createTasks(task) { success in
                 if success {
@@ -127,6 +132,15 @@ class AddTaskViewController: UIViewController {
         self.dataProvider = model
     }
     
+    func prepareAddNotification(with date: Date) {
+        //
+    }
+    
+    func prepareRemoveNotification() {
+        //
+    }
+    
+    
     private func setupButtons() {
         priortyButton.layer.cornerRadius = 10
         priortyButton.backgroundColor = UIColor.clear
@@ -142,6 +156,16 @@ class AddTaskViewController: UIViewController {
         reminderButton.layer.borderWidth = 2
         reminderButton.layer.borderColor = UIColor.darkGray.cgColor
         reminderButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Update Reminder" {
+            if let dueDateViewController = segue.destination as? ReminderViewController {
+                dueDateViewController.notificationDelegate = self
+                // dueDateViewController.dataProvider.task = tasks?.dueDate
+                // dueDateViewController.dataProvider = tasks?.dueDate
+            }
+        }
     }
     
 }

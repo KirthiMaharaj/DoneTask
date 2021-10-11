@@ -12,13 +12,14 @@
 		D1EED19FF05BF21CF5910075 /* Pods_Done.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F30B9B82C6AFBAF0A4F1AD4 /* Pods_Done.framework */; };
 		FE08451F26EFAD5D000538AE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE08451E26EFAD5D000538AE /* StringExtensions.swift */; };
 		FE1002F026F350DD00C3D466 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1002EF26F350DD00C3D466 /* Priority.swift */; };
-		FE1002F226F3523B00C3D466 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1002F126F3523B00C3D466 /* Config.swift */; };
 		FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AB26EA1D8000BCE016 /* DoneTask.swift */; };
 		FE5457AE26EA27C100BCE016 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5457AD26EA27C100BCE016 /* TaskModel.swift */; };
-		FE59BD6F26F0D573006236F4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE59BD6E26F0D573006236F4 /* HomeModel.swift */; };
 		FE763BC726FCF5BC00281128 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE763BC626FCF5BC00281128 /* GDLabel.swift */; };
-		FEB2F82F270DB44F00A0B4DE /* HomeTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2F82E270DB44F00A0B4DE /* HomeTaskTableViewCell.swift */; };
+		FE8C0DA52714B26700ED8E4B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0DA42714B26600ED8E4B /* Category.swift */; };
+		FE8C0DAA2714B7B200ED8E4B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0DA92714B7B200ED8E4B /* HomeTableViewCell.swift */; };
+		FE8C0DAC2714BA9000ED8E4B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C0DAB2714BA9000ED8E4B /* HomeViewController.swift */; };
 		FEB2F831270DB48B00A0B4DE /* HomeTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */; };
+		FEB8DFBE270DE55B004C9A78 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB8DFBD270DE55B004C9A78 /* ReminderViewController.swift */; };
 		FEBFF85E26F9E98A0056E0B4 /* SortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */; };
 		FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141726E7A5D10023ACB8 /* AppDelegate.swift */; };
 		FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */; };
@@ -62,13 +63,14 @@
 		FC85C82AEA7CF6A8694D5122 /* Pods-DoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoneTests.release.xcconfig"; path = "Target Support Files/Pods-DoneTests/Pods-DoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		FE08451E26EFAD5D000538AE /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		FE1002EF26F350DD00C3D466 /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
-		FE1002F126F3523B00C3D466 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		FE5457AB26EA1D8000BCE016 /* DoneTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTask.swift; sourceTree = "<group>"; };
 		FE5457AD26EA27C100BCE016 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
-		FE59BD6E26F0D573006236F4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		FE763BC626FCF5BC00281128 /* GDLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
-		FEB2F82E270DB44F00A0B4DE /* HomeTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTableViewCell.swift; sourceTree = "<group>"; };
+		FE8C0DA42714B26600ED8E4B /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FE8C0DA92714B7B200ED8E4B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = ../../../Done1/Done1/viewCell/HomeTableViewCell.swift; sourceTree = "<group>"; };
+		FE8C0DAB2714BA9000ED8E4B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTableViewController.swift; sourceTree = "<group>"; };
+		FEB8DFBD270DE55B004C9A78 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModel.swift; sourceTree = "<group>"; };
 		FECA141426E7A5D10023ACB8 /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA141726E7A5D10023ACB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,11 +146,19 @@
 			isa = PBXGroup;
 			children = (
 				FE763BC626FCF5BC00281128 /* GDLabel.swift */,
-				FE1002F126F3523B00C3D466 /* Config.swift */,
-				FE59BD6E26F0D573006236F4 /* HomeModel.swift */,
 				FE08451E26EFAD5D000538AE /* StringExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE8C0DA82714B57800ED8E4B /* CoreDate */ = {
+			isa = PBXGroup;
+			children = (
+				FE8C0DA42714B26600ED8E4B /* Category.swift */,
+				FE5457AB26EA1D8000BCE016 /* DoneTask.swift */,
+				FE5457AD26EA27C100BCE016 /* TaskModel.swift */,
+			);
+			path = CoreDate;
 			sourceTree = "<group>";
 		};
 		FECA140B26E7A5D10023ACB8 = {
@@ -176,6 +186,7 @@
 		FECA141626E7A5D10023ACB8 /* Done */ = {
 			isa = PBXGroup;
 			children = (
+				FE8C0DA82714B57800ED8E4B /* CoreDate */,
 				FE08451C26EFAD5D000538AE /* Extensions */,
 				FECA144C26E7D76C0023ACB8 /* Model */,
 				FECA144B26E7D75A0023ACB8 /* View */,
@@ -212,8 +223,8 @@
 		FECA144A26E7D7470023ACB8 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				FE8C0DA92714B7B200ED8E4B /* HomeTableViewCell.swift */,
 				FECA144D26E7D78E0023ACB8 /* TaskViewCell.swift */,
-				FEB2F82E270DB44F00A0B4DE /* HomeTaskTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -224,6 +235,8 @@
 				FECA144F26E7D7C00023ACB8 /* TaskTableViewController.swift */,
 				FECA141B26E7A5D10023ACB8 /* AddTaskViewController.swift */,
 				FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */,
+				FEB8DFBD270DE55B004C9A78 /* ReminderViewController.swift */,
+				FE8C0DAB2714BA9000ED8E4B /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,8 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				FE1002EF26F350DD00C3D466 /* Priority.swift */,
-				FE5457AB26EA1D8000BCE016 /* DoneTask.swift */,
-				FE5457AD26EA27C100BCE016 /* TaskModel.swift */,
 				FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */,
 			);
 			path = Model;
@@ -479,19 +490,20 @@
 			files = (
 				FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */,
 				FECA145026E7D7C00023ACB8 /* TaskTableViewController.swift in Sources */,
-				FE1002F226F3523B00C3D466 /* Config.swift in Sources */,
 				FE763BC726FCF5BC00281128 /* GDLabel.swift in Sources */,
+				FE8C0DAC2714BA9000ED8E4B /* HomeViewController.swift in Sources */,
 				FECA141C26E7A5D10023ACB8 /* AddTaskViewController.swift in Sources */,
+				FE8C0DA52714B26700ED8E4B /* Category.swift in Sources */,
 				FE08451F26EFAD5D000538AE /* StringExtensions.swift in Sources */,
-				FEB2F82F270DB44F00A0B4DE /* HomeTaskTableViewCell.swift in Sources */,
 				FEBFF85E26F9E98A0056E0B4 /* SortModel.swift in Sources */,
 				FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */,
 				FECA144E26E7D78E0023ACB8 /* TaskViewCell.swift in Sources */,
-				FE59BD6F26F0D573006236F4 /* HomeModel.swift in Sources */,
+				FEB8DFBE270DE55B004C9A78 /* ReminderViewController.swift in Sources */,
 				FE1002F026F350DD00C3D466 /* Priority.swift in Sources */,
 				FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */,
 				FEB2F831270DB48B00A0B4DE /* HomeTaskTableViewController.swift in Sources */,
 				FE5457AE26EA27C100BCE016 /* TaskModel.swift in Sources */,
+				FE8C0DAA2714B7B200ED8E4B /* HomeTableViewCell.swift in Sources */,
 				FECA142226E7A5D10023ACB8 /* Done.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import MBCheckboxButton
 
 class HomeTaskTableViewCell: UITableViewCell {
 
+   
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var complButton: CheckboxButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

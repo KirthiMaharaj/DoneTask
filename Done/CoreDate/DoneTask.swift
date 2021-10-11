@@ -10,14 +10,18 @@ import CoreData
 
 struct DoneTask {
     //var color:String
+   
+    var notification :Bool
     var descriptions:String
     var dueDate:Date
     var isComplete:Bool
     var name:String
-    var priorty:Int16 = 5
+    var priorty:Int16
     
-    init(_ taskDescriptions: String, _ taskDate:Date, _ taskComplete:Bool, _ taskName:String, _ taskPriority:Int) {
+    init( _ taskNotification: Bool,_ taskDescriptions: String, _ taskDate:Date, _ taskComplete:Bool, _ taskName:String, _ taskPriority:Int) {
         //  color = taskColor
+       
+        notification = taskNotification
         descriptions = taskDescriptions
         dueDate = taskDate
         isComplete = taskComplete
@@ -28,6 +32,8 @@ struct DoneTask {
     init?(taskModel: Tasks) {
         guard let taskDescriptions = taskModel.descriptions, let taskDate = taskModel.dueDate, let taskName = taskModel.name else { return nil }
         //  color = taskColor
+      
+        notification = taskModel.notification
         descriptions = taskDescriptions
         dueDate = taskDate
         isComplete = taskModel.isComplete
