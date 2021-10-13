@@ -5,24 +5,23 @@
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tasks" inverseName="prarentTask" inverseEntity="Tasks"/>
+        <relationship name="projectTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="parentProject" inverseEntity="Tasks"/>
     </entity>
     <entity name="Tasks" representedClassName="Tasks" syncable="YES" codeGenerationType="class">
-        <attribute name="colors" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="descriptions" optional="YES" attributeType="String"/>
         <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="notificationId" optional="YES" attributeType="String"/>
         <attribute name="priorty" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="prarentTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubTask" inverseName="project" inverseEntity="SubTask"/>
+        <relationship name="parentProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubTask" inverseName="projectTask" inverseEntity="SubTask"/>
     </entity>
     <elements>
         <element name="SubTask" positionX="-63" positionY="45" width="128" height="104"/>
-        <element name="Tasks" positionX="-63" positionY="-18" width="128" height="209"/>
+        <element name="Tasks" positionX="-63" positionY="-18" width="128" height="194"/>
     </elements>
 </model>

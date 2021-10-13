@@ -8,34 +8,44 @@
 import UIKit
 
 
-protocol NotificationDelegate: AnyObject {
-    func prepareAddNotification(with date: Date)
-    func prepareRemoveNotification()
-}
+//protocol NotificationDelegate: AnyObject {
+//    func prepareAddNotification(with date: Date)
+//    func prepareRemoveNotification()
+//}
 
 class ReminderViewController: UIViewController {
 
-    @IBOutlet weak var reminderDoneButton: UIBarButtonItem!
+ 
+    @IBOutlet weak var setReminder: UIButton!
     @IBOutlet weak var noReminderButton: UIButton!
     @IBOutlet weak var reminderDate: UIDatePicker!
     
-    weak var notificationDelegate: NotificationDelegate!
+//    weak var notificationDelegate: NotificationDelegate!
     var dataProvider = TaskModel(completionClosure: {})
-    
+    var dates = Date()
+    var reminder = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func doneReminderTapped(_ sender: UIBarButtonItem) {
-        notificationDelegate.prepareAddNotification(with: reminderDate.date)
+    
+    
+    @IBAction func setReminderTapped(_ sender: UIButton) {
+      //  notificationDelegate.prepareAddNotification(with: reminderDate.date)
+        if sender.isEnabled == true {
+            reminderDate.isHidden = false
+            reminder = true
+        }else{
+            reminderDate.isHidden = true
+            reminder = false
+        }
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func noReminderTapped(_ sender: UIButton) {
-        notificationDelegate.prepareRemoveNotification()
+       // notificationDelegate.prepareRemoveNotification()
         navigationController?.popViewController(animated: true)
     }
     
@@ -44,6 +54,7 @@ class ReminderViewController: UIViewController {
         let components = DateComponents()
         reminderDate.setDate(Calendar(identifier: .gregorian).date(from: components)!, animated: false)
         reminderDate.minimumDate = Date()
+        dataProvider.tasks?.date = sender.date
      }
      // MARK: - Navigation
 

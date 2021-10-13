@@ -63,6 +63,11 @@ class HomeTaskTableViewController: UITableViewController {
         performSegue(withIdentifier: "CateAdd", sender: false)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      //  performSegue(withIdentifier: "AddTasks", sender: self)
+    }
+    
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -99,6 +104,13 @@ class HomeTaskTableViewController: UITableViewController {
             let navi: UINavigationController = segue.destination as! UINavigationController
             if let vc = navi.viewControllers.first as? HomeViewController {
                 vc.addRequiredData(model: self.dataProvider)
+            }
+            if let taskVv = navi.viewControllers.first as? TaskTableViewController {
+                 let indexPath = tableView.indexPathForSelectedRow
+                taskVv.dataProvider = dataProvider
+                taskVv.dataProvider.selectedCategory = dataProvider.taskss[indexPath!.row]
+                tableView.deselectRow(at: indexPath!, animated: true)
+                
             }
         }
     }

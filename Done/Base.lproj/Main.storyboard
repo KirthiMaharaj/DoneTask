@@ -50,14 +50,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSt-HR-SGT">
                                         <rect key="frame" x="0.0" y="114" width="390" height="211"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-ST-mfU">
-                                                <rect key="frame" x="28.999999999999986" y="8" width="242.66666666666663" height="181"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="c8Q-Wf-Qlk">
+                                                <rect key="frame" x="33.999999999999986" y="21" width="249.66666666666663" height="149"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0dc-Hn-SUi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="242.66666666666666" height="51"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0dc-Hn-SUi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="249.66666666666666" height="73"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-D8-lPK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="28.666666666666668" height="51"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="28.666666666666668" height="73"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                                                 <state key="normal" title="Button">
                                                                     <imageReference key="image" image="calendar.circle" catalog="system" symbolScale="large" renderingMode="original"/>
@@ -67,12 +67,12 @@
                                                                 </state>
                                                             </button>
                                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Ek5-hT-1oY">
-                                                                <rect key="frame" x="33.666666666666657" y="0.0" width="209" height="51"/>
+                                                                <rect key="frame" x="40.666666666666686" y="0.0" width="209" height="73"/>
                                                             </datePicker>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dgo-3B-cc1">
-                                                        <rect key="frame" x="0.0" y="75" width="130" height="106"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1aB-01-6lb">
+                                                        <rect key="frame" x="0.0" y="81" width="130" height="68"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-H3-EHq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="30"/>
@@ -91,23 +91,8 @@
                                                                     <action selector="priortyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbq-J2-oVC"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvb-EA-t1W">
-                                                                <rect key="frame" x="0.0" y="38" width="130" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="2W4-YY-YMn"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="Bil-sh-aTe"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                                <state key="normal" title="ColorPicker">
-                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <imageReference key="image" image="paintpalette" catalog="system" symbolScale="medium" renderingMode="original"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="colorPickerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qrx-Q7-qCy"/>
-                                                                </connections>
-                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFN-Cv-fFY">
-                                                                <rect key="frame" x="0.0" y="76" width="130" height="30"/>
+                                                                <rect key="frame" x="0.0" y="38" width="130" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="r8H-AB-1cv"/>
                                                                     <constraint firstAttribute="height" constant="30" id="xfT-xX-XP1"/>
@@ -129,10 +114,10 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="7Ph-ST-mfU" secondAttribute="bottom" constant="22" id="AeZ-K3-nGb"/>
-                                            <constraint firstItem="7Ph-ST-mfU" firstAttribute="top" secondItem="OSt-HR-SGT" secondAttribute="top" constant="8" id="KYt-bs-PqM"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Ph-ST-mfU" secondAttribute="trailing" constant="118.33333333333337" id="XSB-3T-U8c"/>
-                                            <constraint firstItem="7Ph-ST-mfU" firstAttribute="leading" secondItem="OSt-HR-SGT" secondAttribute="leading" constant="28.999999999999986" id="gcf-Xn-yqI"/>
+                                            <constraint firstAttribute="bottom" secondItem="c8Q-Wf-Qlk" secondAttribute="bottom" constant="41" id="Ffh-hZ-bT8"/>
+                                            <constraint firstItem="c8Q-Wf-Qlk" firstAttribute="top" secondItem="OSt-HR-SGT" secondAttribute="top" constant="21" id="a9c-vO-2rb"/>
+                                            <constraint firstAttribute="trailing" secondItem="c8Q-Wf-Qlk" secondAttribute="trailing" constant="106.33333333333337" id="jF2-Md-Lay"/>
+                                            <constraint firstItem="c8Q-Wf-Qlk" firstAttribute="leading" secondItem="OSt-HR-SGT" secondAttribute="leading" constant="33.999999999999986" id="qGE-Zs-d5k"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VA-ID-q7u">
@@ -193,7 +178,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="colorPickerButton" destination="Bvb-EA-t1W" id="Ptr-Lr-QUB"/>
                         <outlet property="dateTaskPicker" destination="Ek5-hT-1oY" id="b3U-wA-q1x"/>
                         <outlet property="priortyButton" destination="j0v-H3-EHq" id="T93-HD-8M6"/>
                         <outlet property="reminderButton" destination="hFN-Cv-fFY" id="xGD-s9-NNy"/>
@@ -209,7 +193,7 @@
         <!--Tasks-->
         <scene sceneID="j77-f3-NDY">
             <objects>
-                <tableViewController id="2Q0-Mm-2Ul" customClass="TaskTableViewController" customModule="Done" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TaskTableViewController" id="2Q0-Mm-2Ul" customClass="TaskTableViewController" customModule="Done" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="23" sectionFooterHeight="25" id="uwo-ng-ShX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,34 +321,6 @@
             <point key="canvasLocation" x="3769.2307692307691" y="68.957345971563981"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="LzQ-XS-BfZ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4So-T9-gcA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ZL1-5I-vK3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ibv-LO-pmx">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" systemColor="systemGreenColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2Q0-Mm-2Ul" kind="relationship" relationship="rootViewController" id="aGI-I4-DH4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bA6-wj-0vT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2651" y="56"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="gSY-FZ-nOn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UAj-GR-d6j" sceneMemberID="viewController">
@@ -387,7 +343,7 @@
         <!--Reminder-->
         <scene sceneID="B28-e1-s1C">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="lap-Rr-KCE" customClass="ReminderViewController" customModule="Done" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReminderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lap-Rr-KCE" customClass="ReminderViewController" customModule="Done" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rkj-yp-RHN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,13 +357,18 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-fs-DI1">
                                         <rect key="frame" x="8" y="29" width="89" height="30"/>
-                                        <state key="normal" title="No Reminder"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="BM7-e6-WoZ"/>
+                                        </constraints>
+                                        <state key="normal" title="No Reminder">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="noReminderTapped:" destination="lap-Rr-KCE" eventType="touchUpInside" id="gXu-bN-TRz"/>
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-bg-MmU">
-                                        <rect key="frame" x="8" y="91" width="374" height="158"/>
+                                        <rect key="frame" x="35" y="82" width="320" height="158"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="158" id="YNJ-h7-o3k"/>
                                         </constraints>
@@ -418,15 +379,28 @@
                                             <action selector="reminderdatePicker:" destination="lap-Rr-KCE" eventType="valueChanged" id="feq-Wy-0te"/>
                                         </connections>
                                     </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-KB-6FM">
+                                        <rect key="frame" x="52" y="248" width="303" height="47"/>
+                                        <color key="backgroundColor" red="0.44659540060000003" green="0.93471002579999996" blue="0.5281948447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Set Reminder"/>
+                                        <connections>
+                                            <action selector="setReminderTapped:" destination="lap-Rr-KCE" eventType="touchUpInside" id="tRy-2z-mHl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="eiO-fs-DI1" secondAttribute="trailing" constant="293" id="1wL-Va-MYl"/>
-                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="top" secondItem="eiO-fs-DI1" secondAttribute="bottom" constant="32" id="Etb-D8-OjP"/>
-                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="top" secondItem="cCT-P1-AWN" secondAttribute="top" constant="91" id="Yif-fM-kag"/>
-                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="trailing" secondItem="cCT-P1-AWN" secondAttribute="trailingMargin" id="alY-ae-vAM"/>
-                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eiO-fs-DI1" secondAttribute="leading" id="rxP-Oa-eIS"/>
-                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="leading" secondItem="cCT-P1-AWN" secondAttribute="leadingMargin" id="wOZ-vJ-FbM"/>
+                                    <constraint firstAttribute="bottom" secondItem="S3v-KB-6FM" secondAttribute="bottom" constant="106" id="0RB-SR-TOo"/>
+                                    <constraint firstItem="S3v-KB-6FM" firstAttribute="leading" secondItem="cCT-P1-AWN" secondAttribute="leading" constant="52" id="31s-lS-K1F"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S3v-KB-6FM" secondAttribute="trailing" constant="20" symbolic="YES" id="A2i-b0-08d"/>
+                                    <constraint firstItem="eiO-fs-DI1" firstAttribute="leading" secondItem="cCT-P1-AWN" secondAttribute="leadingMargin" id="ENF-Rc-780"/>
+                                    <constraint firstItem="S3v-KB-6FM" firstAttribute="top" secondItem="ch5-bg-MmU" secondAttribute="bottom" constant="8" id="ZnG-NW-gGv"/>
+                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="top" secondItem="eiO-fs-DI1" secondAttribute="bottom" constant="23" id="elk-xJ-ECX"/>
+                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="trailing" secondItem="S3v-KB-6FM" secondAttribute="trailing" id="g5E-da-cWC"/>
+                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="top" secondItem="cCT-P1-AWN" secondAttribute="top" constant="82" id="gFI-RI-n4o"/>
+                                    <constraint firstItem="ch5-bg-MmU" firstAttribute="centerX" secondItem="cCT-P1-AWN" secondAttribute="centerX" id="iDQ-mz-QI6"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eiO-fs-DI1" secondAttribute="trailing" constant="20" symbolic="YES" id="pd0-Ug-vGZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -449,21 +423,13 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Reminder" id="fJD-hG-rir">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kY3-ci-WHl">
-                            <connections>
-                                <action selector="doneReminderTapped:" destination="lap-Rr-KCE" id="0kW-bl-E4C"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Reminder" id="fJD-hG-rir"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addTaskView" destination="cCT-P1-AWN" id="gWt-pt-4my"/>
-                        <outlet property="bottomConstraint" destination="lCz-IY-Nyf" id="bkU-tE-nYo"/>
                         <outlet property="noReminderButton" destination="eiO-fs-DI1" id="CMF-MX-uzy"/>
                         <outlet property="reminderDate" destination="ch5-bg-MmU" id="BbF-CT-dRi"/>
-                        <outlet property="reminderDoneButton" destination="kY3-ci-WHl" id="FGp-0e-hSh"/>
+                        <outlet property="setReminder" destination="S3v-KB-6FM" id="2Mf-F4-UIV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4IX-aA-M4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -512,7 +478,7 @@
                                 <connections>
                                     <outlet property="ComBtn" destination="uhe-Rx-hf0" id="nUX-4L-5FO"/>
                                     <outlet property="taskTitle" destination="Kf6-yY-D58" id="K2u-pe-pQu"/>
-                                    <segue destination="4So-T9-gcA" kind="show" id="1rC-OQ-3ZJ"/>
+                                    <segue destination="2Q0-Mm-2Ul" kind="show" identifier="AddTasks" id="zCs-B8-avv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -662,10 +628,10 @@
     </scenes>
     <designables>
         <designable name="p0m-MX-DxL">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="24" height="18"/>
         </designable>
         <designable name="uhe-Rx-hf0">
-            <size key="intrinsicContentSize" width="30" height="30"/>
+            <size key="intrinsicContentSize" width="24" height="18"/>
         </designable>
     </designables>
     <resources>
@@ -674,7 +640,6 @@
         <image name="calendar.circle" catalog="system" width="128" height="121"/>
         <image name="colorPicker" width="16" height="13"/>
         <image name="flag_icon" width="16.666666030883789" height="16.666666030883789"/>
-        <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="repeat" catalog="system" width="128" height="99"/>
         <systemColor name="darkTextColor">

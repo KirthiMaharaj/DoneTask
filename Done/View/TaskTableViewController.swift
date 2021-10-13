@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import LKAlertController
 
+
 class TaskTableViewController: UITableViewController {
     
     
@@ -50,8 +51,8 @@ class TaskTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        self.sortButton.isEnabled = self.dataProvider.count > 0
-       return self.dataProvider.count
+        self.sortButton.isEnabled = self.dataProvider.tasked.count > 0
+        return self.dataProvider.tasked.count
        // return self.dataProvider.numberOfItemsFor(section: section)
     }
     
@@ -102,24 +103,7 @@ class TaskTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [action])
     }
    
-    /*
-   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        switch editingStyle {
-        case .delete: // handling the delete action
-            let alert = UIAlertController(title: "Delete", message: "Are you sure?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-                self.dataProvider.deleteTask(atIndex: indexPath.row)
-                self.dataProvider.saveTasks()
-                self.dataProvider.fetchTasks()
-            }))
-            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-            self.present(alert, animated: true)
-        default:
-            break
-        }
-    }
-    */
-    
+
     @IBAction func sortTypeTapped(_ sender: UIBarButtonItem) {
         let sortSheet = ActionSheet(title: "Sort Types".localized(), message: nil)
         SortModel.allCases.forEach { (sortType) in
@@ -151,8 +135,9 @@ class TaskTableViewController: UITableViewController {
         if segue.destination .isKind(of: UINavigationController.self) {
             let navi: UINavigationController = segue.destination as! UINavigationController
             if let vc = navi.viewControllers.first as? AddTaskViewController {
-                vc.addRequiredData(model: self.dataProvider)
-                vc.tasks = sender  as? DoneTask
+               vc.addRequiredData(model: self.dataProvider)
+                vc.delegate = self
+                vc.dataProvider.tasks = sender  as? DoneTask
             }
         }
     }
@@ -167,12 +152,27 @@ extension TaskTableViewController: TasksDataManagerDelegate {
     }
 }
 
+extension TaskTableViewController : TaskDelegate {
+    func didTapSave(task: DoneTask) {
+       self.dataProvider.saveTasks()
+       // self.dataProvider.deleteTask(atIndex: 0)
+        self.dataProvider.fetchTasks()
+    }
+    
+    func didTapUpdate(task: DoneTask) {
+       self.dataProvider.updatedTasks(task)
+    }
+    
+    
+}
+
+
 extension TaskTableViewController: TaskTableViewCellDelegate {
     
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask( old.notification, old.descriptions, old.dueDate,true, old.name, Int(old.priorty))
+            let new = DoneTask(old.date, old.descriptions, old.dueDate,true, old.name, old.notification,Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
          // self.dataProvider.fetchTasks()
@@ -182,7 +182,7 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
         guard let index = taskTableViewCell.id else { return }
         if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.notification, old.descriptions, old.dueDate, false, old.name, Int(old.priorty))
+            let new = DoneTask(old.date, old.descriptions, old.dueDate, false, old.name, old.notification, Int(old.priorty))
             self.dataProvider.updateTask(task: new, atIndex: index)
             self.dataProvider.saveTasks()
          // self.dataProvider.fetchTasks()

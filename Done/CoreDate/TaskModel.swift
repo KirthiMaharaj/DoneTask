@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import UserNotifications
 
 protocol TasksDataManagerDelegate: AnyObject {
     func fetchTasksSuccess(model: TaskModel, success: Bool)
@@ -18,13 +19,21 @@ class TaskModel {
     
     var managedObjectContext: NSManagedObjectContext { persistentContainer.viewContext }
     private var persistentContainer: NSPersistentContainer
-    var task: [Tasks] = []
-  
-    var list : [SubTask] = []
+    var tasked: [Tasks] = []
+    var taskss = [SubTask]()
     var lastIndexTapped : Int = 0
+    var tasks : DoneTask? = nil
     public weak var delegate: TasksDataManagerDelegate?
     var selectedSortType: SortModel = .sortDateAsc
     let sorting = Sorting()
+    var dates = Date()
+    var reminder = false
+    var selectedCategory : SubTask? {
+        didSet {
+            fetchTasks()
+        }
+    }
+    
     init(completionClosure: @escaping () -> ()) {
         persistentContainer = NSPersistentContainer(name: "Done")
         persistentContainer.loadPersistentStores { (description, error) in
@@ -35,43 +44,41 @@ class TaskModel {
         }
     }
     
-    /*
-     var doneTaskEntities: [Tasks] {
-     get {
-     self.task.filter { taskEntity in
-     taskEntity.isComplete
-     }
-     }
-     }
-     */
     
-     //SubTasks
+    //Tasks
     var count: Int {
         get {
-            self.task.count
+            self.tasked.count
         }
     }
     
-    //SubTasks
+    //Tasks
     func numberOfItemsFor(section: Int) -> Int {
         switch section {
         case 0:
-            return task.filter({!$0.isComplete}).count
+            return tasked.filter({!$0.isComplete}).count
         case 1:
-            return task.filter({$0.isComplete}).count
+            return tasked.filter({$0.isComplete}).count
         default:
             fatalError("Too many sections")
         }
     }
     
     
-    //SubTasks
-    public func fetchTasks() {
-        let fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest()
+    //Tasks
+    public func fetchTasks(with fetchRequest: NSFetchRequest<Tasks> = Tasks.fetchRequest(), predicate: NSPredicate? = nil) {
+        
         fetchRequest.sortDescriptors = sorting.selectedSort + selectedSortType.getSortDescriptor()
-       // fetchRequest.sortDescriptors = selectedSortType.getSortDescriptor()
+        let categoryPredicate = NSPredicate(format: "parentProject.title MATCHES %@", selectedCategory?.title ?? "")
+//        let categoryPredicate = NSPredicate(format: "parentProject.title MATCHES %@", selectedCategory)
+//
+        if let additionalPredicate = predicate {
+            fetchRequest.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [additionalPredicate, categoryPredicate])
+        } else {
+            fetchRequest.predicate = categoryPredicate
+        }
         do {
-            self.task = try self.managedObjectContext.fetch(fetchRequest)
+            self.tasked = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)
         }
         catch {
@@ -79,16 +86,15 @@ class TaskModel {
         }
     }
     
-    //SubTasks
+    //Tasks
     func createTasks(_ task: DoneTask ,completion: @escaping (_ success: Bool)-> ()) {
         let newTask = Tasks(context: managedObjectContext)
-        // newTask.colors =  task.color
-       
-        newTask.notification = task.notification
+        newTask.date = task.date
         newTask.descriptions = task.descriptions
         newTask.dueDate = task.dueDate
         newTask.isComplete = task.isComplete
         newTask.name = task.name
+        newTask.notification = task.notification
         newTask.priorty = task.priorty
         do {
             try managedObjectContext.save()
@@ -96,7 +102,7 @@ class TaskModel {
             fatalError("Could not save context: \(error)")
         }
     }
-    
+
     
     public func saveTasks() {
         do {
@@ -106,76 +112,68 @@ class TaskModel {
         }
     }
     
-    /*
-     public func updatedTasks(_ task: DoneTask) {
-     let update = Tasks(context: managedObjectContext)
-     
-     // update.colors =  task.color
-     update.descriptions = task.descriptions
-     update.dueDate = task.dueDate
-     update.isComplete = task.isComplete
-     update.name = task.name
-     update.priorty = task.priorty
-     do {
-     try self.managedObjectContext.save()
-     fetchTasks()
-     }catch {
-     fatalError()
-     }
-     
-     }
-     */
+    //Tasks
+    public func updatedTasks(_ task: DoneTask) {
+        
+        do {
+            try self.managedObjectContext.save()
+        }catch {
+            fatalError()
+        }
+        fetchTasks()
+    }
     
-    //SubTasks
+    
+    //Tasks
     public func updateTask(task: DoneTask, atIndex index: Int) {
-        guard index >= 0, index < self.count else {
+        guard index >= 0, index < self.tasked.count else {
             return
         }
         
-        let entity = self.task[index]
-        // entity.colors = task.color
-      
-        entity.notification = task.notification
+        let entity = self.tasked[index]
+        entity.date = task.date
         entity.descriptions = task.descriptions
         entity.dueDate = task.dueDate
         entity.isComplete = task.isComplete
         entity.name = task.name
+        entity.notification = task.notification
         entity.priorty = entity.priorty
         
     }
     
-    //SubTasks
+    //Tasks
     public func deleteTask(atIndex index: Int) {
-        guard index >= 0, index < self.count, self.count > 0 else { return }
+        guard index >= 0, index < self.tasked.count, self.tasked.count > 0 else { return }
         
-        let entity = self.task[index]
+        let entity = self.tasked[index]
         self.managedObjectContext.delete(entity)
         
     }
     
-    //SubTasks
+    //Tasks
     public func getTask(atIndex index: Int) -> DoneTask? {
-        guard index >= 0, index < self.count else {
+        guard index >= 0, index < self.tasked.count else {
             return nil
         }
-        let entity = self.task[index]
-        let tasks = DoneTask(entity.notification ,entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name", Int(entity.priorty))
+        let entity = self.tasked[index]
+        let tasks = DoneTask(entity.date ?? Date(), entity.descriptions ?? "empty description", entity.dueDate ?? Date(), entity.isComplete, entity.name ?? "empty name",entity.notification , Int(entity.priorty))
         return tasks
     }
+    
+    
     
     //Category
     
     var countCate: Int {
         get {
-            self.list.count
+            self.taskss.count
         }
     }
     
     public func fetchCategory() {
         let fetchRequest: NSFetchRequest<SubTask> = SubTask.fetchRequest()
-        
         do {
-            self.list = try self.managedObjectContext.fetch(fetchRequest)
+            self.taskss = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)
         }
         catch {
@@ -197,7 +195,7 @@ class TaskModel {
     public func deleteSubTask(atIndex index: Int) {
         guard index >= 0, index < self.countCate, self.countCate > 0 else { return }
         
-        let entity = self.list[index]
+        let entity = self.taskss[index]
         self.managedObjectContext.delete(entity)
         
     }
@@ -206,7 +204,7 @@ class TaskModel {
         guard index >= 0, index < self.countCate else {
             return nil
         }
-        let entity = self.list[index]
+        let entity = self.taskss[index]
         let tasks = Category(entity.title ?? "name")
         return tasks
     }
