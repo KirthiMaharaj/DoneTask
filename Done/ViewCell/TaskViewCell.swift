@@ -29,7 +29,9 @@ class TaskViewCell: UITableViewCell {
     
     public weak var delegate: TaskTableViewCellDelegate?
     public var id: Int?
-    var dataProvider = TaskModel(completionClosure: {})
+    //var dataProvider = TaskManager(completionClosure: {})
+    var dataProvider = TaskManager()
+    var currentDate = Date()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,15 +45,23 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configures(tasks: Tasks){
+    
+    func configures(tasks: DoneTask){
         self.taskName.text = tasks.name
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
-        self.taskDate.text = formatter.string(from: tasks.dueDate ?? Date())
+        if tasks.dueDate <= currentDate {
+            self.taskDate.text = formatter.string(from: tasks.dueDate)
+            self.taskName.textColor = UIColor.red
+        }else {
+            self.taskDate.text = formatter.string(from: tasks.dueDate)
+        }
         self.completeButton.isOn = tasks.isComplete
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
+        
+        print("The category of \(tasks.name) is \(tasks.category)")
 
     }
     

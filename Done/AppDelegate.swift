@@ -15,13 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        print("isDataPreloaded : \(UserDefaults.standard.bool(forKey: "isDataPreloaded"))")
+        
+//        if UserDefaults.standard.bool(forKey: "isDataPreloaded") != true{
+//
+//            let center = UNUserNotificationCenter.current()
+//            center.requestAuthorization(options: [.alert,.badge,.sound]) { (granted, error) in
+//                if granted {
+//                    print("We have permission.")
+//                }else{
+//                    print("Permission Denied.")
+//                }
+//            }
+//        }
         requestNotifications()
         return true
     }
     
     private func requestNotifications() {
         let notificationCenter = UNUserNotificationCenter.current()
-        let options: UNAuthorizationOptions = [.alert, .sound]
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
         notificationCenter.requestAuthorization(options: options) { granted, _ in
             if granted {
                 notificationCenter.delegate = self
@@ -53,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Done")
+        let container = NSPersistentContainer(name: "DonesT")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -103,7 +116,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             controller.present(alert, animated: true, completion: nil)
         }
 
-        completionHandler([.alert, .sound])
+        completionHandler([.alert, .badge, .sound])
 
     }
 }

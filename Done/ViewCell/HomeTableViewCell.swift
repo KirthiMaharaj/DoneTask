@@ -22,8 +22,14 @@ class HomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configures(tasks: Subtask){
-        self.title.text = tasks.title
+    
+    func configures(tasks: CategoryTask){
+        if compButton.isOn {
+            self.title.text = tasks.name
+        }else{
+            self.title.text = tasks.name
+        }
+        
     }
 
 }

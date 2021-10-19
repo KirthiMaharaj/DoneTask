@@ -196,6 +196,7 @@
 		FECA141626E7A5D10023ACB8 /* Done */ = {
 			isa = PBXGroup;
 			children = (
+				FEF98573271EEF5F0003A6B9 /* viewTable */,
 				FE3605F62719EEC6008223B1 /* Subtask+CoreDataProperties.swift */,
 				FE3605F72719EEC6008223B1 /* Tasks+CoreDataProperties.swift */,
 				FE3605FA2719EF0C008223B1 /* Subtask+CoreDataClass.swift */,
@@ -248,9 +249,7 @@
 		FECA144B26E7D75A0023ACB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FECA144F26E7D7C00023ACB8 /* TaskTableViewController.swift */,
 				FECA141B26E7A5D10023ACB8 /* AddTaskViewController.swift */,
-				FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */,
 				FE8C0DAB2714BA9000ED8E4B /* HomeViewController.swift */,
 			);
 			path = View;
@@ -263,6 +262,15 @@
 				FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FEF98573271EEF5F0003A6B9 /* viewTable */ = {
+			isa = PBXGroup;
+			children = (
+				FECA144F26E7D7C00023ACB8 /* TaskTableViewController.swift */,
+				FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */,
+			);
+			path = viewTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

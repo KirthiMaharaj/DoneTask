@@ -13,7 +13,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var titles: UITextField!
     @IBOutlet weak var colorButton: UIButton!
     
-    var dataProvider = TaskModel(completionClosure: {})
+    var dataProvider = TaskManager()
+    var taskCo = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,13 +25,22 @@ class HomeViewController: UIViewController {
 
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         if let taskName = titles.text {
-
-            let task = Subtask(context: dataProvider.managedObjectContext)
-            task.title = taskName
+            let task = CategoryTask(taskName, taskCo)
+            
+            self.dataProvider.createCategoryTasks(task) { success in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+            
             self.dataProvider.saveTasks()
             self.dataProvider.fetchCategory()
             self.dismiss(animated: true, completion: nil)
         }
+        
+        
+        self.dataProvider.saveTasks()
+        self.dataProvider.fetchCategory()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -42,7 +53,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    public func addRequiredData(model: TaskModel) {
+    public func addRequiredData(model: TaskManager) {
         self.dataProvider = model
     }
     /*
