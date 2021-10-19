@@ -37,9 +37,11 @@ class ReminderViewController: UIViewController {
         if sender.isEnabled == true {
             reminderDate.isHidden = false
             reminder = true
+            setReminder.setTitle("On", for: .normal)
         }else{
             reminderDate.isHidden = true
             reminder = false
+            setReminder.setTitle("off", for: .normal)
         }
         navigationController?.popViewController(animated: true)
     }
@@ -54,7 +56,7 @@ class ReminderViewController: UIViewController {
         let components = DateComponents()
         reminderDate.setDate(Calendar(identifier: .gregorian).date(from: components)!, animated: false)
         reminderDate.minimumDate = Date()
-        dataProvider.tasks?.date = sender.date
+        dataProvider.dates = sender.date
      }
      // MARK: - Navigation
 

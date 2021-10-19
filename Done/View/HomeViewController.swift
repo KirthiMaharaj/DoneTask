@@ -23,18 +23,14 @@ class HomeViewController: UIViewController {
 
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
         if let taskName = titles.text {
-            let task = Category(taskName)
-            
-            self.dataProvider.createCategoryTasks(task) { success in
-                if success {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            
+
+            let task = Subtask(context: dataProvider.managedObjectContext)
+            task.title = taskName
             self.dataProvider.saveTasks()
             self.dataProvider.fetchCategory()
             self.dismiss(animated: true, completion: nil)
         }
+        self.dismiss(animated: true, completion: nil)
     }
     
     

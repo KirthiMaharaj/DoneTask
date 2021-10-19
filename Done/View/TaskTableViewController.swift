@@ -60,7 +60,7 @@ class TaskTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskViewCell", for: indexPath) as! TaskViewCell
         // Configure the cell...
-        let complete = self.dataProvider.getTask(atIndex: indexPath.row)!
+        let complete = self.dataProvider.tasked[ indexPath.row]
         cell.id = indexPath.row
         
        /*
@@ -82,7 +82,7 @@ class TaskTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dataProvider.lastIndexTapped = indexPath.row
-        let detail = dataProvider.getTask(atIndex: indexPath.row)
+        let detail = dataProvider.tasked[indexPath.row]
         performSegue(withIdentifier: "Add", sender: detail)
     }
     
@@ -117,28 +117,25 @@ class TaskTableViewController: UITableViewController {
         sortSheet.show(animated: true)
     }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    
+ 
     
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination .isKind(of: UINavigationController.self) {
-            let navi: UINavigationController = segue.destination as! UINavigationController
-            if let vc = navi.viewControllers.first as? AddTaskViewController {
-               vc.addRequiredData(model: self.dataProvider)
-                vc.delegate = self
-                vc.dataProvider.tasks = sender  as? DoneTask
-            }
+//        if segue.destination .isKind(of: UINavigationController.self) {
+//            let navi: UINavigationController = segue.destination as! UINavigationController
+//            if let vc = navi.viewControllers.first as? AddTaskViewController {
+//               vc.addRequiredData(model: self.dataProvider)
+//              //  vc.delegate = self
+//                vc.tasks = sender  as? Tasks
+//            }
+//        }
+        if let taskNav = segue.destination as? AddTaskViewController {
+            taskNav.addRequiredData(model: self.dataProvider)
+            taskNav.dataProvider.parentObject = dataProvider.selectedCategory
+            taskNav.tasks = sender  as? Tasks
         }
     }
     
@@ -152,41 +149,42 @@ extension TaskTableViewController: TasksDataManagerDelegate {
     }
 }
 
-extension TaskTableViewController : TaskDelegate {
-    func didTapSave(task: DoneTask) {
-       self.dataProvider.saveTasks()
-       // self.dataProvider.deleteTask(atIndex: 0)
-        self.dataProvider.fetchTasks()
-    }
-    
-    func didTapUpdate(task: DoneTask) {
-       self.dataProvider.updatedTasks(task)
-    }
-    
-    
-}
+//extension TaskTableViewController : TaskDelegate {
+//    func didTapSave(task: Tasks) {
+//        self.dataProvider.saveTasks()
+//       // self.dataProvider.deleteTask(atIndex: 0)
+//        self.dataProvider.fetchTasks()
+//    }
+//
+//    func didTapUpdate(task: Tasks) {
+//     //  self.dataProvider.updatedTasks(task)
+//    }
+//
+//
+//}
 
 
 extension TaskTableViewController: TaskTableViewCellDelegate {
     
     func didSelect(taskTableViewCell: TaskViewCell, didSelect: Bool) {
         guard let index = taskTableViewCell.id else { return }
-        if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.date, old.descriptions, old.dueDate,true, old.name, old.notification,Int(old.priorty))
-            self.dataProvider.updateTask(task: new, atIndex: index)
-            self.dataProvider.saveTasks()
-         // self.dataProvider.fetchTasks()
-        }
+//        let old = self.dataProvider.tasked[index]
+//        let new = Tasks(context: dataProvider.managedObjectContext)
+////            let new = DoneTask(old.date, old.descriptions, old.dueDate,true, old.name, old.notification,Int(old.priorty))
+////            self.dataProvider.updateTask(task: new, atIndex: index)
+          self.dataProvider.saveTasks()
+//        // self.dataProvider.fetchTasks()
+
     }
     
     func didDeselect(taskTableViewCell: TaskViewCell, didDeselect: Bool) {
-        guard let index = taskTableViewCell.id else { return }
-        if let old = self.dataProvider.getTask(atIndex: index) {
-            let new = DoneTask(old.date, old.descriptions, old.dueDate, false, old.name, old.notification, Int(old.priorty))
-            self.dataProvider.updateTask(task: new, atIndex: index)
-            self.dataProvider.saveTasks()
-         // self.dataProvider.fetchTasks()
-        }
+       guard let index = taskTableViewCell.id else { return }
+//        if let old = self.dataProvider.getTask(atIndex: index) {
+////            let new = DoneTask(old.date, old.descriptions, old.dueDate, false, old.name, old.notification, Int(old.priorty))
+////            self.dataProvider.updateTask(task: new, atIndex: index)
+          self.dataProvider.saveTasks()
+//         // self.dataProvider.fetchTasks()
+//        }
     }
     
     

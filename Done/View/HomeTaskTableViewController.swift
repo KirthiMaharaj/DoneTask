@@ -27,7 +27,7 @@ class HomeTaskTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.dataProvider.countCate
+        return self.dataProvider.taskss.count
     }
 
     
@@ -35,9 +35,9 @@ class HomeTaskTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: " HomeTableViewCell", for: indexPath) as!  HomeTableViewCell
 
         // Configure the cell...
-        if let task = self.dataProvider.getCategory(atIndex: indexPath.row){
+         let task = self.dataProvider.taskss[indexPath.row]
         cell.configures(tasks: task)
-        }
+        
         return cell
     }
     
@@ -107,10 +107,9 @@ class HomeTaskTableViewController: UITableViewController {
             }
             if let taskVv = navi.viewControllers.first as? TaskTableViewController {
                  let indexPath = tableView.indexPathForSelectedRow
-                taskVv.dataProvider = dataProvider
                 taskVv.dataProvider.selectedCategory = dataProvider.taskss[indexPath!.row]
+                taskVv.dataProvider = dataProvider
                 tableView.deselectRow(at: indexPath!, animated: true)
-                
             }
         }
     }

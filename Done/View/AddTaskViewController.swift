@@ -9,8 +9,8 @@ import UIKit
 import LKAlertController
 
 protocol TaskDelegate: AnyObject {
-    func didTapSave(task : DoneTask)
-    func didTapUpdate(task : DoneTask)
+    func didTapSave(task : Tasks)
+    func didTapUpdate(task : Tasks)
 }
 
 class AddTaskViewController: UIViewController{
@@ -21,61 +21,95 @@ class AddTaskViewController: UIViewController{
     @IBOutlet weak var reminderButton: UIButton!
     @IBOutlet weak var taskDescription: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var reminder: UISwitch!
+    @IBOutlet weak var reminderDate: UIDatePicker!
     
     private var dateComponents: DateComponents!
     var dataProvider = TaskModel(completionClosure: {})
     private var selectedPriority: Priority!
-    var isUpdate: Bool = false
- 
+  //  var isUpdate: Bool = false
+    var tasks : Tasks?
     weak var delegate : TaskDelegate?
-    private var updateNotification = false
-    private var removeNotification = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupButtons()
-        isUpdate = (dataProvider.tasks != nil)
+      //  isUpdate = (tasks != nil)
         dateTaskPicker.minimumDate = Date()
         editTasks()
     }
     
     
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
+       
+        if tasks != nil {
+
+            reminderDate.date = tasks?.dates ?? Date()
+            taskDescription.text = tasks?.descriptions
+            dateTaskPicker.date = tasks?.dueDate ?? Date()
+            tasks?.isComplete = false
+            taskTitle.text = tasks?.name
+            //dataProvider.scheduleNotificationFor(task: tasks!)
+            scheduleNotification(id: tasks?.id ?? "")
+            tasks?.parentProject = dataProvider.parentObject
+            tasks?.parentProject?.taskCount += 1
+            dataProvider.saveTasks()
+            
+        } else{
+            createTasks()
+        }
         
-        if let taskDes = taskDescription.text, let taskName = taskTitle.text {
-            let task = DoneTask(Date(),taskDes ,dateTaskPicker.date, false, taskName, reminderButton.isEnabled, Int(self.selectedPriority.rawValue))
-            
-            self.dataProvider.createTasks(task) { success in
-                if success {
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            
-            if isUpdate {
-                self.delegate?.didTapUpdate(task: task)
-               // self.dataProvider.updateTask(task: task, atIndex: 0)
-            } else {
-                self.dataProvider.saveTasks()
-            //    self.delegate?.didTapSave(task: task)
-            }
-            self.dataProvider.fetchTasks()
-            self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func editTasks() {
+       
+        if tasks != nil {
+            reminderDate.date = tasks?.dates ?? Date()
+            taskDescription.text = tasks?.descriptions
+            dateTaskPicker.date = tasks?.dueDate ?? Date()
+            taskTitle.text = tasks?.name
+          //  reminder.isOn = ((tasks?.notification) != nil)
+        }
+
+    }
+    
+    @IBAction func reminderToggle(_ sender: UISwitch) {
+        if sender.isOn == true {
+            reminderDate.isHidden = false
+            tasks?.notification = true
+        }else{
+            reminderDate.isHidden = true
+            tasks?.notification = false
         }
     }
-
-    func editTasks() {
-        guard let tasks = self.dataProvider.tasks else { return }
-
-        taskDescription.text = tasks.descriptions
-        taskTitle.text = tasks.name
-        dateTaskPicker.date = tasks.dueDate
-        let priorityColor = Priority(rawValue: Int(tasks.priorty))
-        self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
-        self.priortyButton.setTitle(priorityColor?.text, for: .normal)
-
+    
+    @IBAction func reminderDatePicker(_ sender: UIDatePicker) {
+        print(sender.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yy-mm-dd hh:mm"
+        
+        reminderButton.setTitle(dateFormatter.string(from: sender.date), for: .normal)
+        tasks?.dates = sender.date
+        
     }
-
+    
+    func  createTasks() {
+        let task = Tasks(context: dataProvider.managedObjectContext)
+        task.dates = reminderDate.date
+        task.descriptions =  taskDescription.text
+        task.dueDate = dateTaskPicker.date
+        task.isComplete = false
+        task.name = taskTitle.text
+        task.notification = false
+        scheduleNotification(id:task.id ?? "")
+        task.priorty = Int16(Int(self.selectedPriority.rawValue))
+        task.parentProject = dataProvider.parentObject
+        self.dataProvider.saveTasks()
+        
+    }
     
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -83,15 +117,15 @@ class AddTaskViewController: UIViewController{
     
     
     
-    func scheduleNotification(id: Int) {
-        if dataProvider.reminder && dataProvider.tasks!.date > Date(){
+    func scheduleNotification(id: String) {
+        if tasks?.notification ?? false  && tasks?.dates ?? Date() > Date(){
             print("Scheduling Notification")
             let content = UNMutableNotificationContent()
             content.title = "You've a task in pending."
             content.body = taskTitle.text!
             content.sound = UNNotificationSound.default
             let calender = Calendar(identifier: .gregorian)
-            let components = calender.dateComponents([.year,.month,.day,.hour,.minute], from: dataProvider.tasks?.date ?? Date() )
+            let components = calender.dateComponents([.year,.month,.day,.hour,.minute], from: dataProvider.dates )
             let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
             let request = UNNotificationRequest(identifier: "task-\(id)", content: content, trigger: trigger)
             let center = UNUserNotificationCenter.current()
@@ -110,13 +144,6 @@ class AddTaskViewController: UIViewController{
     }
     
     
-    @IBAction func reminderTapped(_ sender: Any) {
-        if let remindersVc = storyboard?.instantiateViewController(identifier: "ReminderViewController") as? ReminderViewController {
-            remindersVc.dataProvider = dataProvider
-       
-        }
-
-    }
     
     @IBAction func priortyTapped(_ sender: Any) {
         let sheet = ActionSheet(title: "PRIORITY".localized(), message: nil)
@@ -154,14 +181,14 @@ class AddTaskViewController: UIViewController{
     public func addRequiredData(model: TaskModel) {
         self.dataProvider = model
     }
-
+    
     
     private func setupButtons() {
         priortyButton.layer.cornerRadius = 10
         priortyButton.backgroundColor = UIColor.clear
         priortyButton.layer.borderWidth = 2
         priortyButton.layer.borderColor = UIColor.darkGray.cgColor
-       
+        
         reminderButton.layer.cornerRadius = 10
         reminderButton.backgroundColor = UIColor.clear
         reminderButton.layer.borderWidth = 2
@@ -169,7 +196,7 @@ class AddTaskViewController: UIViewController{
         reminderButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
-
+    
     
 }
 
@@ -188,4 +215,37 @@ class AddTaskViewController: UIViewController{
 //
 //        self.present(UINavigationController(rootViewController: remindersVC), animated: true) {
 //            self.taskTitleTextView.resignFirstResponder()
+//        }
+
+
+
+
+//        if let taskDes = taskDescription.text, let taskName = taskTitle.text {
+//
+//          //  scheduleNotificationFor(task: )
+//            //            let task = DoneTask(dateTaskPicker.date,taskDes ,dateTaskPicker.date, false, taskName, reminderButton.isEnabled, Int(Int16(Int(self.selectedPriority.rawValue))))
+//            //           // scheduleNotification(id:0)
+//            //            self.dataProvider.createTasks(task) { success in
+//            //                if success {
+//            //                    self.dismiss(animated: true, completion: nil)
+//            //                }
+//            //            }
+//            //            let task = Tasks(context: dataProvider.managedObjectContext)
+//            //            //task.dates = gg.reminderDate.date
+//            //            task.descriptions = taskDes
+//            //            task.dueDate = dateTaskPicker.date
+//            //            task.isComplete = false
+//            //            task.name = taskName
+//            //            task.notification = false
+//            //            task.priorty = Int16(Int(self.selectedPriority.rawValue))
+//
+//            //            if isUpdate {
+//            //                self.delegate?.didTapUpdate(task: task)
+//            //               // self.dataProvider.updateTask(task: task, atIndex: 0)
+//            //            } else {
+//            //               // self.dataProvider.saveTasks()
+//            //               self.delegate?.didTapSave(task: task)
+//            //            }
+//            self.dataProvider.fetchTasks()
+//            self.dismiss(animated: true, completion: nil)
 //        }

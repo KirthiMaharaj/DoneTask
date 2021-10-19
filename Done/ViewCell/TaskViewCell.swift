@@ -43,20 +43,16 @@ class TaskViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configures(tasks: DoneTask){
+    func configures(tasks: Tasks){
         self.taskName.text = tasks.name
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
-        self.taskDate.text = formatter.string(from: tasks.dueDate)
+        self.taskDate.text = formatter.string(from: tasks.dueDate ?? Date())
         self.completeButton.isOn = tasks.isComplete
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
         self.priortyButton.setTitle(priorityColor?.text, for: .normal)
-//        if (completed) {
-//            selected()
-//        } else {
-//           deselected()
-//        }
+
     }
     
     override func draw(_ rect: CGRect) {
