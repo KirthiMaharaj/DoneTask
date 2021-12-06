@@ -7,138 +7,220 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B0A2CB8044E2FF98502BEA42376049F /* LKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */; };
-		1D6DF7E6C8A40BC3E297814F2512B7B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		332505AA200561E9DCA3E9D03EFA6C68 /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */; };
-		39FB38FADD5A2E04EEF5EA5EF75C18D6 /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */; };
-		5C01E8C77200D7C562919A4AF814DECB /* LKAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		691E868ABFE11240C25B6F631524269E /* MBCheckboxButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */; };
-		6DF8639777AD87E317E55EF56A854F71 /* Pods-Done-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E75DFD4D69FFEE69BE3D400CA2C9E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		72057BE96FDEA6D88C18C708C847DC52 /* Pods-Done-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */; };
-		7CAE59FD98FFE8CFA0FEF30378466CF6 /* CheckboxButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */; };
-		9353BA8B6D069863D7C4CB267DCC6F11 /* Pods-Done-DoneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F36088C422A7F17C34564D1B92B8236 /* MBCheckboxButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD1DC82ABB7F630B9B9D5874350BBABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		AE0AC93BA55C4C7101E06EC408464405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		B1101DDADF0DE8E93DC932E41E2F2290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		003475471715C79534A569A1DE745889 /* FSCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CE16D200C814D575B59A0EBADD356A26 /* FSCalendarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B0A2CB8044E2FF98502BEA42376049F /* LKAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64143C8F22EDED999E2C7F8FD42C0401 /* LKAlertController.swift */; };
+		0CCBB4361672C8994784F0CD9AFC876D /* FSCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59E2BB5667C45F7A9365044D0C77DDC1 /* FSCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1152D5AAA7732A77B80CF0E33A68351C /* FSCalendarSeparatorDecorationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 159B80B44FBFCF50CC0138A1D1221758 /* FSCalendarSeparatorDecorationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6DF7E6C8A40BC3E297814F2512B7B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		1FF421C714EDBE044E5EEB1E0C6A8571 /* FSCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 229D9B318F367424D53811177C4AF77E /* FSCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24E5EE988A4BD7C15B55708C6D88AE04 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FC26DE69FC4217A3961681307DAEF /* FSCalendarStickyHeader.m */; };
+		332505AA200561E9DCA3E9D03EFA6C68 /* CheckboxLineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C87C0B3E28CDCC391C337ACF3BDAC17 /* CheckboxLineStyle.swift */; };
+		3960120DF8907DA574823ACE7ED96076 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF50D3F6B3B876D1E0B70B0841D7E1B /* FSCalendarWeekdayView.m */; };
+		39F986157716D5214013E395BDFA237A /* FSCalendarDelegationProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A8BD8812EB74BE418384A528C5047CC /* FSCalendarDelegationProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39FB38FADD5A2E04EEF5EA5EF75C18D6 /* RadioCheckboxBaseContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1F44F8703EA58B00A03AD34080E7AB /* RadioCheckboxBaseContainer.swift */; };
+		3E4E56584545A9F057D6A39565EEBE81 /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB1B61F149295F684CA7D51C0693737 /* FSCalendar-dummy.m */; };
+		4643DA364A3E80706B89D53043890B4D /* FSCalendarCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E9990DE8F54DC78BCB6CDD331CDFC43 /* FSCalendarCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4683418880504CD2212FE56C4F1E8F80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
+		4EC9E26EE87569C1B51B6DFF20700772 /* FSCalendarDynamicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B1831048C895BF71C80FB28498D8FF03 /* FSCalendarDynamicHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		517DF7507FDB12DBF9BA9D1536EDCC4F /* FSCalendarWeekdayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F481DE9D7C6398C05D3B524973DAF6D /* FSCalendarWeekdayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5216108B128B5C22B048D023B790CF9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		5C01E8C77200D7C562919A4AF814DECB /* LKAlertController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D43EB294ECA5944FF09EA7806D54B96 /* LKAlertController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D6A05CA0F44437AA850FC4D7AFDD349 /* Pods-Done-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F847123FA3D224722CE24317DCEF968 /* FSCalendarExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CD16F856656A29A662C3D5E3E9CCC8 /* FSCalendarExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6040741383F6F8F6979D6C547230C132 /* FSCalendarSeparatorDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C1D662DC99EB79E62176AAF19D9547 /* FSCalendarSeparatorDecorationView.m */; };
+		60CFDC4002EA677B53ECC413F67C149D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		6201BB85A0AAF8FA6C4771308917BAB2 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 17528B87DD3C32FD694DBCA057FF2E02 /* FSCalendarTransitionCoordinator.m */; };
+		62FFC4B2AA010A5445E5D9D6294C62B6 /* FSCalendarCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 701E47C11F3A53B89A24EF55497E47D5 /* FSCalendarCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		691E868ABFE11240C25B6F631524269E /* MBCheckboxButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F4DD3859EDD94EB512F0C3CCD4EA2 /* MBCheckboxButton-dummy.m */; };
+		6DCF6F2A00DA4D32535EB01AE34F3563 /* FSCalendarCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF934C99B0407A7071C9E045BA3F767 /* FSCalendarCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74340052A3CD15A02A87D8D651CB8AB8 /* FSCalendarTransitionCoordinator.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD08602E9ECEF5489927CC074F0939F /* FSCalendarTransitionCoordinator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		752DBFCDD74504EEA558FCD691F6D548 /* FSCalendarConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6FD6C013472D8D97EE33F75D9B9A62 /* FSCalendarConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CAE59FD98FFE8CFA0FEF30378466CF6 /* CheckboxButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAF0B0852A700C49E8C93F4C27DDDC7 /* CheckboxButtonContainer.swift */; };
+		7E98902CA894CFE1F54E7934B24B0B37 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 028BC34DACF6F97CC6BBFE48AAFF2723 /* FSCalendarCollectionView.m */; };
+		7FDEAD728DF7397DAEE4237F07AD5A70 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C98D8E8C07923A1DF798C26CE0D3E0A0 /* FSCalendarHeaderView.m */; };
+		8D5833379E9F51BFEEA066AA1C4A25A0 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E45B67D1146D0B77E77C547E25F411DB /* FSCalendarConstants.m */; };
+		9F36088C422A7F17C34564D1B92B8236 /* MBCheckboxButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08BCF27F0E76A5F7852077F1F81E5046 /* MBCheckboxButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A550F7F30921E5FFE67A755D67DA7683 /* FSCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = AF45E67F45270B77123C684D5DCC59BE /* FSCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD1DC82ABB7F630B9B9D5874350BBABC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		B1101DDADF0DE8E93DC932E41E2F2290 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
 		BA7D2B4B14FDDF15B1FD1C5D64B61559 /* Pods-DoneTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 98DA2A2512A0D9F51A511883D97DE40D /* Pods-DoneTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC0B2FA367074EAF985420BE965303D3 /* FSCalendarAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = C645A83D85A6E0E09F41A8D5A7FD87D1 /* FSCalendarAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC1A04CE0A9851F3C003ECD156BE95AC /* FSCalendarStickyHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = A09B3802904729111BD5BE7FD28DEEE5 /* FSCalendarStickyHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C17CF6C18DAC9307799F1D7972965EDF /* FSCalendarDelegationFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1A96D501450E944C741683787BE9D4 /* FSCalendarDelegationFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2252A396EB5410375AAD0D615BE72F6 /* Pods-DoneTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 993DE355F1B2115FD82D04F7F9E80F22 /* Pods-DoneTests-dummy.m */; };
-		D2FD47565A46EAD2ED19E052CAF35C99 /* LKAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */; };
-		D7238422BA70C1CEEFE9968B8A01D7D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		D7AC0898CBC727054AC9AA6A467FC50D /* CheckboxButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */; };
-		DB9C3CD2D141DB4502B79C1E0CAE2545 /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */; };
-		E74D3072654C741675136F0F4F3941B0 /* CheckBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */; };
-		EE39E620ADC31C4FD40BF1AE2290ACC6 /* Pods-Done-DoneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */; };
-		F1F5AE80D38C77CD431FB790C2924C7F /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */; };
+		C6ED706364847164CB566CEA1A6FFDD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
+		C7ACD835AAE2936FB6B623084612825D /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F05494EA490F91059F1BA2AF67B00 /* FSCalendarExtensions.m */; };
+		CCD0BBB247A9E8EE1A580B62509DCDFB /* Pods-Done-DoneUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */; };
+		CE132491B81D44BB6B692C3F72FBC980 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B0E08D2FCC3CBDBBD118CBF906B8A832 /* FSCalendarCollectionViewLayout.m */; };
+		CF10A50704D5CF6F07D5949BA4AB3EAB /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A56CD2FE13CFC36F7DD970283360F1 /* FSCalendarDelegationFactory.m */; };
+		D2FD47565A46EAD2ED19E052CAF35C99 /* LKAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA2987423655F1EB4DC61F3278EB635 /* LKAlertController-dummy.m */; };
+		D7238422BA70C1CEEFE9968B8A01D7D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		D7AC0898CBC727054AC9AA6A467FC50D /* CheckboxButtonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25B9095F2E47E73A2E01DFEF2C8902 /* CheckboxButtonContainerView.swift */; };
+		DB9C3CD2D141DB4502B79C1E0CAE2545 /* RadioCheckboxBaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21C2D6280F5086FF2A1AEA2EA476ACA /* RadioCheckboxBaseButton.swift */; };
+		E11220C77D9BB217D63867401FF624F6 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78FBFDF1A7B61B0221C9513B81F2C1FB /* FSCalendarCell.m */; };
+		E53DD07DFCDD2241779DBAAE71E77032 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E826B0B5F1B72ABB1139DBA0B282592 /* FSCalendarDelegationProxy.m */; };
+		E74D3072654C741675136F0F4F3941B0 /* CheckBoxColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E56F621516AF8976AC6DED4A917EE /* CheckBoxColor.swift */; };
+		F1B9720240D5609A1DE32B8350FE0B5B /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7425F52B57682AE49AFB50E4CC39E462 /* FSCalendarCalculator.m */; };
+		F1CA9BC15CC22757E560D201AA11EF8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		F1F5AE80D38C77CD431FB790C2924C7F /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E0C517269A6E61F13043CB688E536B /* CheckboxButton.swift */; };
+		F24ECD33262C3972176ECD171128D23C /* Pods-Done-DoneUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F18A1FEC8212A61301637E40558A13 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E34BDA25D97B9A898CFFF22AF2ED076 /* FSCalendarAppearance.m */; };
+		F57D0325F15A6496D4579F03C68F03BD /* Pods-Done-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */; };
+		F7C20C67D0D5A1C73A0A057268A719C1 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = E37B2C8D64D034CA6C641783932F06A0 /* FSCalendar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A1833C7A1CDEA5A759E422E5D84D0FA /* PBXContainerItemProxy */ = {
+		03D02BCD1E04573433C1D8B819504A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
+			remoteInfo = LKAlertController;
+		};
+		09CCDAE47E1F75C3BECEC8EC90EE6DCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
+			remoteInfo = LKAlertController;
+		};
+		7A7D8D93CE40512CAC572CE4BB337662 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
+			remoteInfo = FSCalendar;
+		};
+		BA1D282C0D9F2364B4FD518F94CDDE94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
+			remoteInfo = FSCalendar;
+		};
+		C6E4BD68CBEFAAA4D9DCFD83207C7386 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C4676B34762A4138E48399FA14D1B48F;
 			remoteInfo = "Pods-Done";
 		};
-		A2C6D2D609BA20BE5A72FEB9CD31E1DA /* PBXContainerItemProxy */ = {
+		F321036E5DD1B7F394925D601FB0FD70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
 			remoteInfo = MBCheckboxButton;
 		};
-		AF23D574E62EBA3C6CF85D6620DBB415 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
-			remoteInfo = LKAlertController;
-		};
-		C2B3A51B3818BF4A9713230BE2C51C08 /* PBXContainerItemProxy */ = {
+		FDAE1954774EBDF17B6C2C06F3B924F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F1F3A67C99ED5D133D4FF8943EF2E113;
 			remoteInfo = MBCheckboxButton;
-		};
-		F831077D66CE262CF417F66F7D7B4862 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 169BDD87530CD45E7C54D8FB26A1575F;
-			remoteInfo = LKAlertController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		083796D02F7D8147BF51CB0B75280FA3 /* MBCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCheckboxButton.modulemap; sourceTree = "<group>"; };
+		028BC34DACF6F97CC6BBFE48AAFF2723 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionView.m; path = FSCalendar/FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		086BD3D99ED441D8B31BB73997E5DB95 /* FSCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-prefix.pch"; sourceTree = "<group>"; };
+		08BCF27F0E76A5F7852077F1F81E5046 /* MBCheckboxButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-umbrella.h"; sourceTree = "<group>"; };
 		0C892FC08B0D4DC9ACB6590A8EC6C243 /* Pods-Done-DoneUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Done-DoneUITests.modulemap"; sourceTree = "<group>"; };
+		0E25B9095F2E47E73A2E01DFEF2C8902 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
+		0EF934C99B0407A7071C9E045BA3F767 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
 		0FEF528930415EE5715FF83C26AE6CDE /* Pods-Done-DoneUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Done-DoneUITests-frameworks.sh"; sourceTree = "<group>"; };
-		1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.release.xcconfig; sourceTree = "<group>"; };
+		119FB87019A7E1CC98F101D0C9BA1E19 /* LKAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LKAlertController.modulemap; sourceTree = "<group>"; };
+		159B80B44FBFCF50CC0138A1D1221758 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarSeparatorDecorationView.h; path = FSCalendar/FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
+		17528B87DD3C32FD694DBCA057FF2E02 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		1B6FD6C013472D8D97EE33F75D9B9A62 /* FSCalendarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
+		1C87C0B3E28CDCC391C337ACF3BDAC17 /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxLineStyle.swift; path = Source/CheckboxButton/CheckboxLineStyle.swift; sourceTree = "<group>"; };
 		200312DFA9C67FF1A9426D24B58EC45C /* Pods-Done-DoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20B0C3D22BB6A0D9C2774BC74B122EA1 /* Pods-Done.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done.debug.xcconfig"; sourceTree = "<group>"; };
-		29927607CE84D95F8F3576097EB2CC69 /* MBCheckboxButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCheckboxButton-Info.plist"; sourceTree = "<group>"; };
+		229D9B318F367424D53811177C4AF77E /* FSCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-umbrella.h"; sourceTree = "<group>"; };
+		2EAF0B0852A700C49E8C93F4C27DDDC7 /* CheckboxButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainer.swift; path = Source/CheckboxButton/CheckboxButtonContainer.swift; sourceTree = "<group>"; };
+		32CD16F856656A29A662C3D5E3E9CCC8 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
+		34AAFE606EAF0F61CCD8300323DD3E04 /* MBCheckboxButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-prefix.pch"; sourceTree = "<group>"; };
 		3B6730B5DB08FB4AAC0B53E7ABAA6BF2 /* Pods-DoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.release.xcconfig"; sourceTree = "<group>"; };
-		4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.debug.xcconfig; sourceTree = "<group>"; };
+		3D43EB294ECA5944FF09EA7806D54B96 /* LKAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-umbrella.h"; sourceTree = "<group>"; };
+		3E34BDA25D97B9A898CFFF22AF2ED076 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAppearance.m; path = FSCalendar/FSCalendarAppearance.m; sourceTree = "<group>"; };
+		4327E056FF32D57B14DF71EBE52222CE /* MBCheckboxButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBCheckboxButton-Info.plist"; sourceTree = "<group>"; };
+		43C1D662DC99EB79E62176AAF19D9547 /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarSeparatorDecorationView.m; path = FSCalendar/FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
+		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4BFAEA23FD3139510F5439B309DBF084 /* Pods-Done-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C32151C6AD3F657F857148004D01F25 /* Pods-Done-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-acknowledgements.plist"; sourceTree = "<group>"; };
-		510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-umbrella.h"; sourceTree = "<group>"; };
+		4E9FC26DE69FC4217A3961681307DAEF /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarStickyHeader.m; path = FSCalendar/FSCalendarStickyHeader.m; sourceTree = "<group>"; };
 		528FBBFC4E7456ADA710B208AE875678 /* Pods-DoneTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DoneTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		542CE8FFB272278C3FC84652BF36AF1C /* MBCheckboxButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.debug.xcconfig; sourceTree = "<group>"; };
+		54D00967E02E6D9104C6EA2F5A4D5016 /* MBCheckboxButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.release.xcconfig; sourceTree = "<group>"; };
+		565E56F621516AF8976AC6DED4A917EE /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
+		59E2BB5667C45F7A9365044D0C77DDC1 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeaderView.h; path = FSCalendar/FSCalendarHeaderView.h; sourceTree = "<group>"; };
 		5C37810A6573A281A8E15CD043B373B9 /* Pods-Done-DoneUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-Info.plist"; sourceTree = "<group>"; };
 		5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done.release.xcconfig"; sourceTree = "<group>"; };
+		64143C8F22EDED999E2C7F8FD42C0401 /* LKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKAlertController.swift; path = Pod/Classes/LKAlertController.swift; sourceTree = "<group>"; };
+		66A56CD2FE13CFC36F7DD970283360F1 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		69E0C517269A6E61F13043CB688E536B /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
+		6B6F05494EA490F91059F1BA2AF67B00 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
 		6C06F903BC7CEA7B3201F53C71590A4F /* Pods-DoneTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DoneTests-Info.plist"; sourceTree = "<group>"; };
 		6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LKAlertController; path = LKAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Done-DoneUITests-umbrella.h"; sourceTree = "<group>"; };
-		78F0330C8CA718AC9365ABC81DE9DFA6 /* MBCheckboxButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-prefix.pch"; sourceTree = "<group>"; };
+		701E47C11F3A53B89A24EF55497E47D5 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
+		7425F52B57682AE49AFB50E4CC39E462 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
+		78FBFDF1A7B61B0221C9513B81F2C1FB /* FSCalendarCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
 		7BDAB166B51A3FA7509A6421109F9EF7 /* Pods-DoneTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DoneTests.modulemap"; sourceTree = "<group>"; };
 		7BFE1625CB047F58DB3A904B3AF632ED /* Pods-Done-DoneUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Done-DoneUITests-dummy.m"; sourceTree = "<group>"; };
-		7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxLineStyle.swift; path = Source/CheckboxButton/CheckboxLineStyle.swift; sourceTree = "<group>"; };
+		7DD08602E9ECEF5489927CC074F0939F /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarTransitionCoordinator.h; path = FSCalendar/FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
 		828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-DoneTests"; path = Pods_DoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878A335119B640B608D474883C3CFCDB /* Pods-Done-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Done-dummy.m"; sourceTree = "<group>"; };
-		87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.debug.xcconfig; sourceTree = "<group>"; };
-		884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
-		956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LKAlertController.swift; path = Pod/Classes/LKAlertController.swift; sourceTree = "<group>"; };
+		8A1A96D501450E944C741683787BE9D4 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationFactory.h; path = FSCalendar/FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		8A8BD8812EB74BE418384A528C5047CC /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationProxy.h; path = FSCalendar/FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8D1F70E718154D30ECE3AD007EEA2134 /* LKAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.debug.xcconfig; sourceTree = "<group>"; };
+		8D7F31CFBC2B8242A2DF24EF9E9F96DF /* LKAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.release.xcconfig; sourceTree = "<group>"; };
+		8E9990DE8F54DC78BCB6CDD331CDFC43 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		95209B8BB966524BC76543F99C75F5FE /* FSCalendar */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DA2A2512A0D9F51A511883D97DE40D /* Pods-DoneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DoneTests-umbrella.h"; sourceTree = "<group>"; };
 		993DE355F1B2115FD82D04F7F9E80F22 /* Pods-DoneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DoneTests-dummy.m"; sourceTree = "<group>"; };
 		9CC7568AB0B892D60B4FB991D76593B4 /* Pods-Done-DoneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5380F95349BCF79A62D8AC84C5DB3E /* Pods-DoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainerView.swift; path = Source/CheckboxButton/CheckboxButtonContainerView.swift; sourceTree = "<group>"; };
+		9E826B0B5F1B72ABB1139DBA0B282592 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		9F1F44F8703EA58B00A03AD34080E7AB /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
+		9F481DE9D7C6398C05D3B524973DAF6D /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A09B3802904729111BD5BE7FD28DEEE5 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		A1E27C6BCF0D7F556E0C713840ED863F /* FSCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCalendar.release.xcconfig; sourceTree = "<group>"; };
+		A3D31E2FF0150A3C0C146055AC6660AD /* LKAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-prefix.pch"; sourceTree = "<group>"; };
 		A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Done"; path = Pods_Done.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButtonContainer.swift; path = Source/CheckboxButton/CheckboxButtonContainer.swift; sourceTree = "<group>"; };
+		A434B56CBD186378AA19B0BF62B01594 /* FSCalendar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSCalendar-Info.plist"; sourceTree = "<group>"; };
 		AA551D5F44FF21A78631A35A43216EE8 /* Pods-Done-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Done-frameworks.sh"; sourceTree = "<group>"; };
+		AAF50D3F6B3B876D1E0B70B0841D7E1B /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		AEB1B61F149295F684CA7D51C0693737 /* FSCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
+		AF45E67F45270B77123C684D5DCC59BE /* FSCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
+		B0E08D2FCC3CBDBBD118CBF906B8A832 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		B1831048C895BF71C80FB28498D8FF03 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		B21C2D6280F5086FF2A1AEA2EA476ACA /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseButton.swift; path = Source/BaseButton/RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
+		B6F8FCECB5096907B43CCB9D44F822B0 /* MBCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCheckboxButton.modulemap; sourceTree = "<group>"; };
+		B976B39F6BF68B1F3A4E41E13A83F0CC /* LKAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LKAlertController-Info.plist"; sourceTree = "<group>"; };
+		BBA2987423655F1EB4DC61F3278EB635 /* LKAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKAlertController-dummy.m"; sourceTree = "<group>"; };
 		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCheckboxButton; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxColor.swift; path = Source/CheckboxButton/CheckBoxColor.swift; sourceTree = "<group>"; };
-		BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCheckboxButton-umbrella.h"; sourceTree = "<group>"; };
-		C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKAlertController-dummy.m"; sourceTree = "<group>"; };
 		C079DFAF2897ECB229869D37211EB694 /* Pods-Done-DoneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-DoneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCheckboxButton-dummy.m"; sourceTree = "<group>"; };
 		C40C12887E96C940D2AF0740826C3E00 /* Pods-Done-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-Info.plist"; sourceTree = "<group>"; };
-		CC567A042DA5A434180BA28489F14C47 /* LKAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LKAlertController-Info.plist"; sourceTree = "<group>"; };
-		D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseButton.swift; path = Source/BaseButton/RadioCheckboxBaseButton.swift; sourceTree = "<group>"; };
-		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D361B3B1E579FCBF6F43D188F96E8E86 /* LKAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LKAlertController-prefix.pch"; sourceTree = "<group>"; };
-		D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBCheckboxButton.release.xcconfig; sourceTree = "<group>"; };
+		C645A83D85A6E0E09F41A8D5A7FD87D1 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
+		C98D8E8C07923A1DF798C26CE0D3E0A0 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeaderView.m; path = FSCalendar/FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		CE16D200C814D575B59A0EBADD356A26 /* FSCalendarCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
+		D09F4DD3859EDD94EB512F0C3CCD4EA2 /* MBCheckboxButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCheckboxButton-dummy.m"; sourceTree = "<group>"; };
 		D990ABA8DD219C2E8483FA0B11284587 /* Pods-Done.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Done.modulemap"; sourceTree = "<group>"; };
-		DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
+		E138BCD2A6F66960770CD17906C0BD42 /* FSCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCalendar.debug.xcconfig; sourceTree = "<group>"; };
+		E37B2C8D64D034CA6C641783932F06A0 /* FSCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
+		E45B67D1146D0B77E77C547E25F411DB /* FSCalendarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
 		E5872B36A5CE4C9F77708D32838780FA /* Pods-Done-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Done-umbrella.h"; sourceTree = "<group>"; };
-		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		F22EB69A8E89BB94518F7FFCCF951EB1 /* Pods-DoneTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DoneTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F3688CEBD5F1A6484D9ACA2CEFA29E3E /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSCalendar.modulemap; sourceTree = "<group>"; };
 		FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Done-DoneUITests"; path = Pods_Done_DoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFF8FA6B82087D7C47D2F59F229B16C6 /* LKAlertController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LKAlertController.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		02C4133319FD67B8674AE21388C68DE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E75DFD4D69FFEE69BE3D400CA2C9E33 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		062890CF79ADA7EB6EAA6A15DC1E589A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,11 +238,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58FBA2756F341F1F862C001D29DED5A5 /* Frameworks */ = {
+		3B4CAC28391D111E0CE2260A97C49836 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0AC93BA55C4C7101E06EC408464405 /* Foundation.framework in Frameworks */,
+				5216108B128B5C22B048D023B790CF9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8243A64755C7A548C64DC56F66C1347B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60CFDC4002EA677B53ECC413F67C149D /* Foundation.framework in Frameworks */,
+				C6ED706364847164CB566CEA1A6FFDD6 /* QuartzCore.framework in Frameworks */,
+				4683418880504CD2212FE56C4F1E8F80 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8474DD7E322E96A66CEFE1791172D54E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1CA9BC15CC22757E560D201AA11EF8A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +275,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0A778C0229E9BF1FD97896B93F3272B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0B98D163C8E300FAE9207BD3F85E3011 /* Pods-DoneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,12 +299,67 @@
 			path = "Target Support Files/Pods-DoneTests";
 			sourceTree = "<group>";
 		};
-		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+		1C77F52D09EB5765893CA0A804B88D3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+				95209B8BB966524BC76543F99C75F5FE /* FSCalendar */,
+				6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */,
+				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
+				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
+				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
+				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
 			);
-			name = Frameworks;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C8E4FECE1C26D4D244B3BF53D58C045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47414E42FADFA1339BD9C61D4C6E9D5A /* FSCalendar */,
+				9E174D4ECE17BEC0A61E2D276D963B27 /* LKAlertController */,
+				779B0FE1755DB913DCD365FB8F1293CA /* MBCheckboxButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47414E42FADFA1339BD9C61D4C6E9D5A /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				AF45E67F45270B77123C684D5DCC59BE /* FSCalendar.h */,
+				E37B2C8D64D034CA6C641783932F06A0 /* FSCalendar.m */,
+				C645A83D85A6E0E09F41A8D5A7FD87D1 /* FSCalendarAppearance.h */,
+				3E34BDA25D97B9A898CFFF22AF2ED076 /* FSCalendarAppearance.m */,
+				701E47C11F3A53B89A24EF55497E47D5 /* FSCalendarCalculator.h */,
+				7425F52B57682AE49AFB50E4CC39E462 /* FSCalendarCalculator.m */,
+				CE16D200C814D575B59A0EBADD356A26 /* FSCalendarCell.h */,
+				78FBFDF1A7B61B0221C9513B81F2C1FB /* FSCalendarCell.m */,
+				0EF934C99B0407A7071C9E045BA3F767 /* FSCalendarCollectionView.h */,
+				028BC34DACF6F97CC6BBFE48AAFF2723 /* FSCalendarCollectionView.m */,
+				8E9990DE8F54DC78BCB6CDD331CDFC43 /* FSCalendarCollectionViewLayout.h */,
+				B0E08D2FCC3CBDBBD118CBF906B8A832 /* FSCalendarCollectionViewLayout.m */,
+				1B6FD6C013472D8D97EE33F75D9B9A62 /* FSCalendarConstants.h */,
+				E45B67D1146D0B77E77C547E25F411DB /* FSCalendarConstants.m */,
+				8A1A96D501450E944C741683787BE9D4 /* FSCalendarDelegationFactory.h */,
+				66A56CD2FE13CFC36F7DD970283360F1 /* FSCalendarDelegationFactory.m */,
+				8A8BD8812EB74BE418384A528C5047CC /* FSCalendarDelegationProxy.h */,
+				9E826B0B5F1B72ABB1139DBA0B282592 /* FSCalendarDelegationProxy.m */,
+				B1831048C895BF71C80FB28498D8FF03 /* FSCalendarDynamicHeader.h */,
+				32CD16F856656A29A662C3D5E3E9CCC8 /* FSCalendarExtensions.h */,
+				6B6F05494EA490F91059F1BA2AF67B00 /* FSCalendarExtensions.m */,
+				59E2BB5667C45F7A9365044D0C77DDC1 /* FSCalendarHeaderView.h */,
+				C98D8E8C07923A1DF798C26CE0D3E0A0 /* FSCalendarHeaderView.m */,
+				159B80B44FBFCF50CC0138A1D1221758 /* FSCalendarSeparatorDecorationView.h */,
+				43C1D662DC99EB79E62176AAF19D9547 /* FSCalendarSeparatorDecorationView.m */,
+				A09B3802904729111BD5BE7FD28DEEE5 /* FSCalendarStickyHeader.h */,
+				4E9FC26DE69FC4217A3961681307DAEF /* FSCalendarStickyHeader.m */,
+				7DD08602E9ECEF5489927CC074F0939F /* FSCalendarTransitionCoordinator.h */,
+				17528B87DD3C32FD694DBCA057FF2E02 /* FSCalendarTransitionCoordinator.m */,
+				9F481DE9D7C6398C05D3B524973DAF6D /* FSCalendarWeekdayView.h */,
+				AAF50D3F6B3B876D1E0B70B0841D7E1B /* FSCalendarWeekdayView.m */,
+				F68D0ECF671FDB8A3A7B0223C5D95E51 /* Support Files */,
+			);
+			name = FSCalendar;
+			path = FSCalendar;
 			sourceTree = "<group>";
 		};
 		5634A0716D265AEE02A9AC8EA7C9BE2C /* Targets Support Files */ = {
@@ -207,30 +370,6 @@
 				0B98D163C8E300FAE9207BD3F85E3011 /* Pods-DoneTests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		580CCF84EF9314ED7252657A54F436D5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				083796D02F7D8147BF51CB0B75280FA3 /* MBCheckboxButton.modulemap */,
-				C07FB981941FC13BA871E20EDB52C51A /* MBCheckboxButton-dummy.m */,
-				29927607CE84D95F8F3576097EB2CC69 /* MBCheckboxButton-Info.plist */,
-				78F0330C8CA718AC9365ABC81DE9DFA6 /* MBCheckboxButton-prefix.pch */,
-				BFD9F8FC77C126576D8710539885DA6F /* MBCheckboxButton-umbrella.h */,
-				4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */,
-				D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MBCheckboxButton";
-			sourceTree = "<group>";
-		};
-		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
-				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		61318A3029DE2F99A420819FA2FC0896 /* Pods-Done-DoneUITests */ = {
@@ -250,54 +389,60 @@
 			path = "Target Support Files/Pods-Done-DoneUITests";
 			sourceTree = "<group>";
 		};
-		85E3625EAF6E150B25F27E9B627A037C /* Support Files */ = {
+		779B0FE1755DB913DCD365FB8F1293CA /* MBCheckboxButton */ = {
 			isa = PBXGroup;
 			children = (
-				FFF8FA6B82087D7C47D2F59F229B16C6 /* LKAlertController.modulemap */,
-				C05BE3E205E3695B170C6A1DCF216E6C /* LKAlertController-dummy.m */,
-				CC567A042DA5A434180BA28489F14C47 /* LKAlertController-Info.plist */,
-				D361B3B1E579FCBF6F43D188F96E8E86 /* LKAlertController-prefix.pch */,
-				510F43F371074A3C2DE774E476A167D4 /* LKAlertController-umbrella.h */,
-				87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */,
-				1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LKAlertController";
-			sourceTree = "<group>";
-		};
-		8B2720F7DD841FBABC6A621DA5319638 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A7FFF883E9F2B3C494BEFC52C1F3A9A1 /* LKAlertController */,
-				8DC2318D364AB5416A34FD945711DB18 /* MBCheckboxButton */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8DC2318D364AB5416A34FD945711DB18 /* MBCheckboxButton */ = {
-			isa = PBXGroup;
-			children = (
-				DE38C89E5DFF5D50908B3BBFAEFD3795 /* CheckboxButton.swift */,
-				A891DC2D953C1A6B5440C1E9CF1C24B7 /* CheckboxButtonContainer.swift */,
-				A352231DBFC635E0C2735F933C867D03 /* CheckboxButtonContainerView.swift */,
-				BDB6D0F18405EB07EF70748FE70EF1CB /* CheckBoxColor.swift */,
-				7DBEDE2535FD3218B03A06837C9A4CDB /* CheckboxLineStyle.swift */,
-				D1369E9F5BF2DA1AA4043614C1E30570 /* RadioCheckboxBaseButton.swift */,
-				884DB728570E2D9C1A1E6D79C09E0E13 /* RadioCheckboxBaseContainer.swift */,
-				580CCF84EF9314ED7252657A54F436D5 /* Support Files */,
+				69E0C517269A6E61F13043CB688E536B /* CheckboxButton.swift */,
+				2EAF0B0852A700C49E8C93F4C27DDDC7 /* CheckboxButtonContainer.swift */,
+				0E25B9095F2E47E73A2E01DFEF2C8902 /* CheckboxButtonContainerView.swift */,
+				565E56F621516AF8976AC6DED4A917EE /* CheckBoxColor.swift */,
+				1C87C0B3E28CDCC391C337ACF3BDAC17 /* CheckboxLineStyle.swift */,
+				B21C2D6280F5086FF2A1AEA2EA476ACA /* RadioCheckboxBaseButton.swift */,
+				9F1F44F8703EA58B00A03AD34080E7AB /* RadioCheckboxBaseContainer.swift */,
+				910245E8A73A25B553587346555E636F /* Support Files */,
 			);
 			name = MBCheckboxButton;
 			path = MBCheckboxButton;
 			sourceTree = "<group>";
 		};
-		A7FFF883E9F2B3C494BEFC52C1F3A9A1 /* LKAlertController */ = {
+		910245E8A73A25B553587346555E636F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				956705BE400E11292AFCD1140CDD3FE9 /* LKAlertController.swift */,
-				85E3625EAF6E150B25F27E9B627A037C /* Support Files */,
+				B6F8FCECB5096907B43CCB9D44F822B0 /* MBCheckboxButton.modulemap */,
+				D09F4DD3859EDD94EB512F0C3CCD4EA2 /* MBCheckboxButton-dummy.m */,
+				4327E056FF32D57B14DF71EBE52222CE /* MBCheckboxButton-Info.plist */,
+				34AAFE606EAF0F61CCD8300323DD3E04 /* MBCheckboxButton-prefix.pch */,
+				08BCF27F0E76A5F7852077F1F81E5046 /* MBCheckboxButton-umbrella.h */,
+				542CE8FFB272278C3FC84652BF36AF1C /* MBCheckboxButton.debug.xcconfig */,
+				54D00967E02E6D9104C6EA2F5A4D5016 /* MBCheckboxButton.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBCheckboxButton";
+			sourceTree = "<group>";
+		};
+		9E174D4ECE17BEC0A61E2D276D963B27 /* LKAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				64143C8F22EDED999E2C7F8FD42C0401 /* LKAlertController.swift */,
+				BF83425DB29D04628E84B27BE977B72D /* Support Files */,
 			);
 			name = LKAlertController;
 			path = LKAlertController;
+			sourceTree = "<group>";
+		};
+		BF83425DB29D04628E84B27BE977B72D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				119FB87019A7E1CC98F101D0C9BA1E19 /* LKAlertController.modulemap */,
+				BBA2987423655F1EB4DC61F3278EB635 /* LKAlertController-dummy.m */,
+				B976B39F6BF68B1F3A4E41E13A83F0CC /* LKAlertController-Info.plist */,
+				A3D31E2FF0150A3C0C146055AC6660AD /* LKAlertController-prefix.pch */,
+				3D43EB294ECA5944FF09EA7806D54B96 /* LKAlertController-umbrella.h */,
+				8D1F70E718154D30ECE3AD007EEA2134 /* LKAlertController.debug.xcconfig */,
+				8D7F31CFBC2B8242A2DF24EF9E9F96DF /* LKAlertController.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LKAlertController";
 			sourceTree = "<group>";
 		};
 		C0E60F092E8D236A8FCF5FC8B9F4C1D2 /* Pods-Done */ = {
@@ -317,37 +462,50 @@
 			path = "Target Support Files/Pods-Done";
 			sourceTree = "<group>";
 		};
-		CCBF106E191333FA7F97FEB91515E498 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */,
-				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
-				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
-				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
-				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				8B2720F7DD841FBABC6A621DA5319638 /* Pods */,
-				CCBF106E191333FA7F97FEB91515E498 /* Products */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				1C8E4FECE1C26D4D244B3BF53D58C045 /* Pods */,
+				1C77F52D09EB5765893CA0A804B88D3A /* Products */,
 				5634A0716D265AEE02A9AC8EA7C9BE2C /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		F0A778C0229E9BF1FD97896B93F3272B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */,
+				9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */,
+				8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F68D0ECF671FDB8A3A7B0223C5D95E51 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3688CEBD5F1A6484D9ACA2CEFA29E3E /* FSCalendar.modulemap */,
+				AEB1B61F149295F684CA7D51C0693737 /* FSCalendar-dummy.m */,
+				A434B56CBD186378AA19B0BF62B01594 /* FSCalendar-Info.plist */,
+				086BD3D99ED441D8B31BB73997E5DB95 /* FSCalendar-prefix.pch */,
+				229D9B318F367424D53811177C4AF77E /* FSCalendar-umbrella.h */,
+				E138BCD2A6F66960770CD17906C0BD42 /* FSCalendar.debug.xcconfig */,
+				A1E27C6BCF0D7F556E0C713840ED863F /* FSCalendar.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FSCalendar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A3C4AFFDBE0EE74F9396C4B3B72E6E6 /* Headers */ = {
+		139DD3777AE408F95CA731F0B9BF91CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF8639777AD87E317E55EF56A854F71 /* Pods-Done-umbrella.h in Headers */,
+				5D6A05CA0F44437AA850FC4D7AFDD349 /* Pods-Done-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,11 +517,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61F452E326C486EBEAFDAEDCAF631D7A /* Headers */ = {
+		6A0DEDA54E564B14DE75FE09742C35FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9353BA8B6D069863D7C4CB267DCC6F11 /* Pods-Done-DoneUITests-umbrella.h in Headers */,
+				F24ECD33262C3972176ECD171128D23C /* Pods-Done-DoneUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +541,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF9900830C8DCDB380DFE67D911EBA65 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A550F7F30921E5FFE67A755D67DA7683 /* FSCalendar.h in Headers */,
+				1FF421C714EDBE044E5EEB1E0C6A8571 /* FSCalendar-umbrella.h in Headers */,
+				BC0B2FA367074EAF985420BE965303D3 /* FSCalendarAppearance.h in Headers */,
+				62FFC4B2AA010A5445E5D9D6294C62B6 /* FSCalendarCalculator.h in Headers */,
+				003475471715C79534A569A1DE745889 /* FSCalendarCell.h in Headers */,
+				6DCF6F2A00DA4D32535EB01AE34F3563 /* FSCalendarCollectionView.h in Headers */,
+				4643DA364A3E80706B89D53043890B4D /* FSCalendarCollectionViewLayout.h in Headers */,
+				752DBFCDD74504EEA558FCD691F6D548 /* FSCalendarConstants.h in Headers */,
+				C17CF6C18DAC9307799F1D7972965EDF /* FSCalendarDelegationFactory.h in Headers */,
+				39F986157716D5214013E395BDFA237A /* FSCalendarDelegationProxy.h in Headers */,
+				4EC9E26EE87569C1B51B6DFF20700772 /* FSCalendarDynamicHeader.h in Headers */,
+				5F847123FA3D224722CE24317DCEF968 /* FSCalendarExtensions.h in Headers */,
+				0CCBB4361672C8994784F0CD9AFC876D /* FSCalendarHeaderView.h in Headers */,
+				1152D5AAA7732A77B80CF0E33A68351C /* FSCalendarSeparatorDecorationView.h in Headers */,
+				BC1A04CE0A9851F3C003ECD156BE95AC /* FSCalendarStickyHeader.h in Headers */,
+				74340052A3CD15A02A87D8D651CB8AB8 /* FSCalendarTransitionCoordinator.h in Headers */,
+				517DF7507FDB12DBF9BA9D1536EDCC4F /* FSCalendarWeekdayView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B0A80925871C91B9D807A479DC9E1C8 /* Build configuration list for PBXNativeTarget "FSCalendar" */;
+			buildPhases = (
+				FF9900830C8DCDB380DFE67D911EBA65 /* Headers */,
+				0850BAB6F37BE1286C748B584A006CC9 /* Sources */,
+				8243A64755C7A548C64DC56F66C1347B /* Frameworks */,
+				6FDC92F7E5D72E9561F44586F35A4DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSCalendar;
+			productName = FSCalendar;
+			productReference = 95209B8BB966524BC76543F99C75F5FE /* FSCalendar */;
+			productType = "com.apple.product-type.framework";
+		};
 		169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EA8E7E8B0828DEB81E3F42AC2922475 /* Build configuration list for PBXNativeTarget "LKAlertController" */;
@@ -416,7 +616,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F73216B7E60B48DAD0B7953435DBFA66 /* PBXTargetDependency */,
+				84F4C116AECBD368EDCFA5C8A998BA7C /* PBXTargetDependency */,
 			);
 			name = "Pods-DoneTests";
 			productName = Pods_DoneTests;
@@ -425,18 +625,19 @@
 		};
 		BDB140F45EA97BF501F6D1B7456E797F /* Pods-Done-DoneUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4964EEB6106ECF9FAF3756FC5B380B42 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */;
+			buildConfigurationList = 943A1E49DBFA34DA8CB3F8B2A9D116AF /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */;
 			buildPhases = (
-				61F452E326C486EBEAFDAEDCAF631D7A /* Headers */,
-				A2BDF0423C1C4B38538D86F4F0CB6558 /* Sources */,
-				58FBA2756F341F1F862C001D29DED5A5 /* Frameworks */,
-				EB9E80BD73B2123AA352A2C8F69B90DD /* Resources */,
+				6A0DEDA54E564B14DE75FE09742C35FE /* Headers */,
+				28746BD6EDDE95BB76426E5AF792C34D /* Sources */,
+				3B4CAC28391D111E0CE2260A97C49836 /* Frameworks */,
+				36F9D56974C7F988F7B2C2B190A7805E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				75B8F5A783AD8F5ADCF1BADD99F330B8 /* PBXTargetDependency */,
-				5CC78750468B0896D5BFF34717F972D1 /* PBXTargetDependency */,
+				18FD8621764D4E2C508A9D3CAF2A73CA /* PBXTargetDependency */,
+				B3FA3F96E5680F271606183A4A23BE52 /* PBXTargetDependency */,
+				3C4C30F6C26C038801C98EDCB51F48D1 /* PBXTargetDependency */,
 			);
 			name = "Pods-Done-DoneUITests";
 			productName = Pods_Done_DoneUITests;
@@ -445,18 +646,19 @@
 		};
 		C4676B34762A4138E48399FA14D1B48F /* Pods-Done */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01DEF0C86A3F80CBB6ADDF7CD6479DFF /* Build configuration list for PBXNativeTarget "Pods-Done" */;
+			buildConfigurationList = F3764E605B7BF8BA38DFD7C332B083B3 /* Build configuration list for PBXNativeTarget "Pods-Done" */;
 			buildPhases = (
-				0A3C4AFFDBE0EE74F9396C4B3B72E6E6 /* Headers */,
-				2ADCCDE67978D259F7E21C4565E5BC04 /* Sources */,
-				02C4133319FD67B8674AE21388C68DE9 /* Frameworks */,
-				586EE559131D125A1E1886F1BA8A6B93 /* Resources */,
+				139DD3777AE408F95CA731F0B9BF91CE /* Headers */,
+				05346504E1DE03BA4175FEAB8852EA60 /* Sources */,
+				8474DD7E322E96A66CEFE1791172D54E /* Frameworks */,
+				02CA7EFF1A29A375BC45AB50813A1FC2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B179D2AA7D2E41C704E36E3A10E5673 /* PBXTargetDependency */,
-				BE9B42E3FD277B81221D445E07BD0CA6 /* PBXTargetDependency */,
+				607A814ACC173C558005ADA1271978DF /* PBXTargetDependency */,
+				8AF684CB8A9D6937197BD32F594807F3 /* PBXTargetDependency */,
+				BCC2544C50617632FA7F0491B3F0FC41 /* PBXTargetDependency */,
 			);
 			name = "Pods-Done";
 			productName = Pods_Done;
@@ -499,10 +701,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CCBF106E191333FA7F97FEB91515E498 /* Products */;
+			productRefGroup = 1C77F52D09EB5765893CA0A804B88D3A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */,
 				169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */,
 				F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */,
 				C4676B34762A4138E48399FA14D1B48F /* Pods-Done */,
@@ -513,7 +716,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		586EE559131D125A1E1886F1BA8A6B93 /* Resources */ = {
+		02CA7EFF1A29A375BC45AB50813A1FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36F9D56974C7F988F7B2C2B190A7805E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FDC92F7E5D72E9561F44586F35A4DEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,13 +751,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB9E80BD73B2123AA352A2C8F69B90DD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F09409FB27F829544B2551C606BC6CFB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,20 +761,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		05346504E1DE03BA4175FEAB8852EA60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57D0325F15A6496D4579F03C68F03BD /* Pods-Done-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0850BAB6F37BE1286C748B584A006CC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C20C67D0D5A1C73A0A057268A719C1 /* FSCalendar.m in Sources */,
+				3E4E56584545A9F057D6A39565EEBE81 /* FSCalendar-dummy.m in Sources */,
+				F3F18A1FEC8212A61301637E40558A13 /* FSCalendarAppearance.m in Sources */,
+				F1B9720240D5609A1DE32B8350FE0B5B /* FSCalendarCalculator.m in Sources */,
+				E11220C77D9BB217D63867401FF624F6 /* FSCalendarCell.m in Sources */,
+				7E98902CA894CFE1F54E7934B24B0B37 /* FSCalendarCollectionView.m in Sources */,
+				CE132491B81D44BB6B692C3F72FBC980 /* FSCalendarCollectionViewLayout.m in Sources */,
+				8D5833379E9F51BFEEA066AA1C4A25A0 /* FSCalendarConstants.m in Sources */,
+				CF10A50704D5CF6F07D5949BA4AB3EAB /* FSCalendarDelegationFactory.m in Sources */,
+				E53DD07DFCDD2241779DBAAE71E77032 /* FSCalendarDelegationProxy.m in Sources */,
+				C7ACD835AAE2936FB6B623084612825D /* FSCalendarExtensions.m in Sources */,
+				7FDEAD728DF7397DAEE4237F07AD5A70 /* FSCalendarHeaderView.m in Sources */,
+				6040741383F6F8F6979D6C547230C132 /* FSCalendarSeparatorDecorationView.m in Sources */,
+				24E5EE988A4BD7C15B55708C6D88AE04 /* FSCalendarStickyHeader.m in Sources */,
+				6201BB85A0AAF8FA6C4771308917BAB2 /* FSCalendarTransitionCoordinator.m in Sources */,
+				3960120DF8907DA574823ACE7ED96076 /* FSCalendarWeekdayView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28746BD6EDDE95BB76426E5AF792C34D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD0BBB247A9E8EE1A580B62509DCDFB /* Pods-Done-DoneUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29C86974434AF8B28F4DBD5701803BC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0B0A2CB8044E2FF98502BEA42376049F /* LKAlertController.swift in Sources */,
 				D2FD47565A46EAD2ED19E052CAF35C99 /* LKAlertController-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2ADCCDE67978D259F7E21C4565E5BC04 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72057BE96FDEA6D88C18C708C847DC52 /* Pods-Done-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,46 +832,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A2BDF0423C1C4B38538D86F4F0CB6558 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EE39E620ADC31C4FD40BF1AE2290ACC6 /* Pods-Done-DoneUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5CC78750468B0896D5BFF34717F972D1 /* PBXTargetDependency */ = {
+		18FD8621764D4E2C508A9D3CAF2A73CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSCalendar;
+			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
+			targetProxy = 7A7D8D93CE40512CAC572CE4BB337662 /* PBXContainerItemProxy */;
+		};
+		3C4C30F6C26C038801C98EDCB51F48D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBCheckboxButton;
 			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
-			targetProxy = C2B3A51B3818BF4A9713230BE2C51C08 /* PBXContainerItemProxy */;
+			targetProxy = FDAE1954774EBDF17B6C2C06F3B924F1 /* PBXContainerItemProxy */;
 		};
-		75B8F5A783AD8F5ADCF1BADD99F330B8 /* PBXTargetDependency */ = {
+		607A814ACC173C558005ADA1271978DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = LKAlertController;
-			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
-			targetProxy = AF23D574E62EBA3C6CF85D6620DBB415 /* PBXContainerItemProxy */;
+			name = FSCalendar;
+			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
+			targetProxy = BA1D282C0D9F2364B4FD518F94CDDE94 /* PBXContainerItemProxy */;
 		};
-		9B179D2AA7D2E41C704E36E3A10E5673 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LKAlertController;
-			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
-			targetProxy = F831077D66CE262CF417F66F7D7B4862 /* PBXContainerItemProxy */;
-		};
-		BE9B42E3FD277B81221D445E07BD0CA6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBCheckboxButton;
-			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
-			targetProxy = A2C6D2D609BA20BE5A72FEB9CD31E1DA /* PBXContainerItemProxy */;
-		};
-		F73216B7E60B48DAD0B7953435DBFA66 /* PBXTargetDependency */ = {
+		84F4C116AECBD368EDCFA5C8A998BA7C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Done";
 			target = C4676B34762A4138E48399FA14D1B48F /* Pods-Done */;
-			targetProxy = 6A1833C7A1CDEA5A759E422E5D84D0FA /* PBXContainerItemProxy */;
+			targetProxy = C6E4BD68CBEFAAA4D9DCFD83207C7386 /* PBXContainerItemProxy */;
+		};
+		8AF684CB8A9D6937197BD32F594807F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKAlertController;
+			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
+			targetProxy = 09CCDAE47E1F75C3BECEC8EC90EE6DCE /* PBXContainerItemProxy */;
+		};
+		B3FA3F96E5680F271606183A4A23BE52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LKAlertController;
+			target = 169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */;
+			targetProxy = 03D02BCD1E04573433C1D8B819504A37 /* PBXContainerItemProxy */;
+		};
+		BCC2544C50617632FA7F0491B3F0FC41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBCheckboxButton;
+			target = F1F3A67C99ED5D133D4FF8943EF2E113 /* MBCheckboxButton */;
+			targetProxy = F321036E5DD1B7F394925D601FB0FD70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -673,9 +918,9 @@
 			};
 			name = Release;
 		};
-		1FAB1D90891C59950E7A6A48D857A9FE /* Release */ = {
+		1F758E37D0A8D10DC9C697DFF3C01B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */;
+			baseConfigurationReference = 20B0C3D22BB6A0D9C2774BC74B122EA1 /* Pods-Done.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -705,11 +950,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		3C3F1167AA6A11069647329FDBC0E048 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -750,7 +994,7 @@
 		};
 		40AE1670022409C453E616E036BCEC4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AACB23A088652B1B5DEF4CFBDF87372 /* MBCheckboxButton.debug.xcconfig */;
+			baseConfigurationReference = 542CE8FFB272278C3FC84652BF36AF1C /* MBCheckboxButton.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -782,9 +1026,78 @@
 			};
 			name = Debug;
 		};
-		416F16D77C15B1C24227E35ABBBBCB75 /* Debug */ = {
+		416F62CA4724A51D675AB18D49EA0E8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20B0C3D22BB6A0D9C2774BC74B122EA1 /* Pods-Done.debug.xcconfig */;
+			baseConfigurationReference = 54D00967E02E6D9104C6EA2F5A4D5016 /* MBCheckboxButton.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton.modulemap";
+				PRODUCT_MODULE_NAME = MBCheckboxButton;
+				PRODUCT_NAME = MBCheckboxButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		73FBC83DA060410357FD0C30D352B208 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E138BCD2A6F66960770CD17906C0BD42 /* FSCalendar.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FSCalendar/FSCalendar.modulemap";
+				PRODUCT_MODULE_NAME = FSCalendar;
+				PRODUCT_NAME = FSCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		79AA9CDAF79A82CC7798BBC4194AB3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -796,7 +1109,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Done/Pods-Done-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Done-DoneUITests/Pods-Done-DoneUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -805,7 +1118,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Done/Pods-Done.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Done-DoneUITests/Pods-Done-DoneUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -814,116 +1127,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		416F62CA4724A51D675AB18D49EA0E8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6972F74113DD97696D32FE9B5E201EE /* MBCheckboxButton.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton.modulemap";
-				PRODUCT_MODULE_NAME = MBCheckboxButton;
-				PRODUCT_NAME = MBCheckboxButton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		9E4201ADA78316FB98C9685012A05140 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87C7E11C2B7B7D2751CA060A6CA9FDD3 /* LKAlertController.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
-				PRODUCT_MODULE_NAME = LKAlertController;
-				PRODUCT_NAME = LKAlertController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AABD2ECBD93FAED2A09E71F009F58F4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D292B5FF2D0EDB6899BAD81BFBE92BE /* LKAlertController.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
-				PRODUCT_MODULE_NAME = LKAlertController;
-				PRODUCT_NAME = LKAlertController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B9AEF4105AF0EDE6C37E47D4D04777FA /* Debug */ = {
+		8995976950902D8C6E9C410D4694AE56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 200312DFA9C67FF1A9426D24B58EC45C /* Pods-Done-DoneUITests.debug.xcconfig */;
 			buildSettings = {
@@ -959,6 +1169,110 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		9E4201ADA78316FB98C9685012A05140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1F70E718154D30ECE3AD007EEA2134 /* LKAlertController.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
+				PRODUCT_MODULE_NAME = LKAlertController;
+				PRODUCT_NAME = LKAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A160472351B46C565056074E8EAAC9F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E27C6BCF0D7F556E0C713840ED863F /* FSCalendar.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FSCalendar/FSCalendar.modulemap";
+				PRODUCT_MODULE_NAME = FSCalendar;
+				PRODUCT_NAME = FSCalendar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AABD2ECBD93FAED2A09E71F009F58F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D7F31CFBC2B8242A2DF24EF9E9F96DF /* LKAlertController.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LKAlertController/LKAlertController.modulemap";
+				PRODUCT_MODULE_NAME = LKAlertController;
+				PRODUCT_NAME = LKAlertController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1088,9 +1402,9 @@
 			};
 			name = Release;
 		};
-		DCAD9C2175E4B4773D4AF891DAEFCC09 /* Release */ = {
+		E5A0BA90AD94FB054594BE7E5DB104D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */;
+			baseConfigurationReference = 5FC932D569A6D297002A76A81659AF48 /* Pods-Done.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1102,7 +1416,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Done-DoneUITests/Pods-Done-DoneUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Done/Pods-Done-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1111,7 +1425,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Done-DoneUITests/Pods-Done-DoneUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Done/Pods-Done.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1129,15 +1443,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01DEF0C86A3F80CBB6ADDF7CD6479DFF /* Build configuration list for PBXNativeTarget "Pods-Done" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				416F16D77C15B1C24227E35ABBBBCB75 /* Debug */,
-				1FAB1D90891C59950E7A6A48D857A9FE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1EA8E7E8B0828DEB81E3F42AC2922475 /* Build configuration list for PBXNativeTarget "LKAlertController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1165,11 +1470,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4964EEB6106ECF9FAF3756FC5B380B42 /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */ = {
+		4B0A80925871C91B9D807A479DC9E1C8 /* Build configuration list for PBXNativeTarget "FSCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B9AEF4105AF0EDE6C37E47D4D04777FA /* Debug */,
-				DCAD9C2175E4B4773D4AF891DAEFCC09 /* Release */,
+				73FBC83DA060410357FD0C30D352B208 /* Debug */,
+				A160472351B46C565056074E8EAAC9F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1179,6 +1484,24 @@
 			buildConfigurations = (
 				3C3F1167AA6A11069647329FDBC0E048 /* Debug */,
 				17DEB31E3B831DAE326998C8EECB17FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		943A1E49DBFA34DA8CB3F8B2A9D116AF /* Build configuration list for PBXNativeTarget "Pods-Done-DoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8995976950902D8C6E9C410D4694AE56 /* Debug */,
+				79AA9CDAF79A82CC7798BBC4194AB3BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3764E605B7BF8BA38DFD7C332B083B3 /* Build configuration list for PBXNativeTarget "Pods-Done" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F758E37D0A8D10DC9C697DFF3C01B45 /* Debug */,
+				E5A0BA90AD94FB054594BE7E5DB104D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

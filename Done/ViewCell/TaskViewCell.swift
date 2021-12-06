@@ -48,6 +48,7 @@ class TaskViewCell: UITableViewCell {
     
     func configures(tasks: DoneTask){
         self.taskName.text = tasks.name
+        self.taskName.textColor = UIColor(named: tasks.category.colors ?? "")
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy"
         if tasks.dueDate <= currentDate {

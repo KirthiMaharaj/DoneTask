@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                }
 //            }
 //        }
+        
         requestNotifications()
         return true
     }

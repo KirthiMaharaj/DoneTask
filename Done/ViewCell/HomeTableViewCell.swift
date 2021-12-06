@@ -24,11 +24,12 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func configures(tasks: CategoryTask){
-        if compButton.isOn {
+       // if compButton.isOn {
             self.title.text = tasks.name
-        }else{
-            self.title.text = tasks.name
-        }
+        self.title.textColor = UIColor(named: tasks.colors)
+     //   }else{
+            
+      //  }
         
     }
 

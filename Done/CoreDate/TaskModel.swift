@@ -184,6 +184,7 @@ class TaskManager  {
         
         newTask.title = task.name
         newTask.taskCount = task.cateCoun
+        newTask.colors = task.colors
         do {
             try managedObjectContext.save()
         } catch {
@@ -204,7 +205,7 @@ class TaskManager  {
             return nil
         }
         let entity = self.taskss[index]
-        let tasks = CategoryTask(entity.title ?? "name", Int(entity.taskCount))
+        let tasks = CategoryTask(entity.title ?? "name", Int(entity.taskCount), entity.colors ?? "colors")
         return tasks
     }
     
@@ -216,6 +217,26 @@ class TaskManager  {
         let entity = self.taskss[index]
         
         return entity
+    }
+    
+     func scheduleNotificationFor(task: DoneTask) {
+        guard let taskIDString = task.taskIds else {
+            fatalError()
+        }
+
+        let center = UNUserNotificationCenter.current()
+
+        let content = UNMutableNotificationContent()
+        content.title = "Task Reminder"
+        content.body = task.name
+        content.categoryIdentifier = "alarm"
+        content.sound = UNNotificationSound.default
+
+        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: task.date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+
+        let request = UNNotificationRequest(identifier: taskIDString, content: content, trigger: trigger)
+        center.add(request)
     }
     
     

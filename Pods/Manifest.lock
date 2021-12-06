@@ -1,20 +1,24 @@
 PODS:
+  - FSCalendar (2.8.2)
   - LKAlertController (1.12.2)
   - MBCheckboxButton (1.4)
 
 DEPENDENCIES:
+  - FSCalendar (~> 2.8)
   - LKAlertController (~> 1.12)
   - MBCheckboxButton (~> 1.4)
 
 SPEC REPOS:
   trunk:
+    - FSCalendar
     - LKAlertController
     - MBCheckboxButton
 
 SPEC CHECKSUMS:
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   LKAlertController: 10c7e8627e5d4757d03b4f53469f35ded14c378f
   MBCheckboxButton: 6ad0b46b111c59ea9dec558e0df1973cee2eb3aa
 
-PODFILE CHECKSUM: 43bb3cb07c1deadfc697de78a4c67073e7fea487
+PODFILE CHECKSUM: 5084067a3d2efeeb3d175df6d9c887e1ff66e9dc
 
 COCOAPODS: 1.11.2

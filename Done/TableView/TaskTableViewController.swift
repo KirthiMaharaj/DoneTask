@@ -15,7 +15,7 @@ class TaskTableViewController: UITableViewController {
     
     var dataProvider: TaskManager!
     var taskCategory: Subtask?
-    
+    var index : Int?
     
     @IBOutlet weak var sortButton: UIBarButtonItem!
     
@@ -50,13 +50,15 @@ class TaskTableViewController: UITableViewController {
         // Configure the cell...
         let complete = self.dataProvider.getTask(atIndex: indexPath.row)!
         cell.id = indexPath.row
-        /*
+        
+/*
         if indexPath.section == 0 && !complete.isComplete {
             cell.configures(tasks: complete)
         }else if indexPath.section == 1 && complete.isComplete {
             cell.configures(tasks: complete)
         }
-        */
+*/
+        
         cell.configures(tasks: complete)
         cell.delegate = self
         return cell
@@ -103,7 +105,28 @@ class TaskTableViewController: UITableViewController {
     }
     
  
-    
+/*
+    private func determineProjectSection() {
+        var pendingTaskCount = 0
+
+        for task in taskCategory!.subtask! {
+            if (task as! DoneTask).isComplete == false {
+                pendingTaskCount += 1
+            }
+        }
+
+        if taskCategory!.subtask?.count == 0 {
+            taskCategory?.status = "1New Projects"
+        }
+        else if pendingTaskCount == 0 {
+            taskCategory!.status = "2Completed Projects"
+        } else {
+            taskCategory!.status = "0Active Projects"
+        }
+
+        self.dataProvider.saveTasks()
+    }
+*/
     
     // MARK: - Navigation
     
@@ -114,8 +137,8 @@ class TaskTableViewController: UITableViewController {
         if let vc = navi.viewControllers.first as? AddTaskViewController {
             vc.taskCategory = taskCategory
             vc.addRequiredData(model: self.dataProvider)
-            vc.delegate = self
-            vc.tasks = sender  as? DoneTask
+          //  vc.delegate = self
+           vc.tasks = sender  as? DoneTask
             
         }
     }
@@ -131,20 +154,22 @@ extension TaskTableViewController: TasksDataManagerDelegate {
     }
 }
 
-extension TaskTableViewController : TaskDelegate {
-   
-    
-    func didTapSave(task: DoneTask) {
-        self.dataProvider.saveTasks()
-        self.dataProvider.fetchTasks()
-    }
-    
-    func didTapUpdate(task: DoneTask) {
-        self.dataProvider.updatedTasks(task)
-    }
-    
-    
-}
+//extension TaskTableViewController : TaskDelegate {
+//
+//
+//    func didTapSave(task: DoneTask) {
+//        self.dataProvider.saveTasks()
+//        self.dataProvider.fetchTasks()
+//    }
+//
+//    func didTapUpdate(task: DoneTask) {
+//
+//        self.dataProvider.updateTask(task: task, atIndex: index ?? Int())
+//        //self.dataProvider.updatedTasks(task)
+//    }
+//
+//
+//}
 
 
 extension TaskTableViewController: TaskTableViewCellDelegate {
@@ -154,10 +179,9 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
         if let old = self.dataProvider.getTask(atIndex: index) {
             let new = DoneTask(old.date, old.descriptions, old.dueDate, old.taskIds!,true, old.name,Int(old.priorty), false, old.category)
             self.dataProvider.updateTask(task: new, atIndex: index)
-          
             self.dataProvider.cancelNotificationFor(task: new)
             self.dataProvider.saveTasks()
-             self.dataProvider.fetchTasks()
+           //  self.dataProvider.fetchTasks()
         }
     }
     
@@ -166,9 +190,8 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
         if let old = self.dataProvider.getTask(atIndex: index) {
             let new = DoneTask(old.date, old.descriptions, old.dueDate, old.taskIds!,false, old.name, Int(old.priorty),true, old.category)
             self.dataProvider.updateTask(task: new, atIndex: index)
-          
             self.dataProvider.saveTasks()
-             self.dataProvider.fetchTasks()
+           //  self.dataProvider.fetchTasks()
         }
     }
     
@@ -206,3 +229,24 @@ extension TaskTableViewController: NSFetchedResultsControllerDelegate {
     }
 }
 
+
+extension TaskTableViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()
+        let predicate =  NSPredicate(format: "name CONTAINS[cd] %@", searchBar.text!)
+        //let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = dataProvider.selectedSortType.getSortDescriptor()
+        self.dataProvider.fetchTasks(with: request, predicate: predicate)
+       
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            self.dataProvider.fetchTasks()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+}
