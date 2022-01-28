@@ -161,7 +161,7 @@
 		69E0C517269A6E61F13043CB688E536B /* CheckboxButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxButton.swift; path = Source/CheckboxButton/CheckboxButton.swift; sourceTree = "<group>"; };
 		6B6F05494EA490F91059F1BA2AF67B00 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
 		6C06F903BC7CEA7B3201F53C71590A4F /* Pods-DoneTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DoneTests-Info.plist"; sourceTree = "<group>"; };
-		6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LKAlertController; path = LKAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LKAlertController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7B00005A7442D3A55365E2EB8A1076 /* Pods-Done-DoneUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Done-DoneUITests-umbrella.h"; sourceTree = "<group>"; };
 		701E47C11F3A53B89A24EF55497E47D5 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
 		7425F52B57682AE49AFB50E4CC39E462 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
@@ -177,12 +177,12 @@
 		8D1F70E718154D30ECE3AD007EEA2134 /* LKAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.debug.xcconfig; sourceTree = "<group>"; };
 		8D7F31CFBC2B8242A2DF24EF9E9F96DF /* LKAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LKAlertController.release.xcconfig; sourceTree = "<group>"; };
 		8E9990DE8F54DC78BCB6CDD331CDFC43 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
-		95209B8BB966524BC76543F99C75F5FE /* FSCalendar */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSCalendar; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98DA2A2512A0D9F51A511883D97DE40D /* Pods-DoneTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DoneTests-umbrella.h"; sourceTree = "<group>"; };
 		993DE355F1B2115FD82D04F7F9E80F22 /* Pods-DoneTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DoneTests-dummy.m"; sourceTree = "<group>"; };
 		9CC7568AB0B892D60B4FB991D76593B4 /* Pods-Done-DoneUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-DoneUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CDB6FB11B5C475D74E5CB728CDE33E2 /* Pods-Done-DoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Done-DoneUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5380F95349BCF79A62D8AC84C5DB3E /* Pods-DoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E826B0B5F1B72ABB1139DBA0B282592 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
 		9F1F44F8703EA58B00A03AD34080E7AB /* RadioCheckboxBaseContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RadioCheckboxBaseContainer.swift; path = Source/BaseButton/RadioCheckboxBaseContainer.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		B6F8FCECB5096907B43CCB9D44F822B0 /* MBCheckboxButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCheckboxButton.modulemap; sourceTree = "<group>"; };
 		B976B39F6BF68B1F3A4E41E13A83F0CC /* LKAlertController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LKAlertController-Info.plist"; sourceTree = "<group>"; };
 		BBA2987423655F1EB4DC61F3278EB635 /* LKAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LKAlertController-dummy.m"; sourceTree = "<group>"; };
-		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCheckboxButton; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBCheckboxButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C079DFAF2897ECB229869D37211EB694 /* Pods-Done-DoneUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Done-DoneUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C40C12887E96C940D2AF0740826C3E00 /* Pods-Done-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Done-Info.plist"; sourceTree = "<group>"; };
 		C645A83D85A6E0E09F41A8D5A7FD87D1 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
@@ -302,9 +302,9 @@
 		1C77F52D09EB5765893CA0A804B88D3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95209B8BB966524BC76543F99C75F5FE /* FSCalendar */,
-				6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */,
-				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */,
+				95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */,
+				6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController.framework */,
+				BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */,
 				A3F28FABDA6A51DB90A166DB678836E7 /* Pods-Done */,
 				FD08297966D5A6661D8495AF23893B47 /* Pods-Done-DoneUITests */,
 				828715DABF5EFD65969A3518105E18E2 /* Pods-DoneTests */,
@@ -358,7 +358,6 @@
 				AAF50D3F6B3B876D1E0B70B0841D7E1B /* FSCalendarWeekdayView.m */,
 				F68D0ECF671FDB8A3A7B0223C5D95E51 /* Support Files */,
 			);
-			name = FSCalendar;
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
@@ -401,7 +400,6 @@
 				9F1F44F8703EA58B00A03AD34080E7AB /* RadioCheckboxBaseContainer.swift */,
 				910245E8A73A25B553587346555E636F /* Support Files */,
 			);
-			name = MBCheckboxButton;
 			path = MBCheckboxButton;
 			sourceTree = "<group>";
 		};
@@ -426,7 +424,6 @@
 				64143C8F22EDED999E2C7F8FD42C0401 /* LKAlertController.swift */,
 				BF83425DB29D04628E84B27BE977B72D /* Support Files */,
 			);
-			name = LKAlertController;
 			path = LKAlertController;
 			sourceTree = "<group>";
 		};
@@ -583,7 +580,7 @@
 			);
 			name = FSCalendar;
 			productName = FSCalendar;
-			productReference = 95209B8BB966524BC76543F99C75F5FE /* FSCalendar */;
+			productReference = 95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		169BDD87530CD45E7C54D8FB26A1575F /* LKAlertController */ = {
@@ -601,7 +598,7 @@
 			);
 			name = LKAlertController;
 			productName = LKAlertController;
-			productReference = 6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController */;
+			productReference = 6E3980CF1759B1B6A46DEB11D397C04E /* LKAlertController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		90BA32F2E01EE6518D47FDCECA0D1F6C /* Pods-DoneTests */ = {
@@ -680,7 +677,7 @@
 			);
 			name = MBCheckboxButton;
 			productName = MBCheckboxButton;
-			productReference = BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton */;
+			productReference = BBCA841992B18D15DEE00A4F35247BED /* MBCheckboxButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -690,7 +687,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1310;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1007,7 +1004,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1041,7 +1038,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCheckboxButton/MBCheckboxButton-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCheckboxButton/MBCheckboxButton-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1076,7 +1073,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1185,7 +1182,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1219,7 +1216,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSCalendar/FSCalendar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSCalendar/FSCalendar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1254,7 +1251,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/LKAlertController/LKAlertController-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/LKAlertController/LKAlertController-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

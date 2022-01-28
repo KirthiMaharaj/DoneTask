@@ -8,10 +8,10 @@
 import UIKit
 import LKAlertController
 
-//protocol TaskDelegate: AnyObject {
-//    func didTapSave(task : DoneTask)
-//    func didTapUpdate(task : DoneTask)
-//}
+protocol TaskDelegate: AnyObject {
+    func didTapSave(task : DoneTask)
+    func didTapUpdate(task : DoneTask)
+}
 
 
 class AddTaskViewController: UIViewController{
@@ -31,24 +31,25 @@ class AddTaskViewController: UIViewController{
     var taskCategory: Subtask?
     private var taskksID: String?
     //var taskCategory: String?
-    // var isUpdate: Bool = false
-    // weak var delegate : TaskDelegate?
+     var isUpdate: Bool = false
+     weak var delegate : TaskDelegate?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        isUpdate = (tasks != nil)
         setupButtons()
         editTasks()
-        //  isUpdate = (tasks != nil)
         dateTaskPicker.minimumDate = Date()
         
     }
     
     
     @IBAction func SaveButtonTapped(_ sender: UIBarButtonItem) {
-        
+
+/*
         if tasks != nil{
             reminderDate.date = tasks!.date
             taskDescription.text = tasks!.descriptions
@@ -60,27 +61,28 @@ class AddTaskViewController: UIViewController{
             self.dataProvider.saveTasks()
             self.dataProvider.fetchTasks()
         }else{
-            if let taskDes = taskDescription.text, let taskName = taskTitle.text {
+ */
+
+        if let taskDes = taskDescription.text, let taskName = taskTitle.text {
+            let task = DoneTask(reminderDate.date, taskDes ,dateTaskPicker.date, self.taskksID ?? "id",false, taskName, Int(self.selectedPriority.rawValue), false, taskCategory!)
+            self.dataProvider.scheduleNotificationFor(task: task)
+            createTasks(task)
                 
-                let task = DoneTask(reminderDate.date, taskDes ,dateTaskPicker.date, self.taskksID ?? "id",false, taskName, Int(self.selectedPriority.rawValue), false, taskCategory!)
-            
-                self.dataProvider.scheduleNotificationFor(task: task)
-                createTasks(task)
-    /*              if isUpdate {
-                                self.delegate?.didTapUpdate(task: task)
-                                print("new Task update")
-                            } else {
-                
-                                self.delegate?.didTapSave(task: task)
-                                print("new Task Save")
-     
-     }
-         */
-                self.dataProvider.fetchTasks()
-                self.dismiss(animated: true, completion: nil)
-                //print("Did not add")
-            }
+
+        if isUpdate {
+            self.delegate?.didTapUpdate(task: task)
+            print("new Task update")
+        } else {
+            self.delegate?.didTapSave(task: task)
+            print("new Task Save")
+         
         }
+
+            self.dataProvider.fetchTasks()
+            self.dismiss(animated: true, completion: nil)
+            //print("Did not add")
+        }
+  //  }
    
     }
     
@@ -104,18 +106,19 @@ class AddTaskViewController: UIViewController{
         }
     }
     
+    
     func editTasks() {
-        //  guard let tasks = self.tasks else { return }
-        if tasks != nil {
-            reminderDate.date = tasks?.date ?? Date()
-            taskDescription.text = tasks!.descriptions
-            taskTitle.text = tasks?.name ?? "Title"
-            dateTaskPicker.date = tasks!.dueDate
-            let priorityColor = Priority(rawValue: Int(tasks!.priorty))
+          guard let tasks = self.tasks else { return }
+       // if tasks != nil {
+            reminderDate.date = tasks.date
+            taskDescription.text = tasks.descriptions
+            taskTitle.text = tasks.name
+            dateTaskPicker.date = tasks.dueDate
+            let priorityColor = Priority(rawValue: Int(tasks.priorty))
             self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
             self.priortyButton.setTitle(priorityColor?.text, for: .normal)
             //tasks.category.taskCount += 1
-        }
+       // }
         
     }
     

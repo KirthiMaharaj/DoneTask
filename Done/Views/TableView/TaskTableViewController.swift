@@ -105,28 +105,7 @@ class TaskTableViewController: UITableViewController {
     }
     
  
-/*
-    private func determineProjectSection() {
-        var pendingTaskCount = 0
 
-        for task in taskCategory!.subtask! {
-            if (task as! DoneTask).isComplete == false {
-                pendingTaskCount += 1
-            }
-        }
-
-        if taskCategory!.subtask?.count == 0 {
-            taskCategory?.status = "1New Projects"
-        }
-        else if pendingTaskCount == 0 {
-            taskCategory!.status = "2Completed Projects"
-        } else {
-            taskCategory!.status = "0Active Projects"
-        }
-
-        self.dataProvider.saveTasks()
-    }
-*/
     
     // MARK: - Navigation
     
@@ -136,9 +115,9 @@ class TaskTableViewController: UITableViewController {
         let navi: UINavigationController = segue.destination as! UINavigationController
         if let vc = navi.viewControllers.first as? AddTaskViewController {
             vc.taskCategory = taskCategory
+            vc.delegate = self
             vc.addRequiredData(model: self.dataProvider)
-          //  vc.delegate = self
-           vc.tasks = sender  as? DoneTask
+            vc.tasks = sender  as? DoneTask
             
         }
     }
@@ -154,23 +133,21 @@ extension TaskTableViewController: TasksDataManagerDelegate {
     }
 }
 
-//extension TaskTableViewController : TaskDelegate {
-//
-//
-//    func didTapSave(task: DoneTask) {
-//        self.dataProvider.saveTasks()
-//        self.dataProvider.fetchTasks()
-//    }
-//
-//    func didTapUpdate(task: DoneTask) {
-//
-//        self.dataProvider.updateTask(task: task, atIndex: index ?? Int())
-//        //self.dataProvider.updatedTasks(task)
-//    }
-//
-//
-//}
 
+extension TaskTableViewController : TaskDelegate {
+
+
+    func didTapSave(task: DoneTask) {
+        self.dataProvider.saveTasks()
+       
+    }
+
+    func didTapUpdate(task: DoneTask) {
+        self.dataProvider.updatedTasks(task)
+    }
+
+
+}
 
 extension TaskTableViewController: TaskTableViewCellDelegate {
     
@@ -200,6 +177,30 @@ extension TaskTableViewController: TaskTableViewCellDelegate {
 
 
 
+
+
+extension TaskTableViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()
+        let predicate =  NSPredicate(format: "name CONTAINS[cd] %@", searchBar.text!)
+        //let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = dataProvider.selectedSortType.getSortDescriptor()
+        self.dataProvider.fetchTasks(with: request, predicate: predicate)
+       
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            self.dataProvider.fetchTasks()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+}
+
+
 extension TaskTableViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
@@ -225,28 +226,6 @@ extension TaskTableViewController: NSFetchedResultsControllerDelegate {
             break
         @unknown default:
             break
-        }
-    }
-}
-
-
-extension TaskTableViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()
-        let predicate =  NSPredicate(format: "name CONTAINS[cd] %@", searchBar.text!)
-        //let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        request.sortDescriptors = dataProvider.selectedSortType.getSortDescriptor()
-        self.dataProvider.fetchTasks(with: request, predicate: predicate)
-       
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0 {
-            self.dataProvider.fetchTasks()
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
-            }
         }
     }
 }

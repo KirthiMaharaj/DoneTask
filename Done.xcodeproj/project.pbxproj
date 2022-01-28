@@ -26,7 +26,6 @@
 		FEA5498B2727185A00D52E2C /* TaskColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5498A2727185A00D52E2C /* TaskColorTableViewController.swift */; };
 		FEA5498D27271AEB00D52E2C /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5498C27271AEB00D52E2C /* NotificationConstants.swift */; };
 		FEB2F831270DB48B00A0B4DE /* HomeTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */; };
-		FEBF9AB427273BC70046DBAA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBF9AB327273BC70046DBAA /* CalendarViewController.swift */; };
 		FEBFF85E26F9E98A0056E0B4 /* SortModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */; };
 		FECA141826E7A5D10023ACB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141726E7A5D10023ACB8 /* AppDelegate.swift */; };
 		FECA141A26E7A5D10023ACB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */; };
@@ -85,7 +84,6 @@
 		FEA5498A2727185A00D52E2C /* TaskColorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskColorTableViewController.swift; sourceTree = "<group>"; };
 		FEA5498C27271AEB00D52E2C /* NotificationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		FEB2F830270DB48B00A0B4DE /* HomeTaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTableViewController.swift; sourceTree = "<group>"; };
-		FEBF9AB327273BC70046DBAA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		FEBFF85D26F9E98A0056E0B4 /* SortModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortModel.swift; sourceTree = "<group>"; };
 		FECA141426E7A5D10023ACB8 /* Done.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Done.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECA141726E7A5D10023ACB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +164,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FE64AE5B275FA11500D52CDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FECA144A26E7D7470023ACB8 /* ViewCell */,
+				FECA144B26E7D75A0023ACB8 /* View */,
+				FEDE0D3F27202A49009C5291 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FE8C0DA82714B57800ED8E4B /* CoreDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +209,7 @@
 		FECA141626E7A5D10023ACB8 /* Done */ = {
 			isa = PBXGroup;
 			children = (
-				FEDE0D3F27202A49009C5291 /* TableView */,
+				FE64AE5B275FA11500D52CDC /* Views */,
 				FE3605F62719EEC6008223B1 /* Subtask+CoreDataProperties.swift */,
 				FE3605F72719EEC6008223B1 /* Tasks+CoreDataProperties.swift */,
 				FE3605FA2719EF0C008223B1 /* Subtask+CoreDataClass.swift */,
@@ -211,9 +219,7 @@
 				FE8C0DA82714B57800ED8E4B /* CoreDate */,
 				FE08451C26EFAD5D000538AE /* Extensions */,
 				FECA144C26E7D76C0023ACB8 /* Model */,
-				FECA144B26E7D75A0023ACB8 /* View */,
 				FECA141726E7A5D10023ACB8 /* AppDelegate.swift */,
-				FECA144A26E7D7470023ACB8 /* ViewCell */,
 				FECA141926E7A5D10023ACB8 /* SceneDelegate.swift */,
 				FECA141D26E7A5D10023ACB8 /* Main.storyboard */,
 				FECA142326E7A5D20023ACB8 /* Assets.xcassets */,
@@ -256,7 +262,6 @@
 			children = (
 				FECA141B26E7A5D10023ACB8 /* AddTaskViewController.swift */,
 				FE8C0DAB2714BA9000ED8E4B /* HomeViewController.swift */,
-				FEBF9AB327273BC70046DBAA /* CalendarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,7 +527,6 @@
 				FE5457AC26EA1D8000BCE016 /* DoneTask.swift in Sources */,
 				FECA145026E7D7C00023ACB8 /* TaskTableViewController.swift in Sources */,
 				FE763BC726FCF5BC00281128 /* GDLabel.swift in Sources */,
-				FEBF9AB427273BC70046DBAA /* CalendarViewController.swift in Sources */,
 				FE8C0DAC2714BA9000ED8E4B /* HomeViewController.swift in Sources */,
 				FECA141C26E7A5D10023ACB8 /* AddTaskViewController.swift in Sources */,
 				FE8C0DA52714B26700ED8E4B /* Category.swift in Sources */,

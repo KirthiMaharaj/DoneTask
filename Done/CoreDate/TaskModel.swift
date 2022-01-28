@@ -112,13 +112,13 @@ class TaskManager  {
     
     //Tasks
     public func updatedTasks(_ task: DoneTask) {
-        
+        fetchTasks()
         do {
             try self.managedObjectContext.save()
         }catch {
             fatalError()
         }
-        fetchTasks()
+        
     }
     
     
@@ -169,7 +169,9 @@ class TaskManager  {
     }
     
     public func fetchCategory() {
+        
         let fetchRequest: NSFetchRequest<Subtask> = Subtask.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         do {
             self.taskss = try self.managedObjectContext.fetch(fetchRequest)
             self.delegate?.fetchTasksSuccess(model: self, success: true)

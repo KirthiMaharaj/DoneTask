@@ -57,6 +57,11 @@ class TaskViewCell: UITableViewCell {
         }else {
             self.taskDate.text = formatter.string(from: tasks.dueDate)
         }
+        if tasks.notification == true {
+            self.reminderButton.isHidden = false
+        }else {
+            self.reminderButton.isHidden = true
+        }
         self.completeButton.isOn = tasks.isComplete
         let priorityColor = Priority(rawValue: Int(tasks.priorty))
         self.priortyButton.setTitleColor(priorityColor?.color, for: .normal)
